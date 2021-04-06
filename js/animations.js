@@ -3,11 +3,14 @@
  */
 
 
-const lionhead = document.querySelector('#lionhead');
+const lionhead = document.getElementById('lionhead');
 const productMenuBtn = document.querySelector('#product-menu-btn')
 let productMenuOpen = false;
 
 productMenuBtn.addEventListener('click', () => {
+
+    console.log('clicktest Löwe')
+
     if(!productMenuOpen){
         lionhead.classList.add('p_open');
         productMenuOpen = true;
@@ -28,7 +31,10 @@ productMenuBtn.addEventListener('click', () => {
 const menuBtn = document.querySelector('.menu-btn');
 console.log(menuBtn);
 let menuOpen = false;
-menuBtn.addEventListener('click', () => {
+menuBtn.onclick = () => {
+
+    console.log('clicktest Blatt');
+
     if(!menuOpen){
         menuBtn.classList.add('open');
         menuOpen = true;
@@ -40,4 +46,10 @@ menuBtn.addEventListener('click', () => {
         console.log(menuOpen);
 
     }
-});
+};
+
+
+window.addEventListener('resize', () =>{
+    console.log(lionhead);
+
+})
