@@ -1,0 +1,127 @@
+/**
+Theme Name: Sanaleo
+Author: Brainstorm Force
+Author URI: http://wpastra.com/about/
+Description: Astra is the fastest, fully customizable & beautiful theme suitable for blogs, personal portfolios and business websites. It is very lightweight (less than 50KB on frontend) and offers unparalleled speed. Built with SEO in mind, Astra comes with schema.org code integrated so search engines will love your site. Astra offers plenty of sidebar options and widget areas giving you a full control for customizations. Furthermore, we have included special features and templates so feel free to choose any of your favorite page builder plugin to create pages flexibly. Some of the other features: # WooCommerce Ready # Responsive # Compatible with major plugins # Translation Ready # Extendible with premium addons # Regularly updated # Designed, Developed, Maintained & Supported by Brainstorm Force. Looking for a perfect base theme? Look no further. Astra is fast, fully customizable and beautiful theme!
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: sanaleo
+Template: astra
+*/
+
+
+
+/*
+HEADER SECTION
+*/
+
+
+
+#lionhead{
+    transition: all 2s;
+    position: relative;
+}
+
+#product-menu-btn{
+	background-color: black;
+	border-radius: 15px;
+    cursor: pointer;
+
+}
+
+.p_open{
+    transform: translateY(150px);
+}
+
+
+.header-widget-area[data-section="sidebar-widgets-header-widget-1"] {
+    color: white;
+    display: block;
+    background-color: black;
+    height: auto;
+    width: 300px;
+    padding: 2em;
+    padding-left: 6em;
+    position: absolute;
+    top: 132px;
+    border-radius: 0px 0px 10px 0px;
+    display: none;
+    transition: display 2s;
+}
+
+.header-widget-area[data-section="sidebar-widgets-header-widget-1"] a{
+    font-size: 1.2em;
+    color: white;
+    font-weight: 900;
+} 
+
+
+/*Menu Button*/ 
+
+
+.menu-btn{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 50px;
+    cursor: pointer;
+    transition: all .5s;
+    margin-bottom: 5px;
+}
+
+.menu-btn__burger{
+    
+    width: 37px;
+    height: 6px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(255,101,47,.2);
+    background: black;
+    transition: all .5s;
+}
+
+.menu-btn__burger::before, .menu-btn__burger::after{
+    content: '';
+    position: absolute;
+    width: 37px;
+    height: 6px;
+    border-radius: 50%;
+    background: black;
+    box-shadow: 0 2px 5px rgba(255,101,47,.2);
+    transition: all 1.5s;
+
+}
+
+.menu-btn__burger::before{
+    transform: translateY(-10px);
+    
+       
+}
+.menu-btn__burger::after{
+    transform: translateY(10px);
+  
+}
+
+/*Menu Button ANIMATION*/
+
+
+
+ .menu-btn.open .menu-btn__burger{
+    transform: rotate(90deg);     
+     height: 8px;
+ }
+
+ .menu-btn.open .menu-btn__burger::before{
+     transform: rotate(45deg) translate(1px, -19px);
+     width: 30px;
+     height: 8px;
+ }
+ .menu-btn.open .menu-btn__burger::after{
+    transform: rotate(-45deg) translate(1px, 19px);
+    width: 30px;
+    height: 8px;
+}
