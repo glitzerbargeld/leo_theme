@@ -7,7 +7,32 @@ const lionhead = document.getElementById('lionhead');
 const productMenuBtn = document.querySelector('#product-menu-btn')
 let productMenuOpen = false;
 
-productMenuBtn.addEventListener('click', () => {
+
+function moveLion(evt){
+
+evt.preventDefault();
+    console.log('clicktest Löwe')
+
+    if(!productMenuOpen){
+        lionhead.classList.add('p_open');
+        productMenuOpen = true;
+        console.log("closed");
+    }
+    else{
+        lionhead.classList.remove('p_open')
+        productMenuOpen = false;
+        console.log("open");
+    }
+
+}
+
+productMenuBtn.addEventListener('click', moveLion)
+productMenuBtn.addEventListener('touchstart', moveLion)
+
+
+
+
+productMenuBtn.addEventListener('touchstart', () => {
 
     console.log('clicktest Löwe')
 
