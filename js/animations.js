@@ -54,9 +54,12 @@ productMenuBtn.addEventListener('touchstart', () => {
 /*Menu Button*/
 
 const menuBtn = document.querySelector('.menu-btn');
+const BtnWrapper = document.querySelector('.ast-header-html-3');
+
+
 console.log(menuBtn);
 let menuOpen = false;
-menuBtn.onclick = () => {
+BtnWrapper.onclick = () => {
 
     console.log('clicktest Blatt');
 

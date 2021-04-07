@@ -34,7 +34,24 @@ get_header( 'shop' ); ?>
 		<?php while ( have_posts() ) : ?>
 			<?php the_post(); ?>
 
-			<?php wc_get_template_part( 'content', 'single-product' ); ?>
+			<?php
+			
+			 global $post;
+
+			 $terms      = wp_get_post_terms( $post->ID, 'product_cat' );
+			 $categories = wp_list_pluck( $terms, 'slug' );
+			 
+			 if ( in_array( 'oil', $categories ) ) {
+				 wc_get_template_part( 'content', 'single-product-oil' );
+			 } 
+			 else  if ( in_array( 'blueten', $categories ) ) {
+				wc_get_template_part( 'content', 'single-product-blueten' );
+			} 
+			 else {
+				 wc_get_template_part( 'content', 'single-product' );
+			 }
+			 
+			 ?>
 
 		<?php endwhile; // end of the loop. ?>
 
