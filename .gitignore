@@ -2,3 +2,4 @@
 .browserslistrc
 *.code-workspace
 node_modules
+cronjobpulltemporary.sh
