@@ -35,3 +35,8 @@ function child_enqueue_scripts(){
 }
 
 add_action( 'wp_enqueue_scripts', 'child_enqueue_scripts', 15 );
+
+
+
+include_once( get_stylesheet_directory() .'/woocommerce/product_hooks.php');
+
