@@ -40,3 +40,9 @@ add_action( 'wp_enqueue_scripts', 'child_enqueue_scripts', 15 );
 
 include_once( get_stylesheet_directory() .'/woocommerce/product_hooks.php');
 
+
+add_action( 'woocommerce_before_single_product', 'customise_product_page' );
+function customise_product_page() {
+  remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_add_to_cart', 30);
+  // ... any other removes and adds here
+}

@@ -41,7 +41,7 @@ const css = function () {
     .pipe(sourcemaps.init())
     .pipe(
       sass({
-        outputStyle: 'compressed',
+        outputStyle: 'nested',
       }).on('error', sass.logError),
     )
     .pipe(autoprefixer())
