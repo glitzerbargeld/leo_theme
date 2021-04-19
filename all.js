@@ -5,6 +5,7 @@
  */
 var lionhead = document.getElementById('lionhead');
 var productMenuBtn = document.querySelector('#product-menu-btn');
+var productMenu = document.querySelector('#product-menu');
 var productMenuOpen = false;
 
 function moveLion(evt) {
@@ -29,10 +30,14 @@ productMenuBtn.addEventListener('touchstart', function () {
 
   if (!productMenuOpen) {
     lionhead.classList.add('p_open');
+    productMenu.classList.add('toggle-product-menu');
+    console.log(productMenu);
     productMenuOpen = true;
     console.log("closed");
   } else {
     lionhead.classList.remove('p_open');
+    productMenu.classList.remove('toggle-product-menu');
+    console.log(productMenu);
     productMenuOpen = false;
     console.log("open");
   }

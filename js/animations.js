@@ -4,14 +4,57 @@
 
 
 const lionhead = document.getElementById('lionhead');
-const productMenuBtn = document.querySelector('#product-menu-btn')
+const productMenuBtn = document.querySelector('#product-menu-btn');
+const productMenu = document.querySelector('#product-menu');
+
 let productMenuOpen = false;
+
+console.log(productMenu.style.display);
+
+function toggleProductMenu() {
+    if (productMenu.style.display == "none") {
+      productMenu.style.display = "block";
+    } else {
+      productMenu.style.display = "none";
+    }
+  }
+
+
+
+  // Show an element
+var show = function (elem) {
+	elem.style.display = 'block';
+    elem.style.height =  '145px';
+
+};
+
+// Hide an element
+var hide = function (elem) {
+	elem.style.display = 'none';
+    elem.style.height =  '0px';
+};
+
+// Toggle element visibility
+var toggle = function (elem) {
+
+	// If the element is visible, hide it
+	if (window.getComputedStyle(elem).display === 'block') {
+		hide(elem);
+		return;
+	}
+
+	// Otherwise, show it
+	show(elem);
+
+};
 
 
 function moveLion(evt){
 
 evt.preventDefault();
     console.log('clicktest Löwe')
+
+    toggle(productMenu);
 
     if(!productMenuOpen){
         lionhead.classList.add('p_open');
@@ -24,12 +67,12 @@ evt.preventDefault();
         console.log("open");
     }
 
+    
+
 }
 
 productMenuBtn.addEventListener('click', moveLion)
 productMenuBtn.addEventListener('touchstart', moveLion)
-
-
 
 
 productMenuBtn.addEventListener('touchstart', () => {
@@ -38,11 +81,15 @@ productMenuBtn.addEventListener('touchstart', () => {
 
     if(!productMenuOpen){
         lionhead.classList.add('p_open');
+        productMenu.classList.add('toggle-product-menu');
+        console.log(productMenu);
         productMenuOpen = true;
         console.log("closed");
     }
     else{
         lionhead.classList.remove('p_open')
+        productMenu.classList.remove('toggle-product-menu');
+        console.log(productMenu);
         productMenuOpen = false;
         console.log("open");
     }
