@@ -1,5 +1,5 @@
 /**
- * LionHead Animation
+ * Product Menu Animation
  */
 
 
@@ -20,6 +20,8 @@ function toggleProductMenu() {
   }
 
 
+
+/** Toggle Function */
 
   // Show an element
 var show = function (elem) {
@@ -49,7 +51,7 @@ var toggle = function (elem) {
 };
 
 
-function moveLion(evt){
+function productMenuToggler(evt){
 
 evt.preventDefault();
     console.log('clicktest Löwe')
@@ -67,15 +69,18 @@ evt.preventDefault();
         console.log("open");
     }
 
-    
-
 }
 
-productMenuBtn.addEventListener('click', moveLion)
-productMenuBtn.addEventListener('touchstart', moveLion)
+productMenuBtn.addEventListener('click', productMenuToggler);
+productMenuBtn.addEventListener('touchstart', productMenuToggler);
+productMenuBtn.addEventListener('mouseover', productMenuToggler);
 
 
-productMenuBtn.addEventListener('touchstart', () => {
+
+
+
+
+/*productMenuBtn.addEventListener('touchstart', () => {
 
     console.log('clicktest Löwe')
 
@@ -94,8 +99,10 @@ productMenuBtn.addEventListener('touchstart', () => {
         console.log("open");
     }
 
-})
+})*/
 
+
+/**End Product Menu Toggle */
 
 
 /*Menu Button*/
