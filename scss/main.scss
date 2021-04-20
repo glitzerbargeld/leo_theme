@@ -153,6 +153,32 @@ HEADER SECTION
 
 /*Product Menu*/
 
+.product-dropdown {
+
+display: none;
+  @media(min-width: 768px){
+  position: absolute;
+  z-index: 100;
+  margin-left: 5em;
+  top: 85px;
+  padding-left: 35px;
+  display: block;
+
+}
+
+  @media(max-width: 921px){
+    padding-left: 20px;
+    margin-left: 2em;
+  }
+}
+
+.product-dropdown:hover {
+  
+  .custom-menu-class{display: block; height: 150px;}
+  #lionhead{-webkit-transform: translateY(150px);transform: translateY(110px);}
+
+}
+
 
 .ast-builder-menu-mobile .main-navigation {
   height: 75vh;
@@ -165,9 +191,9 @@ HEADER SECTION
 
 
   .custom-menu-class {
-    position: absolute;
-    left: 209px;
-    top: 127px;
+    position: relative;
+    margin-left: 84px;
+    margin-top: -9px;
     z-index: 100;
     background: black;
     border: 1px solid black;
@@ -180,8 +206,7 @@ HEADER SECTION
     font-size: 14px;
     font-weight: 300;
     text-align: center;
-    
-
+    display: none;
 
 
     ul{
@@ -211,14 +236,13 @@ HEADER SECTION
     }
 
     }
-    #product-menu{
-      display: none;
-      transition: height 0.5s;
-    }
+   
      
     #menu-produkte {
       margin: auto;
     }
+
+  
 
 
 /*Hero Slider*/

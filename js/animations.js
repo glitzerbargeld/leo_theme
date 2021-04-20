@@ -56,7 +56,7 @@ function productMenuToggler(evt){
 evt.preventDefault();
     console.log('clicktest Löwe')
 
-    toggle(productMenu);
+    
 
     if(!productMenuOpen){
         lionhead.classList.add('p_open');
@@ -73,7 +73,6 @@ evt.preventDefault();
 
 productMenuBtn.addEventListener('click', productMenuToggler);
 productMenuBtn.addEventListener('touchstart', productMenuToggler);
-productMenuBtn.addEventListener('mouseover', productMenuToggler);
 
 
 

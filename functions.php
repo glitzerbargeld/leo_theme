@@ -52,12 +52,17 @@ function wpb_product_menu() {
 	register_nav_menu('product-menu',__( 'Product Menu' ));
   }
   add_action( 'init', 'wpb_product_menu' );
+  
 
   function display_product_menu(){
+	echo '<div class = "product-dropdown"><img id="lionhead" class="alignnone size-full wp-image-11" src="http://localhost:3000/wp-content/uploads/2021/03/loewenkopf@2x.png" alt="" width="50px" /><button id="product-menu-btn">Produkte</button>';
+
 	wp_nav_menu( array( 
 		'theme_location' => 'product-menu', 
 		'container_class' => 'custom-menu-class',
-		'container_id' => 'product-menu' )); 
-  }
+		'container_id' => 'product-menu' ));
 
-  add_action('astra_header', 'display_product_menu');
+	echo '</div>';
+}
+
+  add_action( 'astra_header_after', 'display_product_menu' );

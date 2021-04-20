@@ -45,12 +45,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<?php 
 	astra_header_before();
 
-	astra_header(); 
+	astra_header();
 
 	astra_header_after();
 
 	astra_content_before(); 
+
 	?>
+	
 	<div id="content" class="site-content">
 		<div class="ast-container">
 		<?php astra_content_top(); ?>
