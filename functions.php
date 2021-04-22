@@ -41,18 +41,20 @@ add_action( 'wp_enqueue_scripts', 'child_enqueue_scripts');
 include_once( get_stylesheet_directory() .'/woocommerce/product_hooks.php');
 
 
-add_action( 'woocommerce_before_single_product', 'customise_product_page' );
+
 function customise_product_page() {
-  remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_add_to_cart', 30);
-  // ... any other removes and adds here
+  remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 20);
+  add_action('woocommerce_before_single_product_summary', 'woocommerce_template_single_excerpt', 30);
 }
+add_action( 'woocommerce_before_single_product', 'customise_product_page' );
+
 
 
 function wpb_product_menu() {
 	register_nav_menu('product-menu',__( 'Product Menu' ));
   }
   add_action( 'init', 'wpb_product_menu' );
-  
+
 
   function display_product_menu(){
 	echo '<div class = "product-dropdown"><img id="lionhead" class="alignnone size-full wp-image-11" src="http://localhost:3000/wp-content/uploads/2021/03/loewenkopf@2x.png" alt="" width="50px" /><button id="product-menu-btn">Produkte</button>';
@@ -65,4 +67,63 @@ function wpb_product_menu() {
 	echo '</div>';
 }
 
-  add_action( 'astra_header_after', 'display_product_menu' );
+
+function range_slider(){
+	echo '<div class="range-values"><ul><li>5%</li><li>15%</li><li>25%</li></ul></div>';
+	echo '<div class="slidecontainer">
+	
+	<input type="range" min="5" max="25" step="10" value="25" class="slider" id="myRange" list="steps"> 
+	
+	<datalist id="steps" ><output>5</output><output>15</output><output>25</output></datalist> CBD Gehalt
+  </div>';
+
+}
+add_action( 'astra_header_after', 'display_product_menu' );
+
+
+
+/**ACF Woocommerce Product Variations */
+
+
+// Render fields at the bottom of variations - does not account for field group order or placement.
+add_action( 'woocommerce_product_after_variable_attributes', function( $loop, $variation_data, $variation ) {
+    global $abcdefgh_i; // Custom global variable to monitor index
+    $abcdefgh_i = $loop;
+    // Add filter to update field name
+    add_filter( 'acf/prepare_field', 'acf_prepare_field_update_field_name' );
+    
+    // Loop through all field groups
+    $acf_field_groups = acf_get_field_groups();
+    foreach( $acf_field_groups as $acf_field_group ) {
+        foreach( $acf_field_group['location'] as $group_locations ) {
+            foreach( $group_locations as $rule ) {
+                // See if field Group has at least one post_type = Variations rule - does not validate other rules
+                if( $rule['param'] == 'post_type' && $rule['operator'] == '==' && $rule['value'] == 'product_variation' ) {
+                    // Render field Group
+                    acf_render_fields( $variation->ID, acf_get_fields( $acf_field_group ) );
+                    break 2;
+                }
+            }
+        }
+    }
+    
+    // Remove filter
+    remove_filter( 'acf/prepare_field', 'acf_prepare_field_update_field_name' );
+}, 10, 3 );
+
+// Filter function to update field names
+function  acf_prepare_field_update_field_name( $field ) {
+    global $abcdefgh_i;
+    $field['name'] = preg_replace( '/^acf\[/', "acf[$abcdefgh_i][", $field['name'] );
+    return $field;
+}
+    
+// Save variation data
+add_action( 'woocommerce_save_product_variation', function( $variation_id, $i = -1 ) {
+    // Update all fields for the current variation
+    if ( ! empty( $_POST['acf'] ) && is_array( $_POST['acf'] ) && array_key_exists( $i, $_POST['acf'] ) && is_array( ( $fields = $_POST['acf'][ $i ] ) ) ) {
+        foreach ( $fields as $key => $val ) {
+            update_field( $key, $val, $variation_id );
+        }
+    }
+}, 10, 2 );

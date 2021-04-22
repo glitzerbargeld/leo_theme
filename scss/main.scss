@@ -253,6 +253,85 @@ display: none;
       padding-top: 0 !important; } }
 
 /*Product Page - Öle*/
+
+
+/*Variation Slider*/
+
+
+.slidecontainer {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	margin: 25px 0;
+	align-content: center;
+
+  input[type="range"] {
+    -webkit-appearance: none;
+    width: 72%;
+    margin: 5.7px 9px;
+    padding: 0;
+    border: none;
+  }
+
+
+}
+  
+  .slider {
+  -webkit-appearance: none;
+  width: 200px;
+  height: 15px;
+  background: white;
+  outline: none;
+  
+  }
+  
+  .slider:hover {
+  background: #aaa;
+  }
+  
+  .slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #4CAF50;
+  cursor: pointer;
+  }
+  
+  .slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #4CAF50;
+  cursor: pointer;
+  }
+
+  .range-values{
+    width: 80%;
+    padding: 0 5%;
+
+    ul{
+      display: flex;
+      align-items: stretch; /* Default */
+      justify-content: space-between;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+      li{
+        display: block;
+    flex: 0 1 auto; /* Default */
+    list-style-type: none;
+    background: #fafafa;      }
+    
+  }
+
+
+
+
+
+
 .summary-col {
   right: 50%; }
 

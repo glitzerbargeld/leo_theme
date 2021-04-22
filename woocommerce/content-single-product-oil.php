@@ -65,8 +65,11 @@ if ( post_password_required() ) {
 				 * @hooked woocommerce_template_single_sharing - 50
 				 * @hooked WC_Structured_Data::generate_product_data() - 60
 				 */
-				
+				add_action( 'woocommerce_before_add_to_cart_button', 'range_slider' );
+				add_action('woocommerce_product_thumbnails', 'woocommerce_template_single_excerp');
 				do_action( 'woocommerce_single_product_summary' );
+				
+				
 				
 			?>
 		
@@ -96,3 +99,38 @@ if ( post_password_required() ) {
 </div>
 
 <?php do_action( 'woocommerce_after_single_product' ); ?>
+
+
+<script>
+
+function selectElement(id, valueToSelect) {    
+    let element = document.getElementById(id);
+    element.value = valueToSelect;
+}
+
+
+	// EventListener hinzufügen
+window.addEventListener("load", function(){
+
+// Range-Slider in Variable speichern 
+var slider = document.querySelector("input[type='range']");
+
+
+console.log(slider);
+
+// EventListener für das Verändern des Sliders hinzufügen
+slider.addEventListener("change", function(){
+
+
+let element = document.getElementById("cbd-gehalt");
+console.log(element);
+console.log(this.value);
+element.value = this.value;
+});
+});
+
+
+
+
+
+</script>
