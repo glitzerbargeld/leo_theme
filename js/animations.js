@@ -76,34 +76,6 @@ productMenuBtn.addEventListener('touchstart', productMenuToggler);
 
 
 
-
-
-
-/*productMenuBtn.addEventListener('touchstart', () => {
-
-    console.log('clicktest Löwe')
-
-    if(!productMenuOpen){
-        lionhead.classList.add('p_open');
-        productMenu.classList.add('toggle-product-menu');
-        console.log(productMenu);
-        productMenuOpen = true;
-        console.log("closed");
-    }
-    else{
-        lionhead.classList.remove('p_open')
-        productMenu.classList.remove('toggle-product-menu');
-        console.log(productMenu);
-        productMenuOpen = false;
-        console.log("open");
-    }
-
-})*/
-
-
-/**End Product Menu Toggle */
-
-
 /*Menu Button*/
 
 const menuBtn = document.querySelector('.menu-btn');
@@ -112,7 +84,7 @@ const BtnWrapper = document.querySelector('.ast-header-html-3');
 
 console.log(menuBtn);
 let menuOpen = false;
-BtnWrapper.onclick = () => {
+menuBtn.onclick = () => {
 
     console.log('clicktest Blatt');
 
