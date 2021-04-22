@@ -49,14 +49,20 @@ function customise_product_page() {
 add_action( 'woocommerce_before_single_product', 'customise_product_page' );
 
 
+add_action( 'init', 'wpb_product_menu' );
+
 
 function wpb_product_menu() {
 	register_nav_menu('product-menu',__( 'Product Menu' ));
   }
-  add_action( 'init', 'wpb_product_menu' );
 
 
-  function display_product_menu(){
+
+
+
+  add_action( 'astra_header_before', 'sanaleo_display_product_menu' );
+
+  function sanaleo_display_product_menu(){
 	echo '<div class = "product-dropdown"><img id="lionhead" class="alignnone size-full wp-image-11" src="https://sanaleo-cbd.de/wp-content/uploads/2021/04/CBD-Oele-CBD-Blueten-CBD-Vape-Produtke-Sanaleo-CBD-loewenkopf.png" alt="" width="50px" /><button id="product-menu-btn">Produkte</button>';
 
 	wp_nav_menu( array( 
@@ -66,6 +72,8 @@ function wpb_product_menu() {
 
 	echo '</div>';
 }
+
+
 
 
 function range_slider(){
@@ -78,7 +86,6 @@ function range_slider(){
   </div>';
 
 }
-add_action( 'astra_header_after', 'display_product_menu' );
 
 
 
