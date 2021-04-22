@@ -34,6 +34,14 @@ INDEX
 /*
 HEADER SECTION
 */
+
+
+/* Search Bar*/
+
+.search-field{
+	width: 120px;
+}
+
 #lionhead {
   transition: all 2s;
   position: relative; 
@@ -74,6 +82,10 @@ HEADER SECTION
     margin-bottom: 0em;
     margin-left: 1em;
     margin-right: 1em; } }
+
+    .ast-title-bar-align-center{
+      justify-content: center;
+    }
 
 /*Menu Button*/
 .menu-btn {
