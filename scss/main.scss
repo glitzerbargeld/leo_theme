@@ -154,6 +154,16 @@ HEADER SECTION
 
 /*Product Menu*/
 
+
+.product-dropdown #product-menu {
+  width: auto;
+  height: auto;
+  margin: 0;
+  background: white;
+  z-index: -1;
+  padding-left: 55px;
+}
+
 #menu-produktmenue {
   margin: 0;
   padding: 10px;
@@ -234,7 +244,7 @@ display: none;
       a{
         
         font-size: 1.5em;
-        color: white;
+        color: black;
         cursor: pointer;
       }
 
