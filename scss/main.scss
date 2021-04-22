@@ -153,7 +153,19 @@ HEADER SECTION
 
 /*Product Menu*/
 
+#menu-produktmenue {
+  margin: 0;
+  padding: 10px;
+}
+
+
 .product-dropdown {
+
+  #product-menu {
+    width: auto;
+    height: auto;
+    margin: 0;
+}
 
 display: none;
   @media(min-width: 768px){

@@ -1,14 +1,49 @@
 "use strict";
 
 /**
- * LionHead Animation
+ * Product Menu Animation
  */
 var lionhead = document.getElementById('lionhead');
 var productMenuBtn = document.querySelector('#product-menu-btn');
 var productMenu = document.querySelector('#product-menu');
 var productMenuOpen = false;
+console.log(productMenu.style.display);
 
-function moveLion(evt) {
+function toggleProductMenu() {
+  if (productMenu.style.display == "none") {
+    productMenu.style.display = "block";
+  } else {
+    productMenu.style.display = "none";
+  }
+}
+/** Toggle Function */
+// Show an element
+
+
+var show = function show(elem) {
+  elem.style.display = 'block';
+  elem.style.height = '145px';
+}; // Hide an element
+
+
+var hide = function hide(elem) {
+  elem.style.display = 'none';
+  elem.style.height = '0px';
+}; // Toggle element visibility
+
+
+var toggle = function toggle(elem) {
+  // If the element is visible, hide it
+  if (window.getComputedStyle(elem).display === 'block') {
+    hide(elem);
+    return;
+  } // Otherwise, show it
+
+
+  show(elem);
+};
+
+function productMenuToggler(evt) {
   evt.preventDefault();
   console.log('clicktest Löwe');
 
@@ -23,25 +58,31 @@ function moveLion(evt) {
   }
 }
 
-productMenuBtn.addEventListener('click', moveLion);
-productMenuBtn.addEventListener('touchstart', moveLion);
-productMenuBtn.addEventListener('touchstart', function () {
-  console.log('clicktest Löwe');
+productMenuBtn.addEventListener('click', productMenuToggler);
+productMenuBtn.addEventListener('touchstart', productMenuToggler);
+/*productMenuBtn.addEventListener('touchstart', () => {
 
-  if (!productMenuOpen) {
-    lionhead.classList.add('p_open');
-    productMenu.classList.add('toggle-product-menu');
-    console.log(productMenu);
-    productMenuOpen = true;
-    console.log("closed");
-  } else {
-    lionhead.classList.remove('p_open');
-    productMenu.classList.remove('toggle-product-menu');
-    console.log(productMenu);
-    productMenuOpen = false;
-    console.log("open");
-  }
-});
+    console.log('clicktest Löwe')
+
+    if(!productMenuOpen){
+        lionhead.classList.add('p_open');
+        productMenu.classList.add('toggle-product-menu');
+        console.log(productMenu);
+        productMenuOpen = true;
+        console.log("closed");
+    }
+    else{
+        lionhead.classList.remove('p_open')
+        productMenu.classList.remove('toggle-product-menu');
+        console.log(productMenu);
+        productMenuOpen = false;
+        console.log("open");
+    }
+
+})*/
+
+/**End Product Menu Toggle */
+
 /*Menu Button*/
 
 var menuBtn = document.querySelector('.menu-btn');
