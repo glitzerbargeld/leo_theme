@@ -41,7 +41,7 @@ HEADER SECTION
 
 #product-menu-btn {
   background-color: black;
-  border-radius: 15px;
+  border-radius: 50px;
   cursor: pointer; }
 
 .p_open {
@@ -160,6 +160,7 @@ HEADER SECTION
   height: auto;
   margin: 0;
   background: white;
+  border: none;
   z-index: -1;
   padding-left: 55px;
 }
