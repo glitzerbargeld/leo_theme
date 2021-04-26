@@ -206,13 +206,14 @@ HEADER SECTION
 
 .product-dropdown {
 
+  margin: 0;
+
   #product-menu {
     width: auto;
     height: auto;
     margin: 0;
 }
 
-display: none;
   @media(min-width: 768px){
   position: absolute;
   z-index: 100;
