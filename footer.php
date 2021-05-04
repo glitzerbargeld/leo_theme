@@ -32,35 +32,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	astra_body_bottom();    
 	wp_footer(); 
 ?>
-<script>
-    var rellax = new Rellax('.rellax-bottle', {
-    speed: -1,
-    center: true,
-    wrapper: null,
-    round: true,
-    vertical: true,
-    horizontal: false
-  });
-
-  var rellax = new Rellax('.rellax-cap', {
-    speed: 1,
-    center: true,
-    wrapper: null,
-    round: true,
-    vertical: true,
-    horizontal: false
-  });
-
-  var rellax = new Rellax('.rellax-faq', {
-    speed: 3,
-    center: true,
-    wrapper: null,
-    round: true,
-    vertical: true,
-    horizontal: false
-  });
-  
-</script>
 
 	</body>
 </html>

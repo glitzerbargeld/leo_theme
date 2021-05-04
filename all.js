@@ -84,4 +84,28 @@ menuBtn.onclick = function () {
 window.addEventListener('resize', function () {
   console.log(lionhead);
 });
+"use strict";
+
+$(document).ready(function () {
+  $('.customer-logos').slick({
+    slidesToShow: 6,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 1000,
+    arrows: false,
+    dots: false,
+    pauseOnHover: false,
+    responsive: [{
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 4
+      }
+    }, {
+      breakpoint: 520,
+      settings: {
+        slidesToShow: 3
+      }
+    }]
+  });
+});
 //# sourceMappingURL=all.js.map
