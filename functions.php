@@ -35,7 +35,7 @@ add_action( 'wp_enqueue_scripts', 'child_enqueue_styles', 15 );
 function child_enqueue_scripts(){
 	wp_enqueue_script('sanaleo-animations-js', get_stylesheet_directory_uri() . '/js/animations.js', array(), false, true);
 	wp_enqueue_script('rellax-js', get_stylesheet_directory_uri() . '/js/rellax-master/rellax.min.js', array(), false, true);
-    wp-enqueue_script('my-rellax', get_stylesheet_directory_uri() . 'js/my-rellax.js', array(), false, true);
+    wp_enqueue_script('my-rellax', get_stylesheet_directory_uri() . 'js/my-rellax.js', array(), false, true);
 }
 
 add_action( 'wp_enqueue_scripts', 'child_enqueue_scripts');
