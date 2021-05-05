@@ -25,7 +25,7 @@ function child_enqueue_styles() {
 
 }
 
-add_action( 'wp_enqueue_scripts', 'child_enqueue_styles', 99 );
+add_action( 'wp_enqueue_scripts', 'child_enqueue_styles', 100000 );
 
 
 /**
