@@ -117,6 +117,14 @@ HEADER SECTION
       justify-content: center;
     }
 
+
+/* MENUS */ 
+
+.menu-item-has-children .sub-menu{
+  display: block !important;
+}
+
+
 /*Menu Button*/
 .menu-btn {
   padding-top: 10px;
