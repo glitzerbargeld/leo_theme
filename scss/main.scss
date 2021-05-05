@@ -37,14 +37,6 @@ INDEX
 
 
 
-
-
-
-
-
-
-
-
 /*CONTENT PAGES*/
 
 
@@ -59,6 +51,19 @@ INDEX
 /*
 HEADER SECTION
 */
+
+/*Above Header*/
+
+/*Shopping Cart*/
+
+.ast-icon-shopping-bag::before {
+	content: 0;
+}
+
+.ast-site-header-cart.ast-menu-cart-outline .ast-addon-cart-wrap{
+  border: 0;
+}
+
 
 
 /* Search Bar*/
