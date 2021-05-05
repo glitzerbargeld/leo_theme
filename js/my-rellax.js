@@ -22,7 +22,7 @@ var rellax = new Rellax('.rellax-bottle', {
     center: true,
     wrapper: null,
     round: true,
-    vertical: true,
-    horizontal: false
+    vertical: false,
+    horizontal: true,
   });
   
