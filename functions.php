@@ -64,7 +64,7 @@ function wpb_product_menu() {
 
 
 
-  add_action( 'astra_header_before', 'sanaleo_display_product_menu' );
+  add_action( 'astra_header', 'sanaleo_display_product_menu' );
 
   function sanaleo_display_product_menu(){
 	echo '<div class = "product-dropdown"><img id="lionhead" class="alignnone size-full wp-image-11" src="https://sanaleo-cbd.de/wp-content/uploads/2021/04/CBD-Oele-CBD-Blueten-CBD-Vape-Produtke-Sanaleo-CBD-loewenkopf.png" alt="" width="50px" /><button id="product-menu-btn">Produkte</button>';
@@ -75,19 +75,6 @@ function wpb_product_menu() {
 		'container_id' => 'product-menu' ));
 
 	echo '</div>';
-}
-
-
-function productmenu_short(){
-	return  
-    
-    '<div class = "product-dropdown"><img id="lionhead" class="alignnone size-full wp-image-11" src="https://sanaleo-cbd.de/wp-content/uploads/2021/04/CBD-Oele-CBD-Blueten-CBD-Vape-Produtke-Sanaleo-CBD-loewenkopf.png" alt="" width="50px" /><button id="product-menu-btn">Produkte</button>';
-    + wp_nav_menu( array( 
-		'theme_location' => 'product-menu', 
-		'container_class' => 'custom-menu-class',
-		'container_id' => 'product-menu' ));
-
-	+ '</div>';
 }
 
 
