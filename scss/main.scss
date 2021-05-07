@@ -295,6 +295,8 @@ HEADER SECTION
     padding-left: 55px;
     display: none;
 
+
+
   }
 }
 
@@ -320,7 +322,8 @@ HEADER SECTION
 
 .product-dropdown:hover {
   
-  .custom-menu-class{display: block; height: 150px;}
+  #product-menu{display: block !important; height: 150px;}
+  .custom-menu-class{display: block !important; height: 150px;}
   #lionhead{-webkit-transform: translateY(150px);transform: translateY(150px);}
 
 }
