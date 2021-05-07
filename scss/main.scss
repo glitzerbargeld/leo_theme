@@ -276,7 +276,12 @@ HEADER SECTION
 
 
 @media(min-width: 768px){}
-@media(max-width: 921px){}
+@media(max-width: 921px){
+
+  #product-menu{
+    display: none;
+  }
+}
 
 
 .product-dropdown #product-menu {
