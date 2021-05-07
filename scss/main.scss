@@ -281,7 +281,7 @@ HEADER SECTION
   margin-left: 5em;
   top: 85px;
   padding-left: 35px;
-  display: block;
+  display: none;
 
 
   #product-menu{
@@ -303,17 +303,9 @@ HEADER SECTION
   padding: 10px;
 }
 
-
-@media(max-width: 921px){
-  .product-dropdown{
-    padding-left: 20px;
-    margin-left: 2em;
-  }
-}
-
-  @media(max-width: 767px){
+@media(max-width: 768px){
     .product-dropdown{
-      display: none !important;
+      display: block;
     }
   }
 
