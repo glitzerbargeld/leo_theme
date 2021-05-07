@@ -273,33 +273,9 @@ HEADER SECTION
 
 /*Product Menu*/
 
-.product-dropdown #product-menu {
-  width: auto;
-  height: auto;
-  margin: 0;
-  background: white;
-  border: none;
-  z-index: -1;
-  padding-left: 55px;
-}
 
-#menu-produktmenue {
-  margin: 0;
-  padding: 10px;
-}
+.product-dropdown{
 
-
-.product-dropdown {
-
-  margin: 0;
-
-  #product-menu {
-    width: auto;
-    height: auto;
-    margin: 0;
-}
-
-  @media(min-width: 768px){
   position: absolute;
   z-index: 100;
   margin-left: 5em;
@@ -307,17 +283,41 @@ HEADER SECTION
   padding-left: 35px;
   display: block;
 
+
+  #product-menu{
+    
+    width: auto;
+    height: auto;
+    margin: 0;
+    background: white;
+    border: none;
+    z-index: -1;
+    padding-left: 55px;
+
+  }
 }
 
-  @media(max-width: 921px){
+
+#menu-produktmenue {
+  margin: 0;
+  padding: 10px;
+}
+
+
+@media(max-width: 921px){
+  .product-dropdown{
     padding-left: 20px;
     margin-left: 2em;
   }
+}
 
   @media(max-width: 767px){
-    display: none;
+    .product-dropdown{
+      display: none;
+    }
   }
-}
+
+  
 
 .product-dropdown:hover {
   
