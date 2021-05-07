@@ -79,7 +79,6 @@ function wpb_product_menu() {
 
 
 
-
 function range_slider(){
 	echo '<div class="range-values"><ul><li>5%</li><li>15%</li><li>25%</li></ul></div>';
 	echo '<div class="slidecontainer">
