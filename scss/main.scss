@@ -313,11 +313,11 @@ HEADER SECTION
 
   @media(max-width: 767px){
     .product-dropdown{
-      display: none;
+      display: none !important;
     }
   }
 
-  
+
 
 .product-dropdown:hover {
   
