@@ -328,8 +328,8 @@ HEADER SECTION
 
 .product-dropdown:hover {
   
-  #product-menu{display: block !important; height: 150px;}
-  .custom-menu-class{display: block !important; height: 150px;}
+  #product-menu{display: block !important; height: 150px; background: white;}
+  .custom-menu-class{display: block !important; height: 150px; background: white;}
   #lionhead{-webkit-transform: translateY(150px);transform: translateY(150px);}
 
 }
