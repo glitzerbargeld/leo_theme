@@ -1,6 +1,6 @@
 
 var rellax = new Rellax('.rellax-bottle', {
-    speed: -2.5,
+    speed: -3.5,
     center: true,
     wrapper: null,
     round: true,
