@@ -297,8 +297,6 @@ HEADER SECTION
   ul{
     list-style: none;
 
-    
-
   }
   li a{
     color: black;
@@ -309,14 +307,17 @@ HEADER SECTION
   }
 
 
+ li:nth-child(1) a{
+    color: red; 
+  }
+
+
   li:nth-child(1):hover #lionhead{
       -webkit-transform: translateY(150px);
       transform: translateY(150px);}
   }
 
-  li:nth-child(1):hover a{
-    color: red; 
-  }
+ 
 
 
 @media(max-width: 768px){
