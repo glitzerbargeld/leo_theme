@@ -309,14 +309,10 @@ HEADER SECTION
   }
 
 
-  li:nth-child(1):hover{
-    #lionhead{-webkit-transform: translateY(150px);transform: translateY(150px);}
+  li:nth-child(1):hover #lionhead{
+      -webkit-transform: translateY(150px);
+      transform: translateY(150px);}
   }
-
-  
-
-
-}
 
 
 @media(max-width: 768px){
