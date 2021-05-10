@@ -5,10 +5,11 @@
 
 const lionhead = document.getElementById('lionhead');
 const productMenuBtn = document.querySelector('#product-menu-btn');
-const productMenu = document.getElementbyId('product-menu');
+const productMenu = document.querySelector('#product-menu');
 
 let productMenuOpen = false;
 
+console.log(productMenu.style.display);
 
 function toggleProductMenu() {
     if (productMenu.style.display == "none") {
@@ -53,6 +54,9 @@ var toggle = function (elem) {
 function productMenuToggler(evt){
 
 evt.preventDefault();
+    console.log('clicktest Löwe')
+
+    
 
     if(!productMenuOpen){
         lionhead.classList.add('p_open');
