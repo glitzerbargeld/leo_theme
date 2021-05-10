@@ -314,6 +314,10 @@ HEADER SECTION
       transform: translateY(150px);}
   }
 
+  li:nth-child(1):hover a{
+    color: red; 
+  }
+
 
 @media(max-width: 768px){
     .product-dropdown{
