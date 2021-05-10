@@ -5,7 +5,7 @@
 
 const lionhead = document.getElementById('lionhead');
 const productMenuBtn = document.querySelector('#product-menu-btn');
-const productMenu = document.querySelector('#product-menu');
+const productMenu = document.getElementbyId('product-menu');
 
 let productMenuOpen = false;
 
@@ -55,8 +55,6 @@ function productMenuToggler(evt){
 
 evt.preventDefault();
     console.log('clicktest Löwe')
-
-    
 
     if(!productMenuOpen){
         lionhead.classList.add('p_open');

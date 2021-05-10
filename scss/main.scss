@@ -330,9 +330,12 @@ HEADER SECTION
   #product-menu{
     display: block;
   }
-
-
+  #lionhead{
+    -webkit-transform: translateY(150px);
+    transform: translateY(150px);}
 }
+
+
 
 
 /*Hero Slider*/
