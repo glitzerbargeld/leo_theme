@@ -121,6 +121,7 @@ slider.addEventListener("change", function(){
 console.log("change");
 let element = document.getElementById("anteil-cbd");
 element.value = this.value + "%";
+element.dispatchEvent(new Event('change'));
 
 console.log(element.value);
 
