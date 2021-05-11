@@ -77,6 +77,7 @@ function wpb_product_menu() {
 	echo '</div>';
 }
 
+/*
 
 add_action( 'astra_main_header_bar_top', 'sanaleo_main_menu_overlay' );
 
@@ -90,6 +91,8 @@ function sanaleo_main_menu_overlay(){
   </div>';
     
 }
+
+*/
 
 
 function range_slider(){
