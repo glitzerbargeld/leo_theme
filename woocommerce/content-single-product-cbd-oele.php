@@ -125,7 +125,12 @@ slider.addEventListener("change", function(){
 let element = document.getElementById("cbd-gehalt");
 console.log(element);
 console.log(this.value);
-element.value = this.value;
+element.value = this.value + "%";
+var event = new Event('onselect');
+element.dispatchEvent(event);
+
+
+
 });
 });
 

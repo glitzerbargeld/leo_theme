@@ -107,8 +107,18 @@ function range_slider(){
 }
 
 
+/*
 
-/**ACF Woocommerce Product Variations */
+function snl_variation_slider_jquery(){
+
+    echo '<div class="range-values"><ul><li>5%</li><li>15%</li><li>25%</li></ul></div>';
+    echo '<div id="variation-slider></div>CBD Gehalt';
+}
+
+*/
+
+
+/**ACF Woocommerce Product Variations
 
 
 // Render fields at the bottom of variations - does not account for field group order or placement.
@@ -153,3 +163,5 @@ add_action( 'woocommerce_save_product_variation', function( $variation_id, $i = 
         }
     }
 }, 10, 2 );
+
+ */

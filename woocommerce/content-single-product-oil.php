@@ -101,12 +101,35 @@ if ( post_password_required() ) {
 <?php do_action( 'woocommerce_after_single_product' ); ?>
 
 
+
+<?php
+
+/*
+
+  $( function() {
+    var select = $( "#anteil-cbd" );
+    var slider = $( "#variation-slider" ).slider({
+      min: 5,
+      max: 15,
+	  step: 5,
+      range: "min",
+      value: select[ 0 ].selectedIndex + 1,
+      slide: function( event, ui ) {
+        select[ 0 ].selectedIndex = ui.value - 1;
+      }
+    });
+    $( "#anteil-cbd" ).on( "change", function() {
+      slider.slider( "value", this.selectedIndex + 1 );
+    });
+  } );
+
+  */
+?>
+
+
+
 <script>
 
-function selectElement(id, valueToSelect) {    
-    let element = document.getElementById(id);
-    element.value = valueToSelect;
-}
 
 
 	// EventListener hinzufügen
@@ -128,8 +151,4 @@ console.log(element.value);
 });
 });
 
-
-
-
-
-</script>
+</script> 
