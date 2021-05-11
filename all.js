@@ -84,6 +84,15 @@ menuBtn.onclick = function () {
 window.addEventListener('resize', function () {
   console.log(lionhead);
 });
+/* Main Menu */
+
+function openNav() {
+  document.getElementById("myNav").style.width = "100%";
+}
+
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
 "use strict";
 
 $(document).ready(function () {

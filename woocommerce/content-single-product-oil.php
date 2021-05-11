@@ -115,17 +115,14 @@ window.addEventListener("load", function(){
 // Range-Slider in Variable speichern 
 var slider = document.querySelector("input[type='range']");
 
-
-console.log(slider);
-
 // EventListener für das Verändern des Sliders hinzufügen
 slider.addEventListener("change", function(){
 
-
-let element = document.getElementById("cbd-gehalt");
-console.log(element);
-console.log(this.value);
+console.log("change");
+let element = document.getElementById("anteil-cbd");
 element.value = this.value;
+
+
 });
 });
 
