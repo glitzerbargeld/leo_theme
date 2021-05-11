@@ -126,8 +126,11 @@ let element = document.getElementById("cbd-gehalt");
 console.log(element);
 console.log(this.value);
 element.value = this.value + "%";
-var event = new Event('onselect');
+
+var event = new Event('change');
 element.dispatchEvent(event);
+
+
 
 
 
