@@ -122,6 +122,8 @@ console.log("change");
 let element = document.getElementById("anteil-cbd");
 element.value = this.value + "%";
 
+console.log(element.value);
+
 
 });
 });
