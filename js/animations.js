@@ -132,12 +132,12 @@ jQuery( function() {
       animate:"slow",
       value: select[ 0 ].selectedIndex + 1,
       slide: function( event, ui ) {
-        select[ 0 ].selectedIndex = ui.value;
+        select[ 0 ].selectedIndex = ui.value - 1;
       }
     });
     jQuery( "#anteil-cbd" ).on( "change", function() {
       slider.slider( "value", this.selectedIndex + 1 );
-
+      
       
     });
   } );
