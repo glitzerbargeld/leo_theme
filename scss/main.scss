@@ -423,6 +423,40 @@ HEADER SECTION
 /*Variation Slider*/
 
 
+#variations-slider{
+  background: black;
+  margin: 5%;
+  height: 1.5em;
+  border-radius: 20px;
+
+  .ui-widget-header {
+    border: 1px solid #ddd;
+    background: black;
+    color: #333;
+    font-weight: bold;
+    border-radius: 50px 0px 0px 50px;
+  }
+
+  .ui-slider-horizontal .ui-slider-range-min {
+    left: 0;
+    background: black;
+  }
+  .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active {
+    
+    background: white;
+    font-weight: normal;
+    transform: rotate(45deg);
+    height: 2.2em;
+    width: 2.2em;
+    border-radius: 0px 30px 30px 30px;
+    border: 2px solid black;
+  
+    color: #454545;
+  }
+
+}
+
+
 .slidecontainer {
 	width: 100%;
 	display: flex;

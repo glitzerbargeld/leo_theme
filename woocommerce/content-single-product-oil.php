@@ -52,6 +52,8 @@ if ( post_password_required() ) {
 
 		<div class="ast-col-md-4 ast-col-xs-12 ast-col-md-pull-4">
 
+			
+
 			<?php
 				/**
 				 * Hook: woocommerce_single_product_summary.

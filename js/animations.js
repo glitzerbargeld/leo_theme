@@ -118,3 +118,25 @@ function openNav() {
 function closeNav() {
   document.getElementById("myNav").style.width = "0%";
 }
+
+
+/*PRODUCT VARIATIONS SLIDER CBD ÖLE*/
+
+
+jQuery( function() {
+    var select = jQuery( "#anteil-cbd" );
+    var slider = jQuery( "#variations-slider" ).slider({
+      min: 1,
+      max: 3,
+      range: "min",
+      animate:"slow",
+      value: select[ 0 ].selectedIndex + 1,
+      slide: function( event, ui ) {
+        select[ 0 ].selectedIndex = ui.value - 1;
+      }
+    }).slider("pips");
+    jQuery( "#anteil-cbd" ).on( "change", function() {
+      slider.slider( "value", this.selectedIndex + 1 );
+      
+    });
+  } );
