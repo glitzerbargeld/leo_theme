@@ -428,12 +428,6 @@ HEADER SECTION
   z-index: 99999;
 }
 
-
-.ui-slider-horizontal .ui-slider-handle {
-	top: -0.3em;
-	margin-left: -1.6em;
-}
-
 #variations-slider{
   background: black;
   margin-top: 5%;
@@ -466,6 +460,7 @@ HEADER SECTION
     width: 2.2em;
     border-radius: 0px 30px 30px 30px;
     border: 2px solid black;
+    margin-left: -1.1em;
   
     color: #454545;
   }
