@@ -1,6 +1,6 @@
 <style>
 	.woocommerce div.product form.cart .variations {
-	display: none;
+	display: none;^
 	}
 </style>
 
