@@ -133,11 +133,12 @@ jQuery( function() {
       value: select[ 0 ].selectedIndex + 1,
       slide: function( event, ui ) {
         select[ 0 ].selectedIndex = ui.value - 1;
+        select.trigger("change");
       }
     });
     jQuery( "#anteil-cbd" ).on( "change", function() {
-      slider.slider( "value", this.selectedIndex + "%" );
-      
+      slider.slider( "value", this.selectedIndex + 1 );
+      console.log("Value Passed: " + this.selectedIndex + 1)
       
     });
   } );
