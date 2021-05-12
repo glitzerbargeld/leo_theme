@@ -102,7 +102,7 @@ function sanaleo_main_menu_overlay(){
 
 function range_slider(){
 	echo '<div class="range-values"><ul><li>5%</li><li>15%</li><li>25%</li></ul></div>';
-	echo '<div id="variations-slider"></div>';
+	echo '<div id="variations-slider"></div><h2>CBD ANTEIL</h2>';
 
 }
 
