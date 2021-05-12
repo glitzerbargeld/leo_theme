@@ -429,7 +429,7 @@ HEADER SECTION
   font-size: 1.2em;
 }
 #cbdanteil-title:hover{
-  cursor: none;
+  cursor: alias;
 }
 
 #variations-slider{
@@ -523,8 +523,6 @@ HEADER SECTION
   }
 
   .range-values{
-    width: 80%;
-    padding: 0 5%;
 
     ul{
       display: flex;
