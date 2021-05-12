@@ -129,7 +129,6 @@ jQuery( function() {
       min: 1,
       max: 3,
       range: "min",
-      step: 1,
       animate:"fast",
       orientation: "horizontal",
       value: select[ 0 ].selectedIndex + 1,

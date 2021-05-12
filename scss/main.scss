@@ -428,20 +428,17 @@ HEADER SECTION
   z-index: 99999;
 }
 
-#variations-slider .ui-widget-header {
-	/* border: 1px solid #ddd; */
-	background: black;
-	color: #333;
-	font-weight: bold;
-	border-radius: 50px;
-}
 
+.ui-slider-horizontal .ui-slider-handle {
+	top: -0.3em;
+	margin-left: -1.6em;
+}
 
 #variations-slider{
   background: black;
   margin-top: 5%;
   margin-bottom: 5%;
-  height: 1.5em;
+  height: 2.7em;
   border-radius: 20px;
   width: 100%;
 
