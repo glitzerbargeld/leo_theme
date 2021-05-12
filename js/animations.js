@@ -128,9 +128,8 @@ jQuery( function() {
     var slider = jQuery( "#variations-slider" ).slider({
       min: 1,
       max: 3,
-      range: "min",
+      range: false,
       animate:"fast",
-      orientation: "horizontal",
       value: select[ 0 ].selectedIndex + 1,
       slide: function( event, ui ) {
         select[ 0 ].selectedIndex = ui.value - 1;
