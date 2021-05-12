@@ -136,7 +136,7 @@ jQuery( function() {
       }
     });
     jQuery( "#anteil-cbd" ).on( "change", function() {
-      slider.slider( "value", this.selectedIndex + 1 );
+      slider.slider( "value", this.selectedIndex + "%" );
       
       
     });
