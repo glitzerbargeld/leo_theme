@@ -130,11 +130,11 @@ jQuery( function() {
       max: 3,
       range: "min",
       animate:"slow",
-      value: select[ 0 ].selectedIndex + 1,
+      value: select[ 0 ].selectedIndex,
       slide: function( event, ui ) {
-        select[ 0 ].selectedIndex = ui.value - 1;
+        select[ 0 ].selectedIndex = ui.value;
       }
-    }).slider("pips");
+    });
     jQuery( "#anteil-cbd" ).on( "change", function() {
       slider.slider( "value", this.selectedIndex + 1 );
       

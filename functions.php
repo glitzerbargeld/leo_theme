@@ -37,6 +37,7 @@ function child_enqueue_scripts(){
 	wp_enqueue_script('rellax-js', get_stylesheet_directory_uri() . '/js/rellax-master/rellax.min.js', array(), false, true);
     wp_enqueue_script('my-rellax', get_stylesheet_directory_uri() . '/js/my-rellax.js', array(), false, true);
     wp_enqueue_script( 'jquery-ui-slider' );
+    
 }
 
 add_action( 'wp_enqueue_scripts', 'child_enqueue_scripts');
