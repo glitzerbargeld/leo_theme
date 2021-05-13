@@ -117,6 +117,13 @@ HEADER SECTION
     }
 
 
+/*PRODUCT CATEGORY ARCHIVE*/ 
+
+.term-cbd-blueten .ast-separate-container .ast-article-single, .ast-separate-container .comment-respond, .ast-separate-container .ast-comment-list li, .ast-separate-container .ast-woocommerce-container, .ast-separate-container .error-404, .ast-separate-container .no-results, .single.ast-separate-container .ast-author-meta, .ast-separate-container .related-posts-title-wrapper, .ast-separate-container.ast-two-container #secondary .widget, .ast-separate-container .comments-count-wrapper, .ast-box-layout.ast-plain-container .site-content, .ast-padded-layout.ast-plain-container .site-content {
+	background-color: #ecfbe8;
+}
+
+
 /* MENUS */ 
 
 
@@ -607,6 +614,7 @@ HEADER SECTION
   .woocommerce div.product div.images, .woocommerce div.product div.summary, .woocommerce #content div.product div.images, .woocommerce #content div.product div.summary, .woocommerce-page div.product div.images, .woocommerce-page div.product div.summary, .woocommerce-page #content div.product div.images, .woocommerce-page #content div.product div.summary {
     float: none;
     width: 40%; }
+
   .image-wrap {
     margin-left: auto;
     margin-right: auto;
