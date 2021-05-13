@@ -575,12 +575,20 @@ HEADER SECTION
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  height: 58vh; }
+  height: auto;}
 
 .ast-advanced-headers-title {
   font-size: 2.5em;
   margin-left: 10%;
   margin-right: 10%; }
+
+  .ast-title-bar-wrap {
+    
+    background-color: white;
+  }
+
+
+
 
 /*Product Details*/
 /*Product Gallery*/
