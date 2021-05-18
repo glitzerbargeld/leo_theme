@@ -1,3 +1,10 @@
+<style>
+	.woocommerce div.product form.cart .variations {
+	display: none;^
+	}
+</style>
+
+
 <?php
 /**
  * The template for displaying product content in the single-product.php template
@@ -52,6 +59,8 @@ if ( post_password_required() ) {
 
 		<div class="ast-col-md-4 ast-col-xs-12 ast-col-md-pull-4">
 
+			
+
 			<?php
 				/**
 				 * Hook: woocommerce_single_product_summary.
@@ -101,12 +110,35 @@ if ( post_password_required() ) {
 <?php do_action( 'woocommerce_after_single_product' ); ?>
 
 
+
+<?php
+
+/*
+
+  $( function() {
+    var select = $( "#anteil-cbd" );
+    var slider = $( "#variation-slider" ).slider({
+      min: 5,
+      max: 15,
+	  step: 5,
+      range: "min",
+      value: select[ 0 ].selectedIndex + 1,
+      slide: function( event, ui ) {
+        select[ 0 ].selectedIndex = ui.value - 1;
+      }
+    });
+    $( "#anteil-cbd" ).on( "change", function() {
+      slider.slider( "value", this.selectedIndex + 1 );
+    });
+  } );
+
+  */
+?>
+
+
+
 <script>
 
-function selectElement(id, valueToSelect) {    
-    let element = document.getElementById(id);
-    element.value = valueToSelect;
-}
 
 
 	// EventListener hinzufügen
@@ -115,30 +147,17 @@ window.addEventListener("load", function(){
 // Range-Slider in Variable speichern 
 var slider = document.querySelector("input[type='range']");
 
-
-console.log(slider);
-
 // EventListener für das Verändern des Sliders hinzufügen
 slider.addEventListener("change", function(){
 
-
-let element = document.getElementById("cbd-gehalt");
-console.log(element);
-console.log(this.value);
+console.log("change");
+let element = document.getElementById("anteil-cbd");
 element.value = this.value + "%";
-
-var event = new Event('change');
-element.dispatchEvent(event);
-
-
-
+element.dispatchEvent(new Event('change'))
+console.log(element.value);
 
 
 });
 });
 
-
-
-
-
-</script>
+</script> 

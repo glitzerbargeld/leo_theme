@@ -115,3 +115,25 @@ function filter_dropdown_option_html( $html, $args ) {
 
     return $html;
 }
+
+
+// Removes specific product cats from single product pages
+
+add_filter( 'get_the_terms', 'custom_product_cat_terms', 20, 3 );
+function custom_product_cat_terms( $terms, $post_id, $taxonomy ){
+    // HERE below define your excluded product categories Term IDs in this array
+    $category_ids = array( 174,168,176,175,177,178 );
+
+    if( ! is_product() ) // Only single product pages
+        return $terms;
+
+    if( $taxonomy != 'product_cat' ) // Only product categories custom taxonomy
+        return $terms;
+
+    foreach( $terms as $key => $term ){
+        if( in_array( $term->term_id, $category_ids ) ){
+            unset($terms[$key]); // If term is found we remove it
+        }
+    }
+    return $terms;
+}
