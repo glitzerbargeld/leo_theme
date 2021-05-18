@@ -192,22 +192,17 @@ HEADER SECTION
 
 /*END - OVERLAY MENU*/
 
-
-
-
-
-
-  .menu-item-has-children .sub-menu {
+.menu-item-has-children .sub-menu {
   display:block !important;
-  }
+}
   
-  button.ast-menu-toggle {
-      display: none !important;
-  }
+button.ast-menu-toggle {
+  display: none !important;
+}
   
-  .main-navigation .icon-arrow{
-    display:none !important;
-  }
+.main-navigation .icon-arrow{
+  display:none !important;
+}
   
 
 
@@ -425,6 +420,76 @@ HEADER SECTION
 
 
 
+
+/*Product Page - Blüten */
+
+/*Size Selector*/
+
+.glass-wrapper {
+  display: inline-flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: auto;
+  margin: 5%;
+}
+
+.glass {
+  border: 4px black solid;
+  border-top: 11px solid rgb(221, 193, 142);
+}
+
+.glass-wrapper .glass {
+  &:nth-child(1) {
+    margin-right: 2%;
+    padding: 4% 2% 0;
+  }
+
+  &:nth-child(2) {
+    margin-right: 2%;
+    padding: 7% 3% 0;
+  }
+
+  &:nth-child(3) {
+    margin-right: 2%;
+    padding: 9% 3% 0;
+  }
+
+  &:nth-child(4) {
+    padding: 11% 4% 0;
+  }
+}
+
+.buds {
+  background-color: gray;
+  border-radius: 5px 5px 1px 1px;
+  margin: auto;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.glass:hover .buds {
+  background: rgb(136, 175, 136);
+}
+
+.glass-wrapper .glass {
+  &:nth-child(1) .buds {
+    padding: 7px 11px 6px;
+  }
+
+  &:nth-child(2) .buds {
+    padding: 31px 19px 6px;
+  }
+
+  &:nth-child(3) .buds {
+    padding: 52px 22px 7px;
+  }
+
+  &:nth-child(4) .buds {
+    padding: 78px 30px 6px;
+  }
+}
 
 
 
