@@ -106,6 +106,20 @@ function range_slider(){
 
 }
 
+
+function container_size_buds(){
+  echo '
+    <div class="content">
+      <div class="glass-wrapper">
+          <span class="glass"><div class="buds">2g</div></span>
+          <span class="glass"><div class="buds">5g</div></span>
+          <span class="glass"><div class="buds">10g</div></span>
+          <span class="glass"><div class="buds">20g</div></span>
+      </div>
+    </div>
+  '
+}
+
 add_filter( 'woocommerce_dropdown_variation_attribute_options_html', 'filter_dropdown_option_html', 12, 2 );
 function filter_dropdown_option_html( $html, $args ) {
     $show_option_none_text = $args['show_option_none'] ? $args['show_option_none'] : __( 'Choose an option', 'woocommerce' );
@@ -137,3 +151,5 @@ function custom_product_cat_terms( $terms, $post_id, $taxonomy ){
     }
     return $terms;
 }
+
+
