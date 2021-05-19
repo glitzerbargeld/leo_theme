@@ -82,30 +82,11 @@ function wpb_product_menu() {
 	echo '</div>';
 }
 
-/*
-
-add_action( 'astra_main_header_bar_top', 'sanaleo_main_menu_overlay' );
-
-
-function sanaleo_main_menu_overlay(){
-    echo '<div id="myNav" class="overlay">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <div class="overlay-content">';
-    wp_nav_menu( array( 'main-menu', 'container_class' => 'my_extra_menu_class' ) );
-    echo '</div>
-  </div>';
-    
-}
-
-*/
-
-
 function range_slider(){
 	echo '<div class="range-values"><ul><li>5%</li><li>15%</li><li>25%</li></ul></div>';
 	echo '<div id="variations-slider"><h3 id="cbdanteil-title"style="color: white;">CBD ANTEIL</h3></div>';
 
 }
-
 
 function container_size_buds(){
   echo '
