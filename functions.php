@@ -117,7 +117,7 @@ function container_size_buds(){
           <span class="glass"><div class="buds">20g</div></span>
       </div>
     </div>
-  '
+  ';
 }
 
 add_filter( 'woocommerce_dropdown_variation_attribute_options_html', 'filter_dropdown_option_html', 12, 2 );
