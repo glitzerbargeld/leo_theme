@@ -426,23 +426,21 @@ button.ast-menu-toggle {
 
 	/*Product Detail*/
 	.ProductAttributes_lebensmittel {
-		display: flex;
+		display: inline-flex;
 		flex-direction: row;
 		width: 50%;
 		justify-content: space-around;
 	}
 	.ProductAttributes {
-		display: flex;
+		display: inline-flex;
 		flex-direction: row;
 		justify-content: space-between
 	}
 
 	.ProductAttributesCol {
-		width: 80px;
-		color: green;
+		width: 15%;
 		text-align: center;
 		margin-bottom: 20px;
-		font-size: 16px !important;
 	}
 	.IconAttributes {
 		display: flex;
