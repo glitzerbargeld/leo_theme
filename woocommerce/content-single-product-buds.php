@@ -136,3 +136,28 @@ if ( post_password_required() ) {
 ?>
 
 
+
+<script>
+
+
+
+	// EventListener hinzufügen
+window.addEventListener("load", function(){
+
+// Range-Slider in Variable speichern 
+var slider = document.querySelector("input[type='range']");
+
+// EventListener für das Verändern des Sliders hinzufügen
+slider.addEventListener("change", function(){
+
+console.log("change");
+let element = document.getElementById("anteil-cbd");
+element.value = this.value + "%";
+element.dispatchEvent(new Event('change'))
+console.log(element.value);
+
+
+});
+});
+
+</script> 
