@@ -45,7 +45,7 @@ get_header( 'shop' ); ?>
 				 wc_get_template_part( 'content', 'single-product-oil' );
 			 } 
 			 else  if ( in_array( 'blueten', $categories ) ) {
-				wc_get_template_part( 'content', 'single-product-blueten' );
+				wc_get_template_part( 'content', 'single-product-buds' );
 			} 
 			 else {
 				 wc_get_template_part( 'content', 'single-product' );
