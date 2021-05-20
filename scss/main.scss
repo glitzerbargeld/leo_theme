@@ -421,6 +421,47 @@ button.ast-menu-toggle {
 
 
 
+
+/*Product Page - Allgemein */
+
+	/*Product Detail*/
+	.ProductAttributes_lebensmittel {
+		display: flex;
+		flex-direction: row;
+		width: 50%;
+		justify-content: space-around;
+	}
+	.ProductAttributes {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between
+
+	}
+	.ProductAttributesCol {
+		width: 80px;
+		color: green;
+		text-align: center;
+		margin-bottom: 20px;
+		font-size: 16px !important;
+	}
+	.IconAttributes {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		color: green;
+		width: 100%;
+		margin-left: 10px;
+		margin-right: 10px;
+		padding: 0px 100px;
+	}
+	.IconAttributesCol {
+		width: 100px;
+		text-align: center;
+		/*margin: 0px 80px 40px 80px;*/
+		color: green;
+	}
+	
+
 /*Product Page - Blüten */
 
 /*Size Selector*/
