@@ -44,7 +44,7 @@ get_header( 'shop' ); ?>
 			 if ( in_array( 'oil', $categories ) ) {
 				 wc_get_template_part( 'content', 'single-product-oil' );
 			 } 
-			 else  if ( in_array( 'blueten', $categories ) ) {
+			 else  if ( in_array( 'buds', $categories ) ) {
 				wc_get_template_part( 'content', 'single-product-buds' );
 			} 
 			 else {
