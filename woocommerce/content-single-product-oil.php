@@ -80,7 +80,32 @@ if ( post_password_required() ) {
 				
 				
 				
-			?>
+		
+
+add_action( 'woocommerce_single_product_summary', 'woocommerce_total_product_price', 25 );
+function woocommerce_total_product_price() {
+    global $woocommerce, $product;
+    // let's setup our divs
+    echo sprintf('<div id="product_total_price" style="font-size: 16px; font-weight: 200;">%s %s</div>',__('Total Price (incl Tax):','woocommerce'),'<span class="price">'. get_woocommerce_currency_symbol() .' ' .$product->get_price().'</span>');
+    ?>
+        <script>
+            jQuery(function($){
+                var price = <?php echo $product->get_price(); ?>,
+                    currency = '<?php echo get_woocommerce_currency_symbol(); ?>';
+
+                $('[name=quantity]').change(function(){
+                    if (!(this.value < 1)) {
+
+                        var product_total = parseFloat(price * this.value);
+
+                        $('#product_total_price .price').html( currency + product_total.toFixed(0));
+
+                    }
+                });
+            });
+        </script>
+    <?php
+} ?>
 		
 
 
