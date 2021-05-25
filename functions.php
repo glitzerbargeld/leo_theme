@@ -162,3 +162,11 @@ function display_shop_loop_product_attributes() {
 }
 
 
+
+// FULL PRICE including Quantity
+function woocommerce_total_product_price() {
+    global $woocommerce, $product;
+    echo sprintf('<div id="product_total_price" style="font-size: 16px; font-weight: 200;">%s %s</div>',__('Total Price (incl Tax):','woocommerce'),'<span class="price">'. get_woocommerce_currency_symbol() .' ' .$product->get_price().'</span>');
+    ?>
+
+

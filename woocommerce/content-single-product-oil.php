@@ -77,37 +77,7 @@ if ( post_password_required() ) {
 				add_action( 'woocommerce_before_add_to_cart_button', 'range_slider' );
 				add_action('woocommerce_product_thumbnails', 'woocommerce_template_single_excerp');
 				do_action( 'woocommerce_single_product_summary' );
-				
-				
-				
-		
-
-add_action( 'woocommerce_single_product_summary', 'woocommerce_total_product_price', 25 );
-function woocommerce_total_product_price() {
-    global $woocommerce, $product;
-    // let's setup our divs
-    echo sprintf('<div id="product_total_price" style="font-size: 16px; font-weight: 200;">%s %s</div>',__('Total Price (incl Tax):','woocommerce'),'<span class="price">'. get_woocommerce_currency_symbol() .' ' .$product->get_price().'</span>');
-    ?>
-        <script>
-            jQuery(function($){
-                var price = <?php echo $product->get_price(); ?>,
-                    currency = '<?php echo get_woocommerce_currency_symbol(); ?>';
-
-                $('[name=quantity]').change(function(){
-                    if (!(this.value < 1)) {
-
-                        var product_total = parseFloat(price * this.value);
-
-                        $('#product_total_price .price').html( currency + product_total.toFixed(0));
-
-                    }
-                });
-            });
-        </script>
-    <?php
-} ?>
-		
-
+				add_action( 'woocommerce_single_product_summary', 'woocommerce_total_product_price', 25 );
 
 		</div>
 		
@@ -136,53 +106,19 @@ function woocommerce_total_product_price() {
 
 
 
-<?php
-
-/*
-
-  $( function() {
-    var select = $( "#anteil-cbd" );
-    var slider = $( "#variation-slider" ).slider({
-      min: 5,
-      max: 15,
-	  step: 5,
-      range: "min",
-      value: select[ 0 ].selectedIndex + 1,
-      slide: function( event, ui ) {
-        select[ 0 ].selectedIndex = ui.value - 1;
-      }
-    });
-    $( "#anteil-cbd" ).on( "change", function() {
-      slider.slider( "value", this.selectedIndex + 1 );
-    });
-  } );
-
-  */
-?>
-
-
-
 <script>
+jQuery(function($){
+	var price = <?php echo $product->get_price(); ?>,
+		currency = '<?php echo get_woocommerce_currency_symbol(); ?>';
 
+	$('[name=quantity]').change(function(){
+		if (!(this.value < 1)) {
 
+			var product_total = parseFloat(price * this.value);
 
-	// EventListener hinzufügen
-window.addEventListener("load", function(){
+			$('#product_total_price .price').html( currency + product_total.toFixed(0));
 
-// Range-Slider in Variable speichern 
-var slider = document.querySelector("input[type='range']");
-
-// EventListener für das Verändern des Sliders hinzufügen
-slider.addEventListener("change", function(){
-
-console.log("change");
-let element = document.getElementById("anteil-cbd");
-element.value = this.value + "%";
-element.dispatchEvent(new Event('change'))
-console.log(element.value);
-
-
+		}
+	});
 });
-});
-
-</script> 
+</script>
