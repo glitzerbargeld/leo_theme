@@ -134,3 +134,29 @@ function custom_product_cat_terms( $terms, $post_id, $taxonomy ){
 }
 
 
+// Add Product Attributes to Shop Page
+
+add_action('woocommerce_after_shop_loop_item_title', 'display_shop_loop_product_attributes');
+function display_shop_loop_product_attributes() {
+    global $product;
+
+    // Define you product attribute taxonomies in the array
+    $product_attribute_taxonomies = array( 'pa_country', 'pa_class', 'pa_faction', 'pa_gender' );
+    $attr_output = array(); // Initializing
+
+    // Loop through your defined product attribute taxonomies
+    foreach( $product_attribute_taxonomies as $taxonomy ){
+        if( taxonomy_exists($taxonomy) ){
+            $label_name = wc_attribute_label( $taxonomy, $product );
+
+            $term_names = $product->get_attribute( $taxonomy );
+
+            if( ! empty($term_names) ){
+                $attr_output[] = '<span class="'.$taxonomy.'">'.$label_name.': '.$term_names.'</span>';
+            }
+        }
+    }
+
+    // Output
+    echo '<div class="product-attributes">'.implode( '<br>', $attr_output ).'</div>';
+}
