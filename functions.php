@@ -160,3 +160,5 @@ function display_shop_loop_product_attributes() {
     // Output
     echo '<div class="product-attributes">'.implode( '<br>', $attr_output ).'</div>';
 }
+
+
