@@ -77,7 +77,7 @@ if ( post_password_required() ) {
 				add_action( 'woocommerce_before_add_to_cart_button', 'range_slider' );
 				add_action('woocommerce_product_thumbnails', 'woocommerce_template_single_excerp');
 				do_action( 'woocommerce_single_product_summary' );
-				add_action( 'woocommerce_single_product_summary', 'woocommerce_total_product_price', 25 );
+				add_action( 'woocommerce_single_product_summary', 'woocommerce_total_product_price', 25 ); ?>
 
 		</div>
 		
