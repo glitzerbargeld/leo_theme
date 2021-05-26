@@ -1,6 +1,7 @@
 
 var rellax = new Rellax('.rellax-bottle', {
-    speed: -3.5,
+    breakpoints: [544, 768, 1200],
+    speed: -2.5,
     center: true,
     wrapper: null,
     round: true,
@@ -10,6 +11,7 @@ var rellax = new Rellax('.rellax-bottle', {
 
 
   var rellax = new Rellax('.rellax-cap', {
+    breakpoints: [544, 768, 1200],
     speed: 2.5,
     center: true,
     wrapper: null,
@@ -19,6 +21,7 @@ var rellax = new Rellax('.rellax-bottle', {
   });
 
   var rellax = new Rellax('.rellax-faq', {
+    breakpoints: [544, 768, 1200],
     speed: 3,
     center: true,
     wrapper: null,
