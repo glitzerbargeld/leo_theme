@@ -142,3 +142,8 @@ jQuery( function() {
       
     });
   } );
+
+
+  /*PRODUCT VARIATIONS GLÄSER CBD BLÜTEN*/
+
+  
