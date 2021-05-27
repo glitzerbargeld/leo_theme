@@ -140,6 +140,6 @@ if ( post_password_required() ) {
 <script>
 
 glasses = jQuery(".glass");
-window.alert("sometext");
+window.alert(glasses);
 
 </script> 
