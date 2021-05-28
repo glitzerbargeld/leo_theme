@@ -129,8 +129,6 @@ buds.forEach(el => {
 })
 
 
-console.log("Budvalues: " + budvalues);
-console.log("Selectoptions: " + selectoptionsarray);
 
 
 buds.forEach(el => el.addEventListener('click', event => {
