@@ -134,6 +134,7 @@ buds.forEach(el => {
 buds.forEach(el => el.addEventListener('click', event => {
     event.preventDefault();
     select.value = event.target.getAttribute("data-el");
+	dropdownselect.change();
     buds.forEach(el => el.style.backgroundColor ="gray");
     event.target.style.backgroundColor = "rgb(136, 175, 136)";
 
@@ -143,6 +144,7 @@ buds.forEach(el => el.addEventListener('click', event => {
 buds.forEach(el => el.addEventListener('touchstart', event => {
     event.preventDefault();
     select.value = event.target.getAttribute("data-el");
+	dropdownselect.change();
     buds.forEach(el => el.style.backgroundColor ="gray");
     event.target.style.backgroundColor = "rgb(136, 175, 136)";
 
