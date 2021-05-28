@@ -115,7 +115,7 @@ const buds = document.querySelectorAll('.buds');
 const select = document.getElementById("pa_menge");
 const dropdownselect = jQuery("#pa_menge");
 
-buds.forEach(el => if(el.getAttribute("data-el") == select.value){el.style.backgroundColor = "rgb(136, 175, 136)"});
+buds.forEach(el => {if(el.getAttribute("data-el") == select.value){el.style.backgroundColor = "rgb(136, 175, 136)"}});
 
 buds.forEach(el => el.addEventListener('click', event => {
     event.preventDefault();
@@ -133,8 +133,6 @@ buds.forEach(el => el.addEventListener('touchstart', event => {
     buds.forEach(el => el.style.backgroundColor ="gray");
     event.target.style.backgroundColor = "rgb(136, 175, 136)";
 	$("#pa_menge").change();
-
-
 }));
 
 </script> 
