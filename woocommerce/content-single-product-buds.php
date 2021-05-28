@@ -119,6 +119,7 @@ buds.forEach(el => el.addEventListener('click', event => {
     select.value = event.target.getAttribute("data-el");
     buds.forEach(el => el.style.backgroundColor ="gray");
     event.target.style.backgroundColor = "rgb(136, 175, 136)";
+	$("#pa_menge").change();
 
 
 }));
@@ -128,6 +129,7 @@ buds.forEach(el => el.addEventListener('touchstart', event => {
     select.value = event.target.getAttribute("data-el");
     buds.forEach(el => el.style.backgroundColor ="gray");
     event.target.style.backgroundColor = "rgb(136, 175, 136)";
+	$("#pa_menge").change();
 
 
 }));
