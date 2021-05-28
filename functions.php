@@ -94,8 +94,8 @@ function container_size_buds(){
       <div class="glass-wrapper">
           <span class="glass"><div class="buds" data-el="2g">2g</div></span>
           <span class="glass"><div class="buds" data-el="5g">5g</div></span>
-          <span class="glass"><div class="buds data-el="10g"">10g</div></span>
-          <span class="glass"><div class="buds data-el="20g"">20g</div></span>
+          <span class="glass"><div class="buds" data-el="10g"">10g</div></span>
+          <span class="glass"><div class="buds" data-el="20g"">20g</div></span>
       </div>
     </div>
   ';
