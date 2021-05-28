@@ -90,11 +90,6 @@ if ( post_password_required() ) {
 
 	</div>
 
-
-
-
-	
-
 	<?php
 	/**
 	 * Hook: woocommerce_after_single_product_summary.
@@ -105,41 +100,34 @@ if ( post_password_required() ) {
 	 */
 	do_action( 'woocommerce_after_single_product_summary' );
 	?>
+	
 </div>
 
 <?php do_action( 'woocommerce_after_single_product' ); ?>
 
 
-
-<?php
-
-/*
-
-  $( function() {
-    var select = $( "#anteil-cbd" );
-    var slider = $( "#variation-slider" ).slider({
-      min: 5,
-      max: 15,
-	  step: 5,
-      range: "min",
-      value: select[ 0 ].selectedIndex + 1,
-      slide: function( event, ui ) {
-        select[ 0 ].selectedIndex = ui.value - 1;
-      }
-    });
-    $( "#anteil-cbd" ).on( "change", function() {
-      slider.slider( "value", this.selectedIndex + 1 );
-    });
-  } );
-
-  */
-?>
-
-
-
 <script>
 
-glasses = jQuery(".glass");
-window.alert(glasses);
+
+const buds = document.querySelectorAll('.buds');
+const select = document.querySelector("#choices");
+
+buds.forEach(el => el.addEventListener('click', event => {
+    event.preventDefault();
+    select.value = event.target.getAttribute("data-el");
+    buds.forEach(el => el.style.backgroundColor ="gray");
+    event.target.style.backgroundColor = "rgb(136, 175, 136)";
+
+
+}));
+
+buds.forEach(el => el.addEventListener('touchstart', event => {
+    event.preventDefault();
+    select.value = event.target.getAttribute("data-el");
+    buds.forEach(el => el.style.backgroundColor ="gray");
+    event.target.style.backgroundColor = "rgb(136, 175, 136)";
+
+
+}));
 
 </script> 
