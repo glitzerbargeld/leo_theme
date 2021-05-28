@@ -114,6 +114,7 @@ jQuery(function () {
     console.log("Value Passed: " + this.selectedIndex + 1);
   });
 });
+/*PRODUCT VARIATIONS GLÄSER CBD BLÜTEN*/
 "use strict";
 
 $(document).ready(function () {
@@ -711,7 +712,8 @@ $(document).ready(function () {
 "use strict";
 
 var rellax = new Rellax('.rellax-bottle', {
-  speed: -3.5,
+  breakpoints: [544, 768, 1200],
+  speed: -2.5,
   center: true,
   wrapper: null,
   round: true,
@@ -719,6 +721,7 @@ var rellax = new Rellax('.rellax-bottle', {
   horizontal: false
 });
 var rellax = new Rellax('.rellax-cap', {
+  breakpoints: [544, 768, 1200],
   speed: 2.5,
   center: true,
   wrapper: null,
@@ -727,6 +730,7 @@ var rellax = new Rellax('.rellax-cap', {
   horizontal: false
 });
 var rellax = new Rellax('.rellax-faq', {
+  breakpoints: [544, 768, 1200],
   speed: 3,
   center: true,
   wrapper: null,
