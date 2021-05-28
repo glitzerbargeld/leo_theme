@@ -112,7 +112,7 @@ if ( post_password_required() ) {
 
 
 const buds = document.querySelectorAll('.buds');
-const select = document.getElementByID("pa_menge");
+const select = document.getElementById("pa_menge");
 
 buds.forEach(el => el.addEventListener('click', event => {
     event.preventDefault();
