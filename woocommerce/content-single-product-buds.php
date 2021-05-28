@@ -100,7 +100,7 @@ if ( post_password_required() ) {
 	 */
 	do_action( 'woocommerce_after_single_product_summary' );
 	?>
-	
+
 </div>
 
 <?php do_action( 'woocommerce_after_single_product' ); ?>
@@ -110,7 +110,7 @@ if ( post_password_required() ) {
 
 
 const buds = document.querySelectorAll('.buds');
-const select = document.querySelector("#choices");
+const select = document.querySelector("#pa-menge");
 
 buds.forEach(el => el.addEventListener('click', event => {
     event.preventDefault();
