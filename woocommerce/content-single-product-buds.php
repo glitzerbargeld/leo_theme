@@ -120,7 +120,7 @@ buds.forEach(el => el.addEventListener('click', event => {
     select.value = event.target.getAttribute("data-el");
     buds.forEach(el => el.style.backgroundColor ="gray");
     event.target.style.backgroundColor = "rgb(136, 175, 136)";
-	dropdownselect.change();
+	select.fireEvent("onchange";
 
 
 }));
