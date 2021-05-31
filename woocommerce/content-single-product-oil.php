@@ -2,6 +2,9 @@
 	.woocommerce div.product form.cart .variations {
 	display: none;
 	}
+	.wp-post-image{
+clip-path: url("#zuschnitt");
+}
 </style>
 
 
