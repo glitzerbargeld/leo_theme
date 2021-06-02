@@ -151,4 +151,9 @@ buds.forEach(el => el.addEventListener('touchstart', event => {
 
 }));
 
+
+var cw = $('.outer-circle').width();
+$('.outer-circle').css({'height':cw+'px'});
+
+
 </script> 
