@@ -506,13 +506,14 @@ button.ast-menu-toggle {
  grid-gap: 5%;
 }
 .grid > div {
- background: #d9b382;
+background:linear-gradient(rgba(217, 179, 130, 0.5), rgba(217, 179, 130, 0.9)), url("/noisynoise.jpeg"); 
  padding: 1rem;
  display: flex;
  place-items: center;
  justify-content: center;
  border-radius: 50%;
  color: black;
+ 
 }
 .grid > div::before {
  content: "";
