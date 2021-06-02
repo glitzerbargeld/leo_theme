@@ -459,6 +459,38 @@ button.ast-menu-toggle {
 /*Product Page - Blüten */
 
 
+.outer-circle {
+  background-image: url("/bamboo.jpg");
+  position: relative;
+  width: 50%;
+  padding-top: 50%; /* 1:1 Aspect Ratio */
+  position: absolute;  
+  top: 58%;
+  left: 7%;
+  border-radius: 50%;
+}
+
+.inner-circle{
+   position: absolute;
+   width: 90%;
+   padding-top: 90%;
+   background: green;
+   z-index: 10;
+   left: 5%;
+   top: 5%;
+   border-radius: 50%;
+}
+
+.circle-content {
+  position:  absolute;
+  top: 30%;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  text-align: center;
+  font-size: 20px;
+  color: white;
+}
 
 
 /*Size Selector*/
