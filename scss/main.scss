@@ -474,12 +474,13 @@ button.ast-menu-toggle {
 .inner-circle {
 	position: absolute;
 	width: 88%;
-	padding-top: 88%;
+	padding-top: 78%;
 	background: green;
 	z-index: 10;
 	left: 6%;
 	top: 6%;
 	border-radius: 50%;
+	padding-bottom: 5%;
 }
 
 .circle-content {
