@@ -462,22 +462,24 @@ button.ast-menu-toggle {
 
 
 .outer-circle {
-  background-image: url("https://sanaleo-cbd.de/wp-content/uploads/2021/06/bamboo.jpg");
-  position: relative;
-  width: 50%;
-  padding-top: 50%; /* 1:1 Aspect Ratio */
-  border-radius: 50%;
+	background-image: url("https://sanaleo-cbd.de/wp-content/uploads/2021/06/bamboo.jpg");
+	position: relative;
+	width: 100%;
+	padding-top: 100%;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
-
-.inner-circle{
-   position: absolute;
-   width: 90%;
-   padding-top: 90%;
-   background: green;
-   z-index: 10;
-   left: 5%;
-   top: 5%;
-   border-radius: 50%;
+.inner-circle {
+	position: absolute;
+	width: 88%;
+	padding-top: 88%;
+	background: green;
+	z-index: 10;
+	left: 6%;
+	top: 6%;
+	border-radius: 50%;
 }
 
 .circle-content {
