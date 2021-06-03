@@ -458,9 +458,6 @@ button.ast-menu-toggle {
 
 /*Product Page - Blüten */
 
-
-
-
 .outer-circle {
 	background-image: url("https://sanaleo-cbd.de/wp-content/uploads/2021/06/bamboo.jpg");
 	position: relative;
@@ -489,11 +486,12 @@ button.ast-menu-toggle {
 	width: 88%;
 	padding-top: 78%;
 	background: url("https://sanaleo-cbd.de/wp-content/uploads/2021/06/noisynoise.jpeg");
-	opacity: 0.3;
+	opacity: 0.2;
 	left: 6%;
 	top: 6%;
 	border-radius: 50%;
 	padding-bottom: 5%;
+  filter: brightness(90%)
 }
 
 
@@ -646,7 +644,7 @@ button.ast-menu-toggle {
  grid-gap: 5%;
 }
 .grid > div {
-background:linear-gradient(rgba(217, 179, 130, 0.5), rgba(217, 179, 130, 0.9)), url("https://sanaleo-cbd.de/wp-content/uploads/2021/06/noisynoise.jpeg"); 
+background:linear-gradient(rgba(217, 179, 130, 0.5), rgba(253, 213, 160, 0.9)); 
  padding: 1rem;
  display: flex;
  place-items: center;
