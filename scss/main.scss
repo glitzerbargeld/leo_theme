@@ -753,6 +753,14 @@ background:linear-gradient(rgb(255, 237, 214), rgba(255, 212, 155, 0.98));
 }
 
 
+@media(max-width: 767px){
+.woocommerce-product-details__short-description{
+  text-align: center;
+}
+.image-wrap{ margin-top: -59%;}
+}
+
+
 /*Variation Slider*/
 
 
