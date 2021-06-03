@@ -467,6 +467,7 @@ button.ast-menu-toggle {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+  transform: rotate(50deg);
 }
 .inner-circle {
 	position: absolute;
@@ -478,6 +479,8 @@ button.ast-menu-toggle {
 	top: 6%;
 	border-radius: 50%;
 	padding-bottom: 5%;
+  transform: rotate(-50deg);
+  box-shadow: black 0px 0px 2px;
 }
 
 .circle-background {
