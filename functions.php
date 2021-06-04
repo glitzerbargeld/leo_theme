@@ -171,9 +171,10 @@ function woocommerce_total_product_price() {
 
 
 
-add_action('init', 'test_buds' );   
-function test_buds(){
+add_action('init', 'test_buds' );
 
+
+function test_buds(){
 if(is_product_category( 'buds' )){
     echo '
     <script>
@@ -182,7 +183,6 @@ if(is_product_category( 'buds' )){
     
     ';
 }
-
 }
 
 add_action('woocommerce_before_single_product', 'entferne_single_excerpt');
