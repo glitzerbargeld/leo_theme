@@ -86,6 +86,7 @@ if ( post_password_required() ) {
 				add_action( 'woocommerce_before_add_to_cart_button', 'container_size_buds' );
 				add_action('woocommerce_single_product_summary', 'woocommerce_template_single_excerpt' , 1);
 				do_action( 'woocommerce_single_product_summary' );
+				
 				?>
 		
 
