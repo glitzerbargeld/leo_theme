@@ -170,7 +170,7 @@ function woocommerce_total_product_price() {
 
 
 
-if(is_tax('product_cat', 'buds')){
+if(is_product_category( 'buds' )){
     echo '
     <script>
         alert("BUDS");
