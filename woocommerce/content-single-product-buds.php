@@ -77,6 +77,8 @@ if ( post_password_required() ) {
 				 * @hooked WC_Structured_Data::generate_product_data() - 60
 				 */
 				do_action( 'woocommerce_single_product_summary' );
+				remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 20 );
+				add_action('woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 1);
 				add_action( 'woocommerce_before_add_to_cart_button', 'container_size_buds' );
 				add_action('woocommerce_product_thumbnails', 'woocommerce_template_single_excerp');
 				
