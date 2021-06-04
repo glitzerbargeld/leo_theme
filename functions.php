@@ -176,7 +176,7 @@ if(is_product_category( 'buds' )){
         alert("BUDS");
     </script>
     
-    '
+    ';
 
 }
 
