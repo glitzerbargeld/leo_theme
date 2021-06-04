@@ -170,16 +170,6 @@ function woocommerce_total_product_price() {
 
 
 
-if(is_product_category( 'buds' )){
-    echo '
-    <script>
-        alert("BUDS");
-    </script>
-    
-    ';
-
-}
-
 add_action('woocommerce_before_single_product', 'entferne_single_excerpt');
 function entferne_single_excerpt(){
 	remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 20);
