@@ -170,3 +170,10 @@ function woocommerce_total_product_price() {
 
 
 
+function cspl_change_single_product_layout() {
+    // Disable the hooks so that their order can be changed.
+    remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 20 );
+    // Then the product short description.
+    add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 3 );
+    // Move the title to near the end.
+    }
