@@ -29,8 +29,13 @@ defined( 'ABSPATH' ) || exit;
 global $product;
 
 
+add_action('woocommerce_before_single_product', 'entferne_single_excerpt');
+function entferne_single_excerpt(){
+	remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 20);
+}
 
-remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 20);
+
+
 
 
 /**
