@@ -167,13 +167,4 @@ function display_shop_loop_product_attributes() {
 function woocommerce_total_product_price() {
     global $woocommerce, $product;
     echo sprintf('<div id="product_total_price" style="font-size: 16px; font-weight: 200;">%s %s</div>',__('Total Price (incl Tax):','woocommerce'),'<span class="price">'. get_woocommerce_currency_symbol() .' ' .$product->get_price().'</span>');}
-
-
-
-function cspl_change_single_product_layout() {
-    // Disable the hooks so that their order can be changed.
-    remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 20 );
-    // Then the product short description.
-    add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 3 );
-    // Move the title to near the end.
-    }
+}

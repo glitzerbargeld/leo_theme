@@ -28,6 +28,11 @@ defined( 'ABSPATH' ) || exit;
 
 global $product;
 
+
+
+remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 20);
+
+
 /**
  * Hook: woocommerce_before_single_product.
  *
@@ -76,14 +81,10 @@ if ( post_password_required() ) {
 				 * @hooked woocommerce_template_single_sharing - 50
 				 * @hooked WC_Structured_Data::generate_product_data() - 60
 				 */
-
-
-				add_action( 'woocommerce_before_single_product', 'cspl_change_single_product_layout' );
 				add_action( 'woocommerce_before_add_to_cart_button', 'container_size_buds' );
+				
+				add_action('woocommerce_single_product_summary', 'woocommerce_template_single_excerpt' , 1);
 				do_action( 'woocommerce_single_product_summary' );
-				
-				
-				
 				?>
 		
 
