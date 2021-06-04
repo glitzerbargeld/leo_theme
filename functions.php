@@ -169,6 +169,17 @@ function woocommerce_total_product_price() {
     echo sprintf('<div id="product_total_price" style="font-size: 16px; font-weight: 200;">%s %s</div>',__('Total Price (incl Tax):','woocommerce'),'<span class="price">'. get_woocommerce_currency_symbol() .' ' .$product->get_price().'</span>');}
 
 
+
+if(is_tax('product_cat', 'buds')){
+    echo '
+    <script>
+        alert("BUDS");
+    </script>
+    
+    '
+
+}
+
 add_action('woocommerce_before_single_product', 'entferne_single_excerpt');
 function entferne_single_excerpt(){
 	remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 20);
