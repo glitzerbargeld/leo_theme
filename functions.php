@@ -166,9 +166,24 @@ function display_shop_loop_product_attributes() {
 // FULL PRICE including Quantity
 function woocommerce_total_product_price() {
     global $woocommerce, $product;
-    echo sprintf('<div id="product_total_price" style="font-size: 16px; font-weight: 200;">%s %s</div>',__('Total Price (incl Tax):','woocommerce'),'<span class="price">'. get_woocommerce_currency_symbol() .' ' .$product->get_price().'</span>');}
+    echo sprintf('<div id="product_total_price" style="font-size: 16px; font-weight: 200;">%s %s</div>',__('Total Price (incl Tax):','woocommerce'),'<span class="price">'. get_woocommerce_currency_symbol() .' ' .$product->get_price().'</span>');
+}
 
 
+
+add_action('init', 'test_buds' );   
+function test_buds(){
+
+if(is_product_category( 'buds' )){
+    echo '
+    <script>
+        alert("BUDS");
+    </script>
+    
+    ';
+}
+
+}
 
 add_action('woocommerce_before_single_product', 'entferne_single_excerpt');
 function entferne_single_excerpt(){
