@@ -108,8 +108,8 @@ function customise_product_page() {
         else if(has_term('30', 'product_cat')){
             remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 20);
             add_action('woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 1);
-            add_action('woocommerce_before_single_product_summary', 'implement_row_beginning', 50);
-            add_action('woocommerce_after_single_product_summary', 'implement_div_classes', 10, 4);
+            // add_action('woocommerce_before_single_product_summary', 'implement_row_beginning', 50);
+            // add_action('woocommerce_after_single_product_summary', 'implement_div_classes', 10, 4);
 
         }
     
