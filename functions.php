@@ -45,7 +45,6 @@ function child_enqueue_scripts(){
 add_action( 'wp_enqueue_scripts', 'child_enqueue_scripts');
 
 
-<div class="ast-row"></div>
 
 include_once( get_stylesheet_directory() .'/woocommerce/product_hooks.php');
 
