@@ -200,24 +200,16 @@ if(is_product_category( 'buds' )){
 }
 }
 
-
-/*
-add_action('woocommerce_before_single_product', 'entferne_single_excerpt' , 80);
-function entferne_single_excerpt(){
-	remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 20);
-}
-
-
-add_action('woocommerce_before_single_product', 'packdasdarein', 20 );
-function packdasdarein() {
-    add_action('woocommerce_single_product_summary', 'woocommerce_template_single_excerpt' , 1);
-}
+/**
+ * Disable out of stock variations @ WooCommerce Single
 */
 
+add_filter( 'woocommerce_variation_is_active', 'njengah_grey_out_variations_out_of_stock', 10, 2 );
 
-// add_action( 'woocommerce_before_single_product', 'customise_product_buds_page' );
-// function customise_product_buds_page() {
-//   remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 20);
-//   add_action('woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 1);
-//   ... any other removes and adds here
-// }
+function njengah_grey_out_variations_out_of_stock( $is_active, $variation ) {
+
+    if ( ! $variation->is_in_stock() ) return false;
+
+    return $is_active;
+
+}
