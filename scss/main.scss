@@ -454,6 +454,18 @@ button.ast-menu-toggle {
 		/*margin: 0px 80px 40px 80px;*/
 		color: green;
 	}
+
+
+  // Changes the number of Columns for related products in mobile view
+
+  @media screen and (max-width: 767px){
+
+    .related.products ul.products li.product {
+     flex: 0 1 auto;
+     width: 45%;
+ 
+   }
+ }
 	
 
 /*Product Page - Blüten */
