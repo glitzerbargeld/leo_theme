@@ -54,7 +54,7 @@ include_once( get_stylesheet_directory() .'/woocommerce/product_hooks.php');
 function customise_product_page() {
 
 
-    if(is_product && has_term('31' , 'product_cat')){
+    if(is_product){
         if(has_term('31' , 'product_cat')){
             remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 20);
             add_action('woocommerce_before_single_product_summary', 'woocommerce_template_single_excerpt', 30);
