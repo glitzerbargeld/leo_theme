@@ -260,9 +260,9 @@ function njengah_grey_out_variations_out_of_stock( $is_active, $variation ) {
 }
 
 
-/**
- * Change number of related products output
- */ 
+/*
+  Change number of related products output
+ 
 function woo_related_products_limit() {
     global $product;
       
@@ -275,3 +275,4 @@ function woo_related_products_limit() {
       $args['columns'] = 2; // arranged in 2 columns
       return $args;
   }
+  */ 
