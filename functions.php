@@ -45,16 +45,62 @@ function child_enqueue_scripts(){
 add_action( 'wp_enqueue_scripts', 'child_enqueue_scripts');
 
 
-
+<div class="ast-row"></div>
 
 include_once( get_stylesheet_directory() .'/woocommerce/product_hooks.php');
 
 
 
+function implement_row_beginning(){
+    echo '<div class="ast-row">';
+}
+
+
+// TAKES UNLIMITED CLASSNAMES AND CREATES AN OPENING DIV TAG
+
+function implement_div_classes(...$classes) {
+
+    echo '<div class="';
+    
+    for($i=0; $i < count($classes); $i++){
+    
+        echo $cols[$i];
+        
+        if($i < count($classes)- 1){
+            echo ' ';
+        }
+    
+    }
+    
+    echo '"><br>';
+    
+}
+
+function close_div($div_num){
+    for($i=0; $i < $div_num + 1; $i++){
+        echo '</div>';
+    }
+    
+}
+
 function customise_product_page() {
+
+    /** 
+     * PRODUCT CATEGORY IDS
+     * 
+     * ÖLE: 31
+     * AROMABLÜTEN: 30
+     * VAPE: 140
+     * LEBENSMITTEL: 157
+     * SCHLAFKAPSELN: 161
+     * 
+     * 
+    */
+
 
 
     if(is_product){
+
         if(has_term('31' , 'product_cat')){
             remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 20);
             add_action('woocommerce_before_single_product_summary', 'woocommerce_template_single_excerpt', 30);
@@ -62,6 +108,9 @@ function customise_product_page() {
         else if(has_term('30', 'product_cat')){
             remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 20);
             add_action('woocommerce_single_product_summary', 'woocommerce_template_single_excerpt', 1);
+            add_action('woocommerce_before_single_product_summary', 'implement_row_beginning', 50);
+            add_action('woocommerce_after_single_product_summary', 'implement_div_classes', 10, 4);
+
         }
     
     }
