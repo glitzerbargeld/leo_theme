@@ -161,6 +161,12 @@ function container_size_buds(){
   ';
 }
 
+// ADD ANIMATION FOR BUD LITS
+
+
+
+// REMOVE OUT OF STOCK PRODUCTS FROM VARIATION DROPDOWN 
+
 add_filter( 'woocommerce_dropdown_variation_attribute_options_html', 'filter_dropdown_option_html', 12, 2 );
 function filter_dropdown_option_html( $html, $args ) {
     $show_option_none_text = $args['show_option_none'] ? $args['show_option_none'] : __( 'Choose an option', 'woocommerce' );
