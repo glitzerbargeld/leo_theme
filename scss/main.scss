@@ -459,7 +459,6 @@ button.ast-menu-toggle {
   // Changes the number of Columns for related products in mobile view
 
   @media screen and (max-width: 767px){
-
     .related.products ul.products li.product {
      flex: 0 1 auto;
      width: 45%;
@@ -470,7 +469,7 @@ button.ast-menu-toggle {
 
 /*Product Page - Blüten */
 
-.outer-circle {
+#outer-circle {
 	background-image: url("https://sanaleo-cbd.de/wp-content/uploads/2021/06/bamboo.jpg");
 	position: relative;
 	width: 100%;
@@ -482,7 +481,12 @@ button.ast-menu-toggle {
   transform: rotate(50deg);
   box-shadow: inset 1px -4px 16px #000, 0px 28px 38px black;
 }
-.inner-circle {
+
+.outer-circle_spin{
+  transform: rotate(45deg);
+}
+
+#inner-circle {
 	position: absolute;
 	width: 88%;
 	padding-top: 78%;
@@ -494,6 +498,10 @@ button.ast-menu-toggle {
 	padding-bottom: 5%;
   transform: rotate(-50deg);
   
+}
+
+.inner-circle_spin{
+  transform: rotate(-45deg);
 }
 
 .circle-background {
@@ -519,27 +527,27 @@ button.ast-menu-toggle {
 // PRODUKTINFO-BUTTONS
 
 #cbdgehalt{
-  display:block;
+  display:none;
 }
 
 #geruch{
-  display:block;
+  display:none;
 }
 
 #highcbd{
-  display:block;
+  display:none;
 }
 
 #naturbelassen{
-  display:block;
+  display:none;
 }
 
 #terpene{
-  display:block;
+  display:none;
 }
 
 #terpenecbd{
-  display:block;
+  display:none;
 }
 
 /*MANGO KUSH*/
@@ -688,6 +696,11 @@ button.ast-menu-toggle {
  grid-template-columns: repeat(auto-fill, minmax(35%, 1fr));
  grid-gap: 5%;
 }
+
+.grid-transform{
+  bottom: 20%;
+}
+
 .grid > div {
 background:linear-gradient(rgb(255, 237, 214), rgba(255, 212, 155, 0.98));
  padding: 1rem;
@@ -708,6 +721,122 @@ background:linear-gradient(rgb(255, 237, 214), rgba(255, 212, 155, 0.98));
  width: 80%;
  grid-area: 0.25;
 }
+
+
+.popup_btn{
+  cursor: pointer;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+transition: 0.7s;
+}
+
+
+
+#cbdgehalt{
+visibility: hidden;
+position: absolute;
+
+}
+
+.show{
+  visibility: visible !important;
+  
+  
+}
+
+#btn_cbdgehalt{
+  display: flex;
+  transition: width 0.7s;
+}
+
+#geruch{
+  visibility: hidden;
+  position: absolute;
+}
+
+#btn_geruch{
+  display: flex;
+  transition: width 0.7s;
+
+}
+
+#highcbd{
+  visibility: hidden;
+  position: absolute;
+}
+
+#btn_highcbd{
+  display: flex;
+  transition: width 0.7s;
+}
+
+#naturbelassen{
+  visibility: hidden;
+  position: absolute;
+}
+
+#btn_naturbelassen{
+  display: flex;
+  transition: width 0.7s;
+}
+
+#terpene{
+  visibility: hidden;
+  position: absolute;
+}
+
+#btn_terpene{
+  display: flex;
+  transition: width 0.7s;
+}
+
+#terpenecbd{
+  visibility: hidden;
+  position: absolute;
+}
+
+#btn_terpenecbd{
+  display: flex;
+  transition: all 0.7s;
+}
+
+.btn_active{
+  width: 230% !important;
+
+  margin-left: -19%;
+  transition: all 1s;
+}
+
+.info-popup{
+  position: relative;
+  top: 35%;
+}
+
+.hide_btn{
+  display: none !important;
+}
+
+
+
+.infologo{
+  display: block;
+  width: 100%;
+  transition: 2s;
+
+}
+
+.infologo_active{
+  width: 30% !important;
+  transform: translateY(-100%);
+
+}
+
+.infologo:hover{
+  width: 95%;
+}
+
 
 
 
