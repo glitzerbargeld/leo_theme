@@ -179,6 +179,7 @@ jQuery( function() {
     popup.classList.toggle("show"); 
     document.getElementById("outer-circle").classList.toggle("outer-circle_spin");
     document.getElementById("inner-circle").classList.toggle("inner-circle_spin");
+    document.getElementById("circle-shadow").classList.toggle("inner-circle_spin");
     document.getElementById("logogrid").classList.toggle("grid-transform");
     
 }

@@ -473,7 +473,7 @@ button.ast-menu-toggle {
 	background-image: url("https://sanaleo-cbd.de/wp-content/uploads/2021/06/bamboo.jpg");
 	position: relative;
 	width: 100%;
-	padding-top: 100%;
+	padding-top: 97%;
 	border-radius: 50%;
 	display: flex;
 	justify-content: center;
@@ -516,6 +516,20 @@ button.ast-menu-toggle {
 	padding-bottom: 5%;
   filter: brightness(70%);
   pointer-events: none;
+}
+
+#circle-shadow{
+  z-index: 101;
+  box-shadow: inset 1px -4px 16px #000, 0px 28px 38px black;
+  position: absolute;
+  width: 100%;
+  padding-top: 95%;
+  top: 0;	
+  border-radius: 50%;
+  padding-bottom: 5%;
+  filter: brightness(70%);
+  pointer-events: none;
+  transition: 1s;
 }
 
 .single-product div.product .woocommerce-product-details__short-description, .single-product div.product .product_meta, .single-product div.product .entry-content {
