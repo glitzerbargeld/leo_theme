@@ -865,7 +865,7 @@ position: absolute;
 .infologo{
   display: block;
   width: 100%;
-  transition: .3s;
+  transition: width .3s, transform 1s;
 
 }
 
