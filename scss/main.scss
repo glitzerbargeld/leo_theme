@@ -490,7 +490,6 @@ button.ast-menu-toggle {
 	position: absolute;
 	width: 88%;
 	padding-top: 78%;
-	background: green;
 	z-index: 10;
 	left: 6.1%;
 	top: 6.7%;
@@ -552,14 +551,14 @@ button.ast-menu-toggle {
 
 /*MANGO KUSH*/
 
-.inner-circle{
+#inner-circle{
 	background: #FAB700;
 }
 
 
 /*BLACK DOMINA*/
 
-.postid-10720 .inner-circle{
+.postid-10720 #inner-circle{
 	background: #55000B;
 
 }
@@ -573,7 +572,7 @@ button.ast-menu-toggle {
 /*GORILLA GLUE*/
 
 
-.postid-61890 .inner-circle{
+.postid-61890 #inner-circle{
 	background: radial-gradient(#1E1008 51%, #F3621B 72%);
 
 }
@@ -581,7 +580,7 @@ button.ast-menu-toggle {
 /*JACK HERER*/
 
 
-.postid-61895 .inner-circle{
+.postid-61895 #inner-circle{
 	background: radial-gradient(#0E1912 51%, #0E8F38 72%);
 
 }
@@ -590,7 +589,7 @@ button.ast-menu-toggle {
 /*LITANI HASH*/
 
 
-.postid-61900 .inner-circle{
+.postid-61900 #inner-circle{
 	background: radial-gradient(#4A1906 35%, #FF3000 61%);
 
 }
@@ -599,7 +598,7 @@ button.ast-menu-toggle {
 /*MOBY DICK*/
 
 
-.postid-64640 .inner-circle{
+.postid-64640 #inner-circle{
 	background: radial-gradient(#88c7ff 28%, #6329B9 63%, #16082B 75%);
 
 }
@@ -607,7 +606,7 @@ button.ast-menu-toggle {
 /*POWER PLANT*/
 
 
-.postid-64646 .inner-circle{
+.postid-64646 #inner-circle{
 	background: radial-gradient(#b72d8c 46%, #6329B9 59%, #16082B 77%);
 
 }
@@ -615,7 +614,7 @@ button.ast-menu-toggle {
 /*SKYWALKER OG*/
 
 
-.postid-61885 .inner-circle{
+.postid-61885 #inner-circle{
 	background: radial-gradient( #00295e 50%,#649EE8 68%, #549FFF 76%);
 
 }
@@ -624,7 +623,7 @@ button.ast-menu-toggle {
 /*AMNESIA*/
 
 
-.postid-2247 .inner-circle{
+.postid-2247 #inner-circle{
 	background: #009BAF;
 
 }
@@ -633,7 +632,7 @@ button.ast-menu-toggle {
 /*PINEAPPLE EXPRESS*/
 
 
-.postid-1693 .inner-circle{
+.postid-1693 #inner-circle{
 	background: radial-gradient(#88A900 61%, #FEEB18 70%);
 
 }
@@ -642,7 +641,7 @@ button.ast-menu-toggle {
 /*STRAWBERRY HAZE */
 
 
-.postid-2259 .inner-circle{
+.postid-2259 #inner-circle{
 	background: #c41e18;
 
 }
@@ -650,7 +649,7 @@ button.ast-menu-toggle {
 /*SUPER LEMON HAZE*/
 
 
-.postid-2275 .inner-circle{
+.postid-2275 #inner-circle{
 	background: radial-gradient(#42791E 61%, #fbff00 72%);
 
 }
@@ -658,7 +657,7 @@ button.ast-menu-toggle {
 /*VANILLA KUSH*/
 
 
-.postid-131 .inner-circle{
+.postid-131 #inner-circle{
 	background: radial-gradient(#654A35 61%, #fbff00 74%);
 
 }
@@ -666,7 +665,7 @@ button.ast-menu-toggle {
 /*WATERMELON COOKIES*/
 
 
-.postid-2269 .inner-circle{
+.postid-2269 #inner-circle{
 	background: radial-gradient(#CE1811 29%,#446F26 67%);
 
 }
