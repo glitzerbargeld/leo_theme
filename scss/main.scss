@@ -515,6 +515,7 @@ button.ast-menu-toggle {
 	border-radius: 50%;
 	padding-bottom: 5%;
   filter: brightness(70%);
+  pointer-events: none;
 }
 
 .single-product div.product .woocommerce-product-details__short-description, .single-product div.product .product_meta, .single-product div.product .entry-content {
