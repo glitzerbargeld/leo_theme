@@ -479,11 +479,13 @@ button.ast-menu-toggle {
 	justify-content: center;
 	align-items: center;
   transform: rotate(50deg);
+  -webkit-transform: rotate(50deg);
   
 }
 
 .outer-circle_spin{
-  transform: rotate(95deg) !important;
+  transform: rotate(95deg);
+  -webkit-transform: rotate(90deg);
 }
 
 #inner-circle {
@@ -496,11 +498,13 @@ button.ast-menu-toggle {
 	border-radius: 50%;
 	padding-bottom: 5%;
   transform: rotate(-50deg);
+  -webkit-transform: rotate(-50deg);
   
 }
 
 .inner-circle_spin{
-  transform: rotate(-95deg) !important;
+  transform: rotate(-95deg);
+  -webkit-transform: rotate(-95deg);
 }
 
 .circle-background {
