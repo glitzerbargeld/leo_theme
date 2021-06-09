@@ -479,11 +479,11 @@ button.ast-menu-toggle {
 	justify-content: center;
 	align-items: center;
   transform: rotate(50deg);
-  box-shadow: inset 1px -4px 16px #000, 0px 28px 38px black;
+  
 }
 
 .outer-circle_spin{
-  transform: rotate(45deg);
+  transform: rotate(95deg);
 }
 
 #inner-circle {
@@ -500,7 +500,7 @@ button.ast-menu-toggle {
 }
 
 .inner-circle_spin{
-  transform: rotate(-45deg);
+  transform: rotate(-95deg);
 }
 
 .circle-background {
@@ -516,6 +516,7 @@ button.ast-menu-toggle {
 	padding-bottom: 5%;
   filter: brightness(70%);
   pointer-events: none;
+  transform: rotate(50deg);
 }
 
 #circle-shadow{
