@@ -484,8 +484,8 @@ button.ast-menu-toggle {
 }
 
 .outer-circle_spin{
-  transform: rotate(95deg);
-  -webkit-transform: rotate(90deg);
+  transform: rotate(95deg) !important;
+  -webkit-transform: rotate(90deg) !important;
 }
 
 #inner-circle {
@@ -503,8 +503,8 @@ button.ast-menu-toggle {
 }
 
 .inner-circle_spin{
-  transform: rotate(-95deg);
-  -webkit-transform: rotate(-95deg);
+  transform: rotate(-95deg) !important;
+  -webkit-transform: rotate(-95deg) !important;
 }
 
 .circle-background {
