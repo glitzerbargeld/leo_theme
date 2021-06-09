@@ -480,6 +480,7 @@ button.ast-menu-toggle {
 	align-items: center;
   transform: rotate(50deg);
   -webkit-transform: rotate(50deg);
+  transition: 2s;
   
 }
 
@@ -499,6 +500,7 @@ button.ast-menu-toggle {
 	padding-bottom: 5%;
   transform: rotate(-50deg);
   -webkit-transform: rotate(-50deg);
+  transition: 2s;
   
 }
 
@@ -521,6 +523,7 @@ button.ast-menu-toggle {
   filter: brightness(70%);
   pointer-events: none;
   transform: rotate(50deg);
+  transition: 2s;
 }
 
 #circle-shadow{
@@ -534,7 +537,8 @@ button.ast-menu-toggle {
   padding-bottom: 5%;
   filter: brightness(70%);
   pointer-events: none;
-  transition: 1s;
+  transition: 2s;
+  transform: rotate(-50deg);
 }
 
 .single-product div.product .woocommerce-product-details__short-description, .single-product div.product .product_meta, .single-product div.product .entry-content {
