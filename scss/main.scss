@@ -483,7 +483,7 @@ button.ast-menu-toggle {
 }
 
 .outer-circle_spin{
-  transform: rotate(95deg);
+  transform: rotate(95deg) !important;
 }
 
 #inner-circle {
@@ -500,7 +500,7 @@ button.ast-menu-toggle {
 }
 
 .inner-circle_spin{
-  transform: rotate(-5deg);
+  transform: rotate(-95deg) !important;
 }
 
 .circle-background {
