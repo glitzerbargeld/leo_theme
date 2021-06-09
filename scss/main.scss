@@ -748,7 +748,7 @@ position: absolute;
 
 #btn_cbdgehalt{
   display: flex;
-  transition: width 0.7s;
+  transition: 0.7s;
 }
 
 #geruch{
@@ -758,7 +758,7 @@ position: absolute;
 
 #btn_geruch{
   display: flex;
-  transition: width 0.7s;
+  transition: 0.7s;
 
 }
 
@@ -769,7 +769,7 @@ position: absolute;
 
 #btn_highcbd{
   display: flex;
-  transition: width 0.7s;
+  transition: 0.7s;
 }
 
 #naturbelassen{
@@ -779,7 +779,7 @@ position: absolute;
 
 #btn_naturbelassen{
   display: flex;
-  transition: width 0.7s;
+  transition: 0.7s;
 }
 
 #terpene{
@@ -789,7 +789,7 @@ position: absolute;
 
 #btn_terpene{
   display: flex;
-  transition: width 0.7s;
+  transition: 0.7s;
 }
 
 #terpenecbd{
@@ -799,12 +799,11 @@ position: absolute;
 
 #btn_terpenecbd{
   display: flex;
-  transition: all 0.7s;
+  transition: 0.7s;
 }
 
 .btn_active{
   width: 230% !important;
-
   margin-left: -19%;
   transition: all 1s;
 }
@@ -823,7 +822,7 @@ position: absolute;
 .infologo{
   display: block;
   width: 100%;
-  transition: 2s;
+  transition: transform 2s;
 
 }
 
