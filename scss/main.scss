@@ -505,8 +505,8 @@ button.ast-menu-toggle {
 }
 
 .inner-circle_spin{
-  transform: rotate(-95deg) !important;
-  -webkit-transform: rotate(-95deg) !important;
+  transform: rotate(-90deg) !important;
+  -webkit-transform: rotate(-90deg) !important;
 }
 
 .circle-background {
@@ -847,7 +847,8 @@ position: absolute;
 
 .btn_active{
   width: 230% !important;
-  margin-left: -19%;
+  margin-left: -9%;
+  margin-bottom: 9%;
   
 }
 
