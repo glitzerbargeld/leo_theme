@@ -865,7 +865,7 @@ position: absolute;
 .infologo{
   display: block;
   width: 100%;
-  transition: 2s;
+  transition: .3s;
 
 }
 
@@ -877,6 +877,8 @@ position: absolute;
 
 .infologo:hover{
   width: 95%;
+  transition-property: width;
+
 }
 
 
