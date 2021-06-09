@@ -541,29 +541,7 @@ button.ast-menu-toggle {
 
 // PRODUKTINFO-BUTTONS
 
-#cbdgehalt{
-  display:none;
-}
 
-#geruch{
-  display:none;
-}
-
-#highcbd{
-  display:none;
-}
-
-#naturbelassen{
-  display:none;
-}
-
-#terpene{
-  display:none;
-}
-
-#terpenecbd{
-  display:none;
-}
 
 /*MANGO KUSH*/
 
@@ -747,18 +725,17 @@ user-select: none;
 transition: 0.7s;
 }
 
+.show{
+  visibility: visible !important; 
+}
 
+
+
+// PRODUKTINFO-BUTTONS
 
 #cbdgehalt{
 visibility: hidden;
 position: absolute;
-
-}
-
-.show{
-  visibility: visible !important;
-  
-  
 }
 
 #btn_cbdgehalt{
@@ -817,6 +794,49 @@ position: absolute;
   transition: 0.7s;
 }
 
+
+#outdoor{
+  visibility: hidden;
+  position: absolute;
+}
+
+#btn_outdoor{
+  display: flex;
+  transition: 0.7s;
+}
+
+#indoor{
+  visibility: hidden;
+  position: absolute;
+}
+
+#btn_indoor{
+  display: flex;
+  transition: 0.7s;
+
+}
+
+#greenhouse{
+  visibility: hidden;
+  position: absolute;
+}
+
+#btn_greenhouse{
+  display: flex;
+  transition: 0.7s;
+}
+
+
+#terpenecbd{
+  visibility: hidden;
+  position: absolute;
+}
+#btn_terpenecbd{
+  display: flex;
+  transition: 0.7s;
+}
+
+
 .btn_active{
   width: 230% !important;
   margin-left: -19%;
@@ -831,7 +851,6 @@ position: absolute;
 .hide_btn{
   display: none !important;
 }
-
 
 
 .infologo{
