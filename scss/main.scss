@@ -413,6 +413,25 @@ button.ast-menu-toggle {
 
 
 
+/*SCROLL TOP*/
+
+#ast-scroll-top {
+	color: #ffffff;
+	background-color: #000000;
+	font-size: 26px;
+	font-size: 1.4444444444444rem;
+	border-radius: 441px;
+	background-image: url("https://sanaleo-cbd.de/wp-content/uploads/2021/06/bamboo.jpg");
+  transform: rotate(45deg);
+}
+
+
+#ast-scroll-top .ast-icon.icon-arrow svg {
+	margin-left: 0;
+	transform: translate(0,-20%) rotate(135deg);
+	width: 1.6em;
+  color: darkgreen;
+}
 
 
 /*Product Page - Allgemein */
@@ -558,7 +577,7 @@ button.ast-menu-toggle {
 /*BLACK DOMINA*/
 
 .postid-10720 #inner-circle{
-	background: #55000B;
+	background: #880337;
 
 }
 
@@ -669,6 +688,12 @@ button.ast-menu-toggle {
 
 }
 
+
+/*MANGO KUSH*/
+
+.postid-2252 #innercircle{
+  background: #FFA700;
+}
 
 
 
@@ -1522,10 +1547,6 @@ justify-content: center;
 	margin: 0 0 .8em 0;
 
 	margin-bottom: 3em;
-}
-
-.ticss-0df26919 wc-block-grid__products{
-  padding: 6%;
 }
 
 .astra-off-canvas-sidebar{
