@@ -131,11 +131,6 @@ HEADER SECTION
 /* MENUS */ 
 
 
-
-
-
-
-
 /*OVERLAY MENU*/
 
 
@@ -269,6 +264,8 @@ button.ast-menu-toggle {
 
 
 /*Menu Button*/
+
+
 .menu-btn {
   padding-top: 10px;
   padding-bottom: 10px;
@@ -699,7 +696,9 @@ button.ast-menu-toggle {
 }
 
 .grid-transform{
-  bottom: 20%;
+  bottom: 24%;
+  left: 18%;
+
 }
 
 .grid > div {
@@ -847,8 +846,8 @@ position: absolute;
 
 .btn_active{
   width: 230% !important;
-  margin-left: -9%;
-  margin-bottom: 9%;
+  margin-left: -2%;
+  margin-bottom: 2%;
   
 }
 
@@ -877,8 +876,6 @@ position: absolute;
 
 .infologo:hover{
   width: 95%;
-  
-
 }
 
 
