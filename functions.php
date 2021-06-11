@@ -121,36 +121,36 @@ add_action( 'woocommerce_before_single_product', 'customise_product_page' );
 //
 
 
-if(is_product && has_term('30', 'product_cat')){
-    add_action('before_single_product', 'blueten_hook');
-    $klassenarbeit = apply_filters('blueten_hook', 'testklasse');
-    echo $klassenarbeit;
-}
+// if(is_product && has_term('30', 'product_cat')){
+//     add_action('before_single_product', 'blueten_hook');
+//     $klassenarbeit = apply_filters('blueten_hook', 'testklasse');
+//     echo $klassenarbeit;
+// }
 
 
-function blueten_hook(...$classes){
-do_action('blueten_hook');
-}
+// function blueten_hook(...$classes){
+// do_action('blueten_hook');
+// }
 
 
-function implement_div_classes(...$classes) {
+// function implement_div_classes(...$classes) {
 
-    $div = '<div class="'; 
+//     $div = '<div class="'; 
     
     
-        for($i=0; $i < count($classes); $i++){
-            $div += " " . $classes[$i];
-        }
+//         for($i=0; $i < count($classes); $i++){
+//             $div += " " . $classes[$i];
+//         }
     
-    $div += '"><br>';
+//     $div += '"><br>';
     
-    return $div;
+//     return $div;
     
-    }
+//     }
     
 
 
-add_filter('blueten_hook', 'implement_div_classes');
+// add_filter('blueten_hook', 'implement_div_classes');
 
 
 //
