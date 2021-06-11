@@ -495,13 +495,17 @@ button.ast-menu-toggle {
  /*Product Page - Schlafkapseln*/
 
  .postid-64328 {
-   
+
    .range-values{
      display: none;
     } 
 
    #variations-slider{
       display: none;
+    }
+
+    .woocommerce div.product div.images img {
+      margin-top: 0%;
     }
  }
 
