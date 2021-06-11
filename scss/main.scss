@@ -368,7 +368,10 @@ button.ast-menu-toggle {
   z-index: -1;
   padding-left: 55px;
   padding-right: 20px;
-  
+  border-right: .7px solid black;
+  border-bottom: .7px solid black;
+  margin-top: 35px;
+
   ul{
     list-style: none;
 
