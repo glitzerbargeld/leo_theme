@@ -621,6 +621,9 @@ button.ast-menu-toggle {
 
 /*MOBY DICK*/
 
+.moby-dick{
+  background: radial-gradient(#88c7ff 28%, #6329B9 63%, #16082B 75%) !important;
+}
 
 .postid-64640 #inner-circle{
 	background: radial-gradient(#88c7ff 28%, #6329B9 63%, #16082B 75%);
@@ -629,6 +632,9 @@ button.ast-menu-toggle {
 
 /*POWER PLANT*/
 
+.power-plant{
+  background: radial-gradient(#b72d8c 46%, #6329B9 59%, #16082B 77%) !important;
+}
 
 .postid-64646 #inner-circle{
 	background: radial-gradient(#b72d8c 46%, #6329B9 59%, #16082B 77%);
@@ -880,7 +886,7 @@ position: absolute;
   margin-left: -2%;
   margin-bottom: 2%;
   z-index: 10;
-  
+
 }
 
 .info-popup{
