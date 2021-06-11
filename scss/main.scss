@@ -494,8 +494,15 @@ button.ast-menu-toggle {
 
  /*Product Page - Schlafkapseln*/
 
- .postid-64328 #variations-slider{
-   display: none;
+ .postid-64328 {
+   
+   .range-values{
+     display: none;
+    } 
+
+   #variations-slider{
+      display: none;
+    }
  }
 
 /*Product Page - Blüten */
