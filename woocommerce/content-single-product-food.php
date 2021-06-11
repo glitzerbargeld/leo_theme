@@ -77,9 +77,9 @@ if ( post_password_required() ) {
 				 * @hooked woocommerce_template_single_sharing - 50
 				 * @hooked WC_Structured_Data::generate_product_data() - 60
 				 */
-				add_action('woocommerce_product_thumbnails', 'woocommerce_template_single_excerp');
+				
 				do_action( 'woocommerce_single_product_summary' );
-				add_action( 'woocommerce_single_product_summary', 'woocommerce_total_product_price', 25 ); ?>
+				
 
 		</div>
 		
