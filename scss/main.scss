@@ -490,6 +490,14 @@ button.ast-menu-toggle {
  
    }
  }
+
+
+ /*PRODUCT PAGES*/
+
+
+ .woocommerce div.product .woocommerce-tabs ul.tabs {
+	text-align: center;
+}
 	
 
  /*Product Page - Schlafkapseln*/
@@ -508,6 +516,30 @@ button.ast-menu-toggle {
       margin-top: 0%;
     }
  }
+
+
+/*Product Page - VAPE*/
+
+#product-id10886{
+  display: grid;
+
+
+  .woocommerce #content .ast-woocommerce-container div.product div.summary, .woocommerce .ast-woocommerce-container div.product div.summary, .woocommerce-page #content .ast-woocommerce-container div.product div.summary, .woocommerce-page .ast-woocommerce-container div.product div.summary {
+    text-align: center;
+    margin: auto;
+    width: 70%;
+  }
+
+  .woocommerce-variation-add-to-cart{
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .woocommerce .product .cart .quantity.buttons_added {
+    margin-bottom: 0;
+  }
+
+}
 
 /*Product Page - Blüten */
 
