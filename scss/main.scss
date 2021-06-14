@@ -1330,10 +1330,11 @@ position: absolute;
 .zm-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(10%, 25%));
-  grid-gap: 1rem;
-  padding: 0 5.5%;
+  grid-gap: 3%;
+  padding: 0 3%;
+  justify-content: center;
   > div {
-    padding: 1%;
+    padding: 0;
     display: grid;
     place-items: center;
     &::before {
