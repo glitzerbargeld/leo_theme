@@ -1331,6 +1331,7 @@ position: absolute;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(10%, 25%));
   grid-gap: 1rem;
+  padding: 0 5.5%;
   > div {
     padding: 1%;
     display: grid;
