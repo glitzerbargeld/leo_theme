@@ -1329,11 +1329,10 @@ position: absolute;
 
 .zm-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(10%, 25%));
   grid-gap: 1rem;
   > div {
-    background: black;
-    padding: 1rem;
+    padding: 1%;
     display: grid;
     place-items: center;
     &::before {
