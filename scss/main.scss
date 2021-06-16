@@ -506,6 +506,7 @@ button.ast-menu-toggle {
   }
 }
 
+@media screen and (min-width: 768px){
 #tab-reviews{
   padding: 0 12%;
   text-align: left;
@@ -515,6 +516,7 @@ button.ast-menu-toggle {
   #review_form_wrapper{
     width: 52%;
   }
+}
 }
 
 
