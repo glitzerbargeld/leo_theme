@@ -618,6 +618,14 @@ button.ast-menu-toggle {
 }
 
 
+@media screen and (max-width: 544px){
+  .woocommerce div.product {
+    margin-bottom: 0;
+    position: relative;
+    padding: 0 5%;
+  }
+}
+
 
 // PRODUKTINFO-BUTTONS
 
