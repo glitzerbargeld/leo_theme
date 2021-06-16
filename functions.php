@@ -301,20 +301,11 @@ function njengah_grey_out_variations_out_of_stock( $is_active, $variation ) {
 
 }
 
+add_filter( 'wpsl_admin_marker_dir', 'custom_admin_marker_dir' );
 
-/*
-  Change number of related products output
- 
-function woo_related_products_limit() {
-    global $product;
-      
-      $args['posts_per_page'] = 6;
-      return $args;
-  }
-  add_filter( 'woocommerce_output_related_products_args', 'jk_related_products_args', 20 );
-    function jk_related_products_args( $args ) {
-      $args['posts_per_page'] = 4; // 4 related products
-      $args['columns'] = 2; // arranged in 2 columns
-      return $args;
-  }
-  */ 
+function custom_admin_marker_dir() {
+
+    $admin_marker_dir = get_stylesheet_directory() . '/wpsl-markers/';
+    
+    return $admin_marker_dir;
+}
