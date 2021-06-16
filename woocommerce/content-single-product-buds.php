@@ -59,7 +59,7 @@ if ( post_password_required() ) {
 			?>
 		</div>
 
-		<div class="ast-col-md-4 ast-col-xs-12 ast-col-md-pull-4">
+		<div class="ast-col-xl-4 ast-col-md-6 ast-col-sm-12 ast-col-md-pull-5 ast-col-xl-pull-4">
 
 			
 
