@@ -498,6 +498,13 @@ button.ast-menu-toggle {
  .woocommerce div.product .woocommerce-tabs ul.tabs {
 	text-align: center;
 }
+
+@media  screen and (max-width: 544px) {
+  .woocommerce #reviews {
+    display: block;
+    text-align: left;
+  }
+}
 	
 
  /*Product Page - Schlafkapseln*/
