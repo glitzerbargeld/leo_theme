@@ -1017,11 +1017,11 @@ position: absolute;
 /*Size Selector*/
 
 .glass-wrapper {
-  display: inline-flex;
-  justify-content: center;
-  align-items: flex-end;
-  width: auto;
-  margin: 5%;
+	display: inline-flex;
+	justify-content: center;
+	align-items: flex-end;
+	width: auto;
+	margin: 2% 0% 4% 10%;
 }
 
 .glass {
@@ -1033,17 +1033,17 @@ position: absolute;
 .glass-wrapper .glass {
   &:nth-child(1) {
     margin-right: 2%;
-    padding: 4% 2% 0;
+    padding: 7% 6% 0;
   }
 
   &:nth-child(2) {
     margin-right: 2%;
-    padding: 7% 3% 0;
+    padding: 10% 8% 0;
   }
 
   &:nth-child(3) {
     margin-right: 2%;
-    padding: 9% 3% 0;
+    padding: 12% 6% 0;
   }
 
   &:nth-child(4) {
@@ -1068,15 +1068,15 @@ position: absolute;
 
 .glass-wrapper .glass {
   &:nth-child(1) .buds {
-    padding: 7px 11px 6px;
+    padding: 7px 13px 6px;
   }
 
   &:nth-child(2) .buds {
-    padding: 31px 19px 6px;
+    padding: 32px 21px 6px;
   }
 
   &:nth-child(3) .buds {
-    padding: 52px 22px 7px;
+    padding: 52px 32px 7px;
   }
 
   &:nth-child(4) .buds {
