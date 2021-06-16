@@ -547,15 +547,14 @@ button.ast-menu-toggle {
 	background-image: url("https://sanaleo-cbd.de/wp-content/uploads/2021/06/bamboo.jpg");
 	position: relative;
 	width: 100%;
-	padding-top: 97%;
+	padding-top: 91%;
 	border-radius: 50%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-  transform: rotate(50deg);
-  -webkit-transform: rotate(50deg);
-  transition: 2s;
-  
+	transform: rotate(50deg);
+	-webkit-transform: rotate(50deg);
+	transition: 2s;
 }
 
 .outer-circle_spin{
@@ -566,16 +565,15 @@ button.ast-menu-toggle {
 #inner-circle {
 	position: absolute;
 	width: 88%;
-	padding-top: 78%;
+	padding-top: 73%;
 	z-index: 10;
 	left: 6.1%;
-	top: 6.7%;
+	top: 5.7%;
 	border-radius: 50%;
 	padding-bottom: 5%;
-  transform: rotate(-50deg);
-  -webkit-transform: rotate(-50deg);
-  transition: 2s;
-  
+	transform: rotate(-50deg);
+	-webkit-transform: rotate(-50deg);
+	transition: 2s;
 }
 
 .inner-circle_spin{
@@ -781,13 +779,13 @@ button.ast-menu-toggle {
 
 
 .grid {
-  position: absolute;
-  left: 20.2%;
-  bottom: 27%;
-  width: 60%;
- display: grid;
- grid-template-columns: repeat(auto-fill, minmax(35%, 1fr));
- grid-gap: 5%;
+	position: absolute;
+	left: 19.6%;
+	bottom: 17%;
+	width: 60%;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(35%, 1fr));
+	grid-gap: 5%;
 }
 
 .grid-transform{
