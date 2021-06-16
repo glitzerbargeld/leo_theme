@@ -309,3 +309,5 @@ function custom_admin_marker_dir() {
     
     return $admin_marker_dir;
 }
+
+define( 'WPSL_MARKER_URI', dirname( get_bloginfo( 'stylesheet_url') ) . '/wpsl-markers/' );
