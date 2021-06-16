@@ -29,6 +29,7 @@ INDEX
         3.2.3 Lebensmittel
         3.2.4 Kosmetik
         3.2.5 VAPE
+4. Store Locator
 
 */
 
@@ -1358,6 +1359,22 @@ position: absolute;
     margin-top: -20%; } }
 
 
+
+/*STORE LOCATOR*/
+
+/*Search Bar*/
+.wpsl-search {
+	margin-bottom: 12px;
+	padding: 12px 12px 0 12px;
+	background: white;
+}
+
+#wpsl-search-wrap {
+	float: left;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
 
 
 /* FOOTER */
