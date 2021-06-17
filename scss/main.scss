@@ -1427,7 +1427,11 @@ position: absolute;
 	padding: 0;
 	border: none;
 	outline: 0;
-	display: inline-flex;
+	display: flex;
+}
+
+#wpsl-search-wrap div label {
+	display: none;
 }
 
 
