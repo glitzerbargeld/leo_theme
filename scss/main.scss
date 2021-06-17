@@ -120,12 +120,45 @@ HEADER SECTION
 
 /*PRODUCT CATEGORY ARCHIVE*/ 
 
+
+.woocommerce-products-header h1 {
+	font-size: 2.5em;
+	margin-bottom: 0.5em;
+	margin-top: 1em;
+	
+}
+
 .term-cbd-oele .site-content {
 	background-color: #fdede0;
 }
 
+.term-cbd-vape{
+  .woocommerce-products-header h1 {
+    
+    color: #93933c;
+  }
+}
+
+.term-cbd-oele{
+  .woocommerce-products-header h1 {
+    color: #f48c10;
+  }
+}
+
 .term-lebensmittel .site-content{
   background-color: #f6eaff !important;
+}
+
+.term-lebensmittel{
+  .woocommerce-products-header h1 {
+    color: #a773ce;
+  }
+}
+
+.term-cbd-aromablueten{
+  .woocommerce-products-header h1 {
+    color: darkgreen;
+  }
 }
 
 .woocommerce-products-header .term-description {
@@ -1474,6 +1507,28 @@ position: absolute;
 }
 
 
+
+/*CHECKOUT PAGE*/
+
+.woocommerce.woocommerce-checkout form #order_review, .woocommerce.woocommerce-checkout form #order_review_heading, .woocommerce-page.woocommerce-checkout form #order_review, .woocommerce-page.woocommerce-checkout form #order_review_heading{
+  text-align: center;
+  border: none;
+  width: 100%;
+}
+
+.woocommerce-page.woocommerce-checkout form #order_review table, .woocommerce.woocommerce-checkout form #order_review table {
+	background: white;
+}
+
+
+#order_review .legal {
+	margin-bottom: 10%;
+}
+
+.woocommerce-page.woocommerce-checkout form #order_review, .woocommerce.woocommerce-checkout form #order_review {
+  border: none;
+  margin-bottom: 10%;
+}
 
 
 /*UNSORTIERT*/
