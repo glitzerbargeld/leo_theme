@@ -312,3 +312,14 @@ function custom_admin_marker_dir() {
 }
 
 define( 'WPSL_MARKER_URI', dirname( get_bloginfo( 'stylesheet_url') ) . '/wpsl-markers/' );
+
+add_filter( 'wpsl_marker_props', 'custom_marker_props' );
+
+function custom_marker_props( $marker_props ) {
+            
+    $marker_props['scaledSize'] = '48,70'; // Set this to 50% of the original size
+    $marker_props['origin'] = '0,0';
+    $marker_props['anchor'] = '12,35';
+    
+    return $marker_props;
+}
