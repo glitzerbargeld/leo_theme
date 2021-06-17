@@ -1401,6 +1401,20 @@ position: absolute;
 	color: white;
 }
 
+#wpsl-wrap.wpsl-store-below #wpsl-result-list li {
+	padding: 10px 10px 10px 0;
+	display: inline-block !important;
+	width: 20%;
+	margin: 2.4%;
+}
+
+#wpsl-result-list ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	text-align: justify;
+}
+
 /* FOOTER */
 
 /*Zahlungsmöglichkeiten grid*/
