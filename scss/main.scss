@@ -1422,6 +1422,14 @@ position: absolute;
 
 }
 
+#wpsl-search-wrap form {
+	margin: 0;
+	padding: 0;
+	border: none;
+	outline: 0;
+	display: inline-flex;
+}
+
 
 #wpsl-result-list ul {
 	list-style: none;
