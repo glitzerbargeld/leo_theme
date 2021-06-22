@@ -9,7 +9,6 @@ const productMenu = document.querySelector('#product-menu');
 
 let productMenuOpen = false;
 
-console.log(productMenu.style.display);
 
 function toggleProductMenu() {
     if (productMenu.style.display == "none") {
@@ -56,8 +55,6 @@ function productMenuToggler(evt){
 evt.preventDefault();
     console.log('clicktest Löwe')
 
-    
-
     if(!productMenuOpen){
         lionhead.classList.add('p_open');
         productMenuOpen = true;
@@ -71,8 +68,23 @@ evt.preventDefault();
 
 }
 
+function lionDown(evt){
+console.log("lionUp");
+evt.preventDefault();
+lionhead.classList.add('p_open');
+}
+
+function lionUp(evt){
+  console.log("lionDown");
+  evt.preventDefault();
+  lionhead.classList.add('p_open');
+}
+
 productMenuBtn.addEventListener('click', productMenuToggler);
 productMenuBtn.addEventListener('touchstart', productMenuToggler);
+productMenuBtn.addEventListener('mouseover', lionDown);
+productMenuBtn.addEventListener('mouseout', lionUp);
+
 
 
 
@@ -86,7 +98,6 @@ console.log(menuBtn);
 let menuOpen = false;
 menuBtn.onclick = () => {
 
-    console.log('clicktest Blatt');
 
     if(!menuOpen){
         menuBtn.classList.add('open');
