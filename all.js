@@ -7,7 +7,6 @@ var lionhead = document.getElementById('lionhead');
 var productMenuBtn = document.querySelector('#product-menu-btn');
 var productMenu = document.querySelector('#product-menu');
 var productMenuOpen = false;
-console.log(productMenu.style.display);
 
 function toggleProductMenu() {
   if (productMenu.style.display == "none") {
@@ -58,8 +57,22 @@ function productMenuToggler(evt) {
   }
 }
 
+function lionDown(evt) {
+  console.log("lionUp");
+  evt.preventDefault();
+  lionhead.classList.add('p_open');
+}
+
+function lionUp(evt) {
+  console.log("lionDown");
+  evt.preventDefault();
+  lionhead.classList.add('p_open');
+}
+
 productMenuBtn.addEventListener('click', productMenuToggler);
 productMenuBtn.addEventListener('touchstart', productMenuToggler);
+productMenuBtn.addEventListener('mouseover', lionDown);
+productMenuBtn.addEventListener('mouseout', lionUp);
 /*Menu Button*/
 
 var menuBtn = document.querySelector('.menu-btn');
@@ -68,8 +81,6 @@ console.log(menuBtn);
 var menuOpen = false;
 
 menuBtn.onclick = function () {
-  console.log('clicktest Blatt');
-
   if (!menuOpen) {
     menuBtn.classList.add('open');
     menuOpen = true;
@@ -114,7 +125,35 @@ jQuery(function () {
     console.log("Value Passed: " + this.selectedIndex + 1);
   });
 });
-/*PRODUCT VARIATIONS GLÄSER CBD BLÜTEN*/
+/* DECKEL CBD BLÜTEN*/
+
+function openPopUp(popupbutton, popupid) {
+  var popup = document.getElementById(popupid);
+  var popbtn = document.getElementById(popupbutton);
+  var logo = popbtn.children[0];
+  var pop_btn_array = document.getElementsByClassName("popup_btn");
+  var otherpopups = document.getElementsByClassName("info-popup");
+  Array.prototype.forEach.call(otherpopups, function (p) {
+    if (p.id != popupid) {
+      p.classList.remove("show");
+    }
+  });
+  Array.prototype.forEach.call(pop_btn_array, function (p) {
+    console.log(p.id);
+
+    if (p.id == popupbutton) {
+      p.classList.toggle("btn_active");
+    } else {
+      p.classList.toggle("hide_btn");
+    }
+  });
+  logo.classList.toggle("infologo_active");
+  popup.classList.toggle("show");
+  document.getElementById("outer-circle").classList.toggle("outer-circle_spin");
+  document.getElementById("inner-circle").classList.toggle("inner-circle_spin");
+  document.getElementById("circle-shadow").classList.toggle("inner-circle_spin");
+  document.getElementById("logogrid").classList.toggle("grid-transform");
+}
 "use strict";
 
 $(document).ready(function () {
@@ -139,6 +178,11 @@ $(document).ready(function () {
     }]
   });
 });
+"use strict";
+
+/*STORE LOCATOR CUSTOMIZATIONS*/
+document.getElementById('wpsl-search-input').placeholder = 'Ort';
+document.getElementById('wpsl-search-btn').value = 'Los';
 "use strict";
 
 /*! jQuery-ui-Slider-Pips - v1.11.4 - 2016-09-04
