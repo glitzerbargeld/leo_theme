@@ -448,7 +448,7 @@ button.ast-menu-toggle {
     }
   }
 
-.product-dropdown:hover {
+.product-dropdown:hover, .product-dropdown:active {
   #product-menu{
     display: block;
   }
