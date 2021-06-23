@@ -1,7 +1,7 @@
 
 var rellax = new Rellax('.rellax-bottle', {
     breakpoints: [544, 768, 1200],
-    speed: -1.5,
+    speed: -0.5,
     center: true,
     wrapper: null,
     round: true,
