@@ -1,83 +1,8 @@
 "use strict";
 
-/**
- * Product Menu Animation
- */
-var lionhead = document.getElementById('lionhead');
-var productMenuBtn = document.querySelector('#product-menu-btn');
-var productMenu = document.querySelector('#product-menu');
-var productMenuOpen = false;
-
-function toggleProductMenu() {
-  if (productMenu.style.display == "none") {
-    productMenu.style.display = "block";
-  } else {
-    productMenu.style.display = "none";
-  }
-}
-/** Toggle Function */
-// Show an element
-
-
-var show = function show(elem) {
-  elem.style.display = 'block';
-  elem.style.height = '145px';
-}; // Hide an element
-
-
-var hide = function hide(elem) {
-  elem.style.display = 'none';
-  elem.style.height = '0px';
-}; // Toggle element visibility
-
-
-var toggle = function toggle(elem) {
-  // If the element is visible, hide it
-  if (window.getComputedStyle(elem).display === 'block') {
-    hide(elem);
-    return;
-  } // Otherwise, show it
-
-
-  show(elem);
-};
-
-function productMenuToggler(evt) {
-  evt.preventDefault();
-  console.log('clicktest Löwe');
-
-  if (!productMenuOpen) {
-    lionhead.classList.add('p_open');
-    productMenuOpen = true;
-    console.log("closed");
-  } else {
-    lionhead.classList.remove('p_open');
-    productMenuOpen = false;
-    console.log("open");
-  }
-}
-
-function lionDown(evt) {
-  console.log("lionUp");
-  evt.preventDefault();
-  lionhead.classList.add('p_open');
-}
-
-function lionUp(evt) {
-  console.log("lionDown");
-  evt.preventDefault();
-  lionhead.classList.add('p_open');
-}
-
-productMenuBtn.addEventListener('click', productMenuToggler);
-productMenuBtn.addEventListener('touchstart', productMenuToggler);
-productMenuBtn.addEventListener('mouseover', lionDown);
-productMenuBtn.addEventListener('mouseout', lionUp);
 /*Menu Button*/
-
 var menuBtn = document.querySelector('.menu-btn');
 var BtnWrapper = document.querySelector('.ast-header-html-3');
-console.log(menuBtn);
 var menuOpen = false;
 
 menuBtn.onclick = function () {
@@ -91,11 +16,8 @@ menuBtn.onclick = function () {
     console.log(menuOpen);
   }
 };
-
-window.addEventListener('resize', function () {
-  console.log(lionhead);
-});
 /* Main Menu */
+
 
 function openNav() {
   document.getElementById("myNav").style.width = "100%";
@@ -757,7 +679,7 @@ document.getElementById('wpsl-search-btn').value = 'Los';
 
 var rellax = new Rellax('.rellax-bottle', {
   breakpoints: [544, 768, 1200],
-  speed: -2.5,
+  speed: -0.5,
   center: true,
   wrapper: null,
   round: true,
@@ -766,7 +688,7 @@ var rellax = new Rellax('.rellax-bottle', {
 });
 var rellax = new Rellax('.rellax-cap', {
   breakpoints: [544, 768, 1200],
-  speed: 2.5,
+  speed: 3,
   center: true,
   wrapper: null,
   round: true,
