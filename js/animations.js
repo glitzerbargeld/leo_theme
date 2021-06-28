@@ -3,14 +3,13 @@
 
 /*Menu Button*/
 
-const menuBtn = document.querySelector('.menu-btn');
+const menuBtn = document.classList('.menu-btn');
 const BtnWrapper = document.querySelector('.ast-header-html-3');
-let menuOpen = false;
 
 menuBtn.onclick = () => {
-
-    menuBtn.classList.contains('open') ? menuBtn.classList.remove('open') : menuBtn.classList.add('open');
-  
+    menuBtn.forEach(element => {
+      element.classList.contains('open') ? element.classList.remove('open') : element.classList.add('open');
+    });
 };
 
 
