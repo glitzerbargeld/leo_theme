@@ -9,18 +9,8 @@ let menuOpen = false;
 
 menuBtn.onclick = () => {
 
-
-    if(!menuOpen){
-        menuBtn.classList.add('open');
-        menuOpen = true;
-        console.log(menuOpen);
-
-    }else{
-        menuBtn.classList.remove('open');
-        menuOpen = false;
-        console.log(menuOpen);
-
-    }
+    menuBtn.classList.contains('open') ? menuBtn.classList.remove('open') : menuBtn.classList.add('open');
+  
 };
 
 
