@@ -3,7 +3,7 @@
 
 /*Menu Button*/
 jQuery( document ).ready(function() {
-  const menuBtn = document.getElementsByClassName('.menu-btn');
+  const menuBtn = document.getElementsByClassName('menu-btn');
   console.log(menuBtn)
   menuBtn.onclick = () => {
     menuBtn.forEach(element => {
