@@ -6,7 +6,7 @@
 let menuBtn = null 
 let BtnWrapper = null
 
-$( document ).ready(function() {
+jQuery( document ).ready(function() {
   menuBtn = document.getElementsByClassName('.menu-btn');
   BtnWrapper = document.querySelector('.ast-header-html-3');
 });
