@@ -3,8 +3,13 @@
 
 /*Menu Button*/
 
-const menuBtn = document.getElementsByClassName('.menu-btn');
-const BtnWrapper = document.querySelector('.ast-header-html-3');
+let menuBtn = null 
+let BtnWrapper = null
+
+$( document ).ready(function() {
+  menuBtn = document.getElementsByClassName('.menu-btn');
+  BtnWrapper = document.querySelector('.ast-header-html-3');
+});
 
 menuBtn.onclick = () => {
     menuBtn.forEach(element => {
