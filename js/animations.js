@@ -6,7 +6,7 @@ jQuery( document ).ready(function() {
   const menuBtn = document.getElementsByClassName('menu-btn');
   console.log(menuBtn)
   menuBtn.forEach(element => {
-    menuBtn.onclick = () => {
+    element.onclick = () => {
       console.log(element)
       element.classList.contains('open') ? element.classList.remove('open') : element.classList.add('open');
     };
