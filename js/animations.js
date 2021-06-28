@@ -3,14 +3,12 @@
 
 /*Menu Button*/
 jQuery( document ).ready(function() {
-  const menuBtn = document.getElementsByClassName('menu-btn');
-  console.log(menuBtn)
-  menuBtn.forEach(element => {
-    element.onclick = () => {
-      console.log(element)
-      element.classList.contains('open') ? element.classList.remove('open') : element.classList.add('open');
+  let menuBtn = document.getElementsByClassName('menu-btn');
+  for (let i = 0; i < menuBtn.length; i++) {
+    menuBtn[i].onclick = () => {
+      menuBtn[i].classList.contains('open') ? menuBtn[i].classList.remove('open') : menuBtn[i].classList.add('open');
     };
-  });
+  }
 });
 
 
