@@ -2,16 +2,16 @@
 
 
 /*Menu Button*/
-
-const menuBtn = document.querySelector('.menu-btn');
-const BtnWrapper = document.querySelector('.ast-header-html-3');
-let menuOpen = false;
-
-menuBtn.onclick = () => {
-
-    menuBtn.classList.contains('open') ? menuBtn.classList.remove('open') : menuBtn.classList.add('open');
+jQuery( document ).ready(function() {
+  let menuBtn = document.getElementsByClassName('menu-btn');
+  let astraMenu = document.getElementsByClassName('main-header-menu-toggle');
   
-};
+  for (let i = 0; i < astraMenu.length; i++) {
+    astraMenu[i].onclick = () => {
+      menuBtn[i].classList.contains('open') ? menuBtn[i].classList.remove('open') : menuBtn[i].classList.add('open');
+    };
+  }
+});
 
 
 
