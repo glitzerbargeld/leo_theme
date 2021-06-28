@@ -2,16 +2,34 @@
 
 
 /*Menu Button*/
-jQuery( document ).ready(function() {
-  let menuBtn = document.getElementsByClassName('menu-btn');
-  let astraMenu = document.getElementsByClassName('main-header-menu-toggle');
+// jQuery( document ).ready(function() {
+//   let menuBtn = document.getElementsByClassName('menu-btn');
+//   let astraMenu = document.getElementsByClassName('main-header-menu-toggle');
   
-  for (let i = 0; i < astraMenu.length; i++) {
-    astraMenu[i].onclick = () => {
-      menuBtn[i].classList.contains('open') ? menuBtn[i].classList.remove('open') : menuBtn[i].classList.add('open');
-    };
+//   for (let i = 0; i < astraMenu.length; i++) {
+//     astraMenu[i].onclick = () => {
+//       menuBtn[i].classList.contains('open') ? menuBtn[i].classList.remove('open') : menuBtn[i].classList.add('open');
+//     };
+//   }
+// });
+
+menuBtn.onclick = () => {
+
+
+  if(!menuOpen){
+      menuBtn.classList.add('open');
+      menuOpen = true;
+      console.log(menuOpen);
+
+  }else{
+      menuBtn.classList.remove('open');
+      menuOpen = false;
+      console.log(menuOpen);
+
   }
-});
+
+};
+
 
 
 
