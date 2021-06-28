@@ -4,8 +4,10 @@
 /*Menu Button*/
 jQuery( document ).ready(function() {
   let menuBtn = document.getElementsByClassName('menu-btn');
-  for (let i = 0; i < menuBtn.length; i++) {
-    menuBtn[i].onclick = () => {
+  let astraMenu = document.getElementsByClassName('main-header-menu-toggle');
+  
+  for (let i = 0; i < astraMenu.length; i++) {
+    astraMenu[i].onclick = () => {
       menuBtn[i].classList.contains('open') ? menuBtn[i].classList.remove('open') : menuBtn[i].classList.add('open');
     };
   }
