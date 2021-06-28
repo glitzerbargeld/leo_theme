@@ -2,20 +2,16 @@
 
 
 /*Menu Button*/
-
-let menuBtn = null 
-let BtnWrapper = null
-
 jQuery( document ).ready(function() {
-  menuBtn = document.getElementsByClassName('.menu-btn');
-  BtnWrapper = document.querySelector('.ast-header-html-3');
-});
-
-menuBtn.onclick = () => {
+  const menuBtn = document.getElementsByClassName('.menu-btn');
+  menuBtn.onclick = () => {
     menuBtn.forEach(element => {
       element.classList.contains('open') ? element.classList.remove('open') : element.classList.add('open');
     });
 };
+
+
+});
 
 
 
