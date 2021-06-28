@@ -3,7 +3,7 @@
 
 /*Menu Button*/
 
-const menuBtn = document.classList('.menu-btn');
+const menuBtn = document.getElementsByClassName('.menu-btn');
 const BtnWrapper = document.querySelector('.ast-header-html-3');
 
 menuBtn.onclick = () => {
