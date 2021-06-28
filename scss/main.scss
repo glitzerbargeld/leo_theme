@@ -167,7 +167,6 @@ HEADER SECTION
 
 .term-cbd-vape{
   .woocommerce-products-header h1 {
-    
     color: #93933c;
   }
 }
@@ -501,6 +500,11 @@ button.ast-menu-toggle {
     padding: 5%;
     border-radius: 50px;
   }
+
+  .bg-lebensmittel{
+    background-color: #f6eaff;
+  }
+
 
 
   // Changes the number of Columns for related products in mobile view
@@ -1733,7 +1737,7 @@ display: flex;
 	/* margin: auto; */
 	width: 70%;
 	padding: 3%;
-	border: 5px solid;
+	box-shadow: 0px 27px 16px -8px lightgray;
 	margin-bottom: 3em;
 	margin-left: 17%;
 }
