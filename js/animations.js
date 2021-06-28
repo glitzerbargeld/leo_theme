@@ -5,14 +5,12 @@
 jQuery( document ).ready(function() {
   const menuBtn = document.getElementsByClassName('menu-btn');
   console.log(menuBtn)
-  menuBtn.onclick = () => {
-    menuBtn.forEach(element => {
+  menuBtn.forEach(element => {
+    menuBtn.onclick = () => {
       console.log(element)
       element.classList.contains('open') ? element.classList.remove('open') : element.classList.add('open');
-    });
-};
-
-
+    };
+  });
 });
 
 
