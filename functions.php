@@ -456,6 +456,28 @@ function implement_row_beginning(){
 }
 
 
+/**
+ * Exclude products from a particular category on the shop page
+ */
+function custom_pre_get_posts_query( $q ) {
+
+  $tax_query = (array) $q->get( 'tax_query' );
+
+  $tax_query[] = array(
+         'taxonomy' => 'product_cat',
+         'field' => 'slug',
+         'terms' => array( 'cbd-aromablueten' ), // Don't display products in the clothing category on the shop page.
+         'operator' => 'NOT IN'
+  );
+
+
+  $q->set( 'tax_query', $tax_query );
+
+}
+add_action( 'woocommerce_product_query', 'custom_pre_get_posts_query' );  
+
+
+
 // TAKES UNLIMITED CLASSNAMES AND CREATES AN OPENING DIV TAG
 
 function implement_div_classes(...$classes) {
@@ -715,7 +737,7 @@ add_filter( 'get_terms', 'ts_get_subcategory_terms', 10, 3 );
           // if it is a product category and on the shop page
           if ( in_array( 'product_cat', $taxonomies ) && ! is_admin() && is_shop() ) {
              foreach ( $terms as $key => $term ) {
-                 if ( ! in_array( $term->slug, array( 'buds', 'oil', 'food', 'schlafkapseln' ) ) ) {        //pass the slug name here
+                 if ( ! in_array( $term->slug, array( 'buds', 'oil', 'food', 'schlafkapseln', 'cbd-aromablueten' ) ) ) {        //pass the slug name here
                     $new_terms[] = $term;
                  }
           }

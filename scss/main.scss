@@ -119,6 +119,7 @@ HEADER SECTION
   font-weight: 900; }
 
   .ast-desktop .ast-account-nav-menu {
+    max-height: 0;
     width: 260px;
     background: #fff;
     left: -999em;
@@ -130,10 +131,29 @@ HEADER SECTION
     padding-left: 0;
     border: 1px solid black;
     right: -20px !important;
+    transition: max-height .6s ease-in;;
+    a{color: rgba(0,0,0,0); transition: color 1s, letter-spacing .2s; transition-delay: color .4s;}
+  }
+
+  .ast-header-account-wrap.focus .ast-account-nav-menu, .ast-header-account-wrap:hover .ast-account-nav-menu {
+    right: -100%;
+    left: auto;
+    max-height: 1500px;
+    a{color: rgba(0,0,0,1);}
+    a:hover{letter-spacing: 2px;}
   }
 
 
 
+  .ast-site-header-cart .widget_shopping_cart, .woocommerce .ast-site-header-cart .widget_shopping_cart {
+    max-height: 0;
+    transition: max-height .5s ease-in;
+  }
+
+  .ast-site-header-cart:focus .widget_shopping_cart, .ast-site-header-cart:hover .widget_shopping_cart, .woocommerce .ast-site-header-cart:focus .widget_shopping_cart, .woocommerce .ast-site-header-cart:hover .widget_shopping_cart {
+    
+    max-height: 1200px
+  }
 
 
 
@@ -666,11 +686,15 @@ button.ast-menu-toggle {
 .main-navigation .icon-arrow{
   display:none !important;
 }
+
+.ast-hfb-header .ast-builder-menu-mobile .main-header-menu.ast-nav-menu .sub-menu .menu-item .menu-link {
+	font-weight: 200;
+}
   
 
 
   .ast-builder-menu-mobile .main-header-menu, .ast-header-break-point .ast-builder-menu-mobile .main-header-menu {
-    padding: 1em;
+    padding: 1em; 
     width: 50%;
   }
 
@@ -2524,6 +2548,18 @@ h2{
 
 .product-category img{
     border-radius: 50px;
+    transition: all .3s ease-in-out;
+}
+
+.product-category img:hover{
+  box-shadow: 0 1px 3px -2px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.1) !important;
+
+}
+
+.woocommerce ul.products li.product.product-category > a:hover .woocommerce-loop-category__title, .woocommerce-page ul.products li.product.product-category > a:hover .woocommerce-loop-category__title {
+	background-color: #fff;
+  box-shadow: 0 1px 3px -2px rgba(0, 0, 0, 0.12), 0 2px 6px rgba(0, 0, 0, 0.3);
+  transition: all .3s ease-in-out;
 }
 
 .product-category img:hover{
