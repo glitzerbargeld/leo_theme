@@ -1,10 +1,9 @@
 <style>
+
 	.woocommerce div.product form.cart .variations {
 	display: none;
 	}
-	.wp-post-image{
-clip-path: url("#zuschnitt");
-}
+	
 </style>
 
 
@@ -47,7 +46,7 @@ if ( post_password_required() ) {
 
 
 	<div class="ast-row">
-		<div class="ast-col-md-5 ast-col-xs-12 ast-col-md-push-6 image-wrap">
+		<div class="ast-col-md-5 ast-col-xs-12 ast-col-md-push-6">
 			<?php
 				/**
 				 * Hook: woocommerce_before_single_product_summary.
@@ -60,7 +59,7 @@ if ( post_password_required() ) {
 			?>
 		</div>
 
-		<div class="ast-col-md-4 ast-col-xs-12 ast-col-md-pull-4">
+		<div class="ast-col-xl-4 ast-col-md-6 ast-col-sm-12 ast-col-md-pull-5 ast-col-xl-pull-4" style="overflow: hidden">
 
 			
 
@@ -77,21 +76,19 @@ if ( post_password_required() ) {
 				 * @hooked woocommerce_template_single_sharing - 50
 				 * @hooked WC_Structured_Data::generate_product_data() - 60
 				 */
-				add_action( 'woocommerce_before_add_to_cart_button', 'range_slider' );
-				add_action('woocommerce_product_thumbnails', 'woocommerce_template_single_excerp');
+				add_action( 'woocommerce_before_add_to_cart_button', 'container_size_buds' );
+				// add_action('woocommerce_single_product_summary', 'woocommerce_template_single_excerpt' , 1);
 				do_action( 'woocommerce_single_product_summary' );
-				add_action( 'woocommerce_single_product_summary', 'woocommerce_total_product_price', 25 ); ?>
+
+				?>
+		
+
 
 		</div>
 		
 
 
 	</div>
-
-
-
-
-	
 
 	<?php
 	/**
@@ -103,25 +100,54 @@ if ( post_password_required() ) {
 	 */
 	do_action( 'woocommerce_after_single_product_summary' );
 	?>
+
 </div>
 
 <?php do_action( 'woocommerce_after_single_product' ); ?>
 
 
-
 <script>
-jQuery(function($){
-	var price = <?php echo $product->get_price(); ?>,
-		currency = '<?php echo get_woocommerce_currency_symbol(); ?>';
 
-	$('[name=quantity]').change(function(){
-		if (!(this.value < 1)) {
 
-			var product_total = parseFloat(price * this.value);
+const buds = document.querySelectorAll('.buds');
+const select = document.getElementById("pa_menge");
+const dropdownselect = jQuery("#pa_menge");
+const selectoptions = select.options;
+var selectoptionsarray = [];
 
-			$('#product_total_price .price').html( currency + product_total.toFixed(0));
+for(var i=0; i<select.options.length; i++){
+    selectoptionsarray.push(select.options[i].value);
+}
 
-		}
-	});
-});
-</script>
+buds.forEach(el => {
+    if(selectoptionsarray.includes(el.getAttribute("data-el"))){
+        el.parentElement.style.display = "block";
+    }
+    if(el.getAttribute("data-el") == select.value){el.style.backgroundColor = "rgb(136, 175, 136)"}
+})
+
+
+
+
+buds.forEach(el => el.addEventListener('click', event => {
+    event.preventDefault();
+    select.value = event.target.getAttribute("data-el");
+	dropdownselect.change();
+    buds.forEach(el => el.style.backgroundColor ="gray");
+    event.target.style.backgroundColor = "rgb(136, 175, 136)";
+
+
+}));
+
+buds.forEach(el => el.addEventListener('touchstart', event => {
+    event.preventDefault();
+    select.value = event.target.getAttribute("data-el");
+	dropdownselect.change();
+    buds.forEach(el => el.style.backgroundColor ="gray");
+    event.target.style.backgroundColor = "rgb(136, 175, 136)";
+
+
+}));
+
+
+</script> 

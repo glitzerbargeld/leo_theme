@@ -41,11 +41,11 @@ get_header( 'shop' ); ?>
 			 $terms      = wp_get_post_terms( $post->ID, 'product_cat' );
 			 $categories = wp_list_pluck( $terms, 'slug' );
 			 
-			 if ( in_array( 'oil', $categories ) ) {
-				 wc_get_template_part( 'content', 'single-product-oil' );
+			 if ( in_array( 'cbd-oele', $categories ) ) {
+				 wc_get_template_part( 'content', 'single-product-cbd-oele' );
 			 } 
-			 else  if ( in_array( 'buds', $categories ) ) {
-				wc_get_template_part( 'content', 'single-product-buds' );
+			 else  if ( in_array( 'cbd-aromablueten', $categories ) ) {
+				wc_get_template_part( 'content', 'single-product-cbd-aromablueten' );
 			} 
 			 else {
 				 wc_get_template_part( 'content', 'single-product' );

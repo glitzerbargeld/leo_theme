@@ -13,6 +13,26 @@ jQuery( document ).ready(function() {
   }
 });
 
+// menuBtn.onclick = () => {
+
+
+//   if(!menuOpen){
+//       menuBtn.classList.add('open');
+//       menuOpen = true;
+//       console.log(menuOpen);
+
+//   }else{
+//       menuBtn.classList.remove('open');
+//       menuOpen = false;
+//       console.log(menuOpen);
+
+//   }
+
+// };
+
+
+
+
 /* Main Menu */
 
 function openNav() {
@@ -32,6 +52,27 @@ jQuery( function() {
     var slider = jQuery( "#variations-slider" ).slider({
       min: 1,
       max: 3,
+      range: false,
+      animate:"fast",
+      value: select[ 0 ].selectedIndex + 1,
+      slide: function( event, ui ) {
+        select[ 0 ].selectedIndex = ui.value - 1;
+        select.trigger("change");
+      }
+    });
+    jQuery( "#anteil-cbd" ).on( "change", function() {
+      slider.slider( "value", this.selectedIndex + 1 );
+      console.log("Value Passed: " + this.selectedIndex + 1)
+      
+    });
+  } );
+
+
+  jQuery( function() {
+    var select = jQuery( "#anteil-cbd" );
+    var slider = jQuery( "#variations-slider-small" ).slider({
+      min: 1,
+      max: 2,
       range: false,
       animate:"fast",
       value: select[ 0 ].selectedIndex + 1,
@@ -87,4 +128,21 @@ jQuery( function() {
     document.getElementById("logogrid").classList.toggle("grid-transform");
     
 }
-  
+
+//Accordion
+
+
+var acc = document.getElementsByClassName("faq-accordion-archive");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.maxHeight) {
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    }
+  });
+}
