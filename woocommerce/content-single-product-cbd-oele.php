@@ -131,7 +131,7 @@ function svgmask($product) {
 	} elseif (is_single("61679")) {
 		echo $mask_array["BSPack"];
 	} elseif (is_single('61684')) {
-		echo $mask_array("EDPack");
+		echo $mask_array["EDPack"];
 	} elseif (is_single("61688")) {
 		echo $mask_array["HDPack"];
 	} elseif (is_single("61698")) {

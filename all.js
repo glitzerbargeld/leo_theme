@@ -40,17 +40,22 @@ function closeNav() {
 
 jQuery(function () {
   var select = jQuery("#anteil-cbd");
-  var slider = jQuery("#variations-slider").slider({
-    min: 1,
-    max: 3,
-    range: false,
-    animate: "fast",
-    value: select[0].selectedIndex + 1,
-    slide: function slide(event, ui) {
-      select[0].selectedIndex = ui.value - 1;
-      select.trigger("change");
-    }
-  });
+  var slider;
+
+  if (select[0]) {
+    slider = jQuery("#variations-slider").slider({
+      min: 1,
+      max: 3,
+      range: false,
+      animate: "fast",
+      value: select[0].selectedIndex + 1,
+      slide: function slide(event, ui) {
+        select[0].selectedIndex = ui.value - 1;
+        select.trigger("change");
+      }
+    });
+  }
+
   jQuery("#anteil-cbd").on("change", function () {
     slider.slider("value", this.selectedIndex + 1);
     console.log("Value Passed: " + this.selectedIndex + 1);
@@ -58,17 +63,22 @@ jQuery(function () {
 });
 jQuery(function () {
   var select = jQuery("#anteil-cbd");
-  var slider = jQuery("#variations-slider-small").slider({
-    min: 1,
-    max: 2,
-    range: false,
-    animate: "fast",
-    value: select[0].selectedIndex + 1,
-    slide: function slide(event, ui) {
-      select[0].selectedIndex = ui.value - 1;
-      select.trigger("change");
-    }
-  });
+  var slider;
+
+  if (select[0]) {
+    slider = jQuery("#variations-slider-small").slider({
+      min: 1,
+      max: 2,
+      range: false,
+      animate: "fast",
+      value: select[0].selectedIndex + 1,
+      slide: function slide(event, ui) {
+        select[0].selectedIndex = ui.value - 1;
+        select.trigger("change");
+      }
+    });
+  }
+
   jQuery("#anteil-cbd").on("change", function () {
     slider.slider("value", this.selectedIndex + 1);
     console.log("Value Passed: " + this.selectedIndex + 1);
@@ -147,8 +157,10 @@ $(document).ready(function () {
 "use strict";
 
 /*STORE LOCATOR CUSTOMIZATIONS*/
-document.getElementById('wpsl-search-input').placeholder = 'Ort';
-document.getElementById('wpsl-search-btn').value = 'Los';
+if (document.getElementById('wpsl-search-input')) {
+  document.getElementById('wpsl-search-input').placeholder = 'Ort';
+  document.getElementById('wpsl-search-btn').value = 'Los';
+}
 "use strict";
 
 /*! jQuery-ui-Slider-Pips - v1.11.4 - 2016-09-04

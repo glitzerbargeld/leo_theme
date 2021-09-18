@@ -18,7 +18,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 <?php astra_html_before(); ?>
 <html <?php language_attributes(); ?>>
 <head>
-
 <script>
 document.addEventListener("touchstart", function(){}, true);
 </script>

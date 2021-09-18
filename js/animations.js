@@ -49,17 +49,20 @@ function closeNav() {
 
 jQuery( function() {
     var select = jQuery( "#anteil-cbd" );
-    var slider = jQuery( "#variations-slider" ).slider({
-      min: 1,
-      max: 3,
-      range: false,
-      animate:"fast",
-      value: select[ 0 ].selectedIndex + 1,
-      slide: function( event, ui ) {
-        select[ 0 ].selectedIndex = ui.value - 1;
-        select.trigger("change");
-      }
-    });
+    var slider
+    if(select[0]) {
+      slider = jQuery( "#variations-slider" ).slider({
+        min: 1,
+        max: 3,
+        range: false,
+        animate:"fast",
+        value: select[ 0 ].selectedIndex + 1,
+        slide: function( event, ui ) {
+          select[ 0 ].selectedIndex = ui.value - 1;
+          select.trigger("change");
+        }
+      });
+    }
     jQuery( "#anteil-cbd" ).on( "change", function() {
       slider.slider( "value", this.selectedIndex + 1 );
       console.log("Value Passed: " + this.selectedIndex + 1)
@@ -70,17 +73,20 @@ jQuery( function() {
 
   jQuery( function() {
     var select = jQuery( "#anteil-cbd" );
-    var slider = jQuery( "#variations-slider-small" ).slider({
+    var slider
+    if(select[0]) {
+    slider = jQuery( "#variations-slider-small" ).slider({
       min: 1,
       max: 2,
       range: false,
       animate:"fast",
       value: select[ 0 ].selectedIndex + 1,
       slide: function( event, ui ) {
-        select[ 0 ].selectedIndex = ui.value - 1;
-        select.trigger("change");
-      }
-    });
+          select[ 0 ].selectedIndex = ui.value - 1;
+          select.trigger("change");
+        }
+      });
+    }
     jQuery( "#anteil-cbd" ).on( "change", function() {
       slider.slider( "value", this.selectedIndex + 1 );
       console.log("Value Passed: " + this.selectedIndex + 1)

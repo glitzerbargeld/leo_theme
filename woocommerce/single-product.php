@@ -44,7 +44,7 @@ get_header( 'shop' ); ?>
 			 if ( in_array( 'cbd-oele', $categories ) ) {
 				 wc_get_template_part( 'content', 'single-product-cbd-oele' );
 			 } 
-			 else  if ( in_array( 'cbd-aromablueten', $categories ) ) {
+			 else  if ( in_array( 'cbd-blueten', $categories ) ) {
 				wc_get_template_part( 'content', 'single-product-cbd-aromablueten' );
 			} 
 			 else {
