@@ -326,6 +326,7 @@ function customjs_load()
 add_action('wp_head', 'customjs_load', 2);
 
 function schemaMarkupOrganization() {
+	if (is_page(65230)) :
 	echo '<script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -434,7 +435,7 @@ function schemaMarkupOrganization() {
       }
   ]
 }
-</script>';
+</script>'; endif;
 }
 add_action('wp_head', 'schemaMarkupOrganization', 2);
 
@@ -925,7 +926,7 @@ add_filter( 'get_terms', 'ts_get_subcategory_terms', 10, 3 );
           // if it is a product category and on the shop page
           if ( in_array( 'product_cat', $taxonomies ) && ! is_admin() && is_shop() ) {
              foreach ( $terms as $key => $term ) {
-                 if ( ! in_array( $term->slug, array( 'buds', 'oil', 'food', 'schlafkapseln', 'cbd-blueten' ) ) ) {        //pass the slug name here
+                 if ( ! in_array( $term->slug, array( 'buds', 'oil', 'food', 'schlafkapseln' ) ) ) {        //pass the slug name here
                     $new_terms[] = $term;
                  }
           }
