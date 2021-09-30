@@ -1359,3 +1359,17 @@ function add_styles_to_product(){
 }
 
 
+/*QUANTITY BUTTON - ADD TO CART - WRAPPER*/
+
+add_action( 'woocommerce_before_add_to_cart_quantity', 'flexwrapper_start' , 10 );
+add_action( 'woocommerce_after_add_to_cart_button', 'wrapper_end', 10 );
+
+
+function flexwrapper_start() {
+  echo '<div class="inline-flex-wrapper">';
+}
+
+function wrapper_end() {
+  echo '</div>';
+}
+

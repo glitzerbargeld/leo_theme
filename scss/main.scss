@@ -121,6 +121,58 @@ HEADER SECTION
 }
 
 
+/*MAIN MENU*/
+
+.menu-link {
+	text-transform: uppercase;
+}
+
+.astra-megamenu {
+	border-radius: 0 0 30px 30px !important;
+	padding: 10px !important
+}
+
+.sub-menu {
+	border-radius: 0 0 20px 20px !important;
+	padding: 10px;
+}
+
+
+/*MOBILE MENUE*/
+
+.ast-menu-toggle {
+	border: none !important;
+}
+
+.ast-menu-toggle:focus {
+	outline: none !important;
+}
+.ast-menu-toggle:hover {
+	outline: none !important;
+}
+
+.ast-menu-toggle {
+	top: 0 !important;
+right: 25px !important;
+	padding: 0 !important;
+	
+}
+
+.ast-builder-menu-mobile .main-navigation .menu-item > .menu-link {
+	font-weight: 200;
+
+}
+
+.ast-mobile-header-content {
+	position: absolute;
+	top: 170px;
+	left: 0;
+	width: 100%;
+	overflow: scroll;
+	height: calc(100vh - 170px);
+	border-radius: 50px
+}
+
 /*PRODUCT MENU*/
 
 #lionhead {
@@ -719,14 +771,7 @@ transform: scale(1) translate3d(0, 0, 0) !important;
 
 
 /*END - OVERLAY MENU*/
-  
-button.ast-menu-toggle {
-  display: none !important;
-}
-  
-.main-navigation .icon-arrow{
-  display:none !important;
-}
+
 
 .ast-hfb-header .ast-builder-menu-mobile .main-header-menu.ast-nav-menu .sub-menu .menu-item .menu-link {
 	font-weight: 200;
