@@ -37,6 +37,26 @@ INDEX
 
 
 
+@import './partials/animations/permanentanimations';
+@import './partials/common/fonts';
+@import './partials/common/global';
+@import './partials/common/variables';
+@import './partials/components/buttons';
+@import './partials/components/comments';
+@import './partials/components/forms';
+@import './partials/components/images';
+@import './partials/components/wp_classes';
+@import './partials/layouts/footer';
+@import './partials/layouts/frontpage';
+@import './partials/layouts/header';
+@import './partials/layouts/pages';
+@import './partials/layouts/posts';
+@import './partials/layouts/sidebar';
+@import './partials/woocommerce/checkout';
+@import './partials/woocommerce/products';
+@import './partials/woocommerce/shoppingcart';
+
+
 /*LAYOUT UND TYPOGRAPHIE*/
 
 
@@ -1443,13 +1463,12 @@ position: absolute;
 
 #geruch{
   visibility: hidden;
-  position: absolute;
+  position: absolute; 
 }
 
 #btn_geruch{
   display: flex;
-  
-
+  animation: pulse 1s 10 ease-in-out;
 }
 
 #highcbd{
@@ -1799,7 +1818,6 @@ position: absolute;
 	margin-bottom: 5%;
 	height: 38px;
 	border-radius: 30px;
-	width: 95%;
 	text-align: center;
 
 
@@ -1872,7 +1890,7 @@ position: absolute;
     padding-bottom: 10px;
     padding-right: 5px;
     width: 160px;
-    height: 40px;
+    height: 44px;
   }
 
 
@@ -2010,8 +2028,6 @@ position: absolute;
     margin-top: -30%; } }
 
 @media (min-width: 922px) {
-  .woocommerce #content .ast-woocommerce-container div.product div.images, .woocommerce .ast-woocommerce-container div.product div.images, .woocommerce-page #content .ast-woocommerce-container div.product div.images, .woocommerce-page .ast-woocommerce-container div.product div.images {
-    width: 60%; }
   .image-wrap {
     text-align: center;
     margin-top: -20%; } }
@@ -2803,10 +2819,6 @@ box-shadow: 0px 7px 12px 1px rgba(0,0,0,0.2);
 
 /* Element | https://sanaleo.com/cbd-blueten/gorilla-glue/ */
 
-.woocommerce-variation-add-to-cart {
-  width: 100%;
-  margin-bottom: 30px;
-}
 
 .glass-wrapper {
   /* display: inline-flex; */
@@ -3304,10 +3316,6 @@ box-shadow: 0px 0px 16px 5px lightgray;
 	margin-top: -5%;
 }
 
-.ast-row{
-	margin-top: 5%;
-}
-
 .woocommerce .woocommerce-ordering select {
 	vertical-align: top;
 	width: 100%;
@@ -3744,11 +3752,6 @@ display: block;
 	text-align: center;
 
 }
-}
-
-.woocommerce #content .ast-woocommerce-container div.product div.images, .woocommerce .ast-woocommerce-container div.product div.images, .woocommerce-page #content .ast-woocommerce-container div.product div.images, .woocommerce-page .ast-woocommerce-container div.product div.images {
-	width: 100%;
-	margin: auto;
 }
 
 .woocommerce div.product div.images img {

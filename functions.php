@@ -1559,3 +1559,33 @@ function flexwrapper_start() {
 function wrapper_end() {
   echo '</div>';
 }
+
+
+function get_current_product_category(){
+	global $post;
+
+  $ers = array(
+
+    ' ' => '_',
+    'Ä' => 'Ae',
+    'Ö' => 'Oe',
+    'Ü' => 'Ue',
+    'ä' => 'ae',
+    'ö' => 'oe',
+    'ü' => 'ue',
+    'ß' => 'ss'
+);
+  
+  $terms = get_the_terms( $post->ID, 'product_cat' );        
+  
+  if($terms) {
+		foreach ($terms as $term){
+		    $product_cat_name_temp = $term->name;  
+		    break;
+      }
+  }
+  
+  $product_cat_name = strtr($product_cat_name_temp, $ers);
+  $product_cat_name = strtolower($product_cat_name);
+  echo $product_cat_name;
+}

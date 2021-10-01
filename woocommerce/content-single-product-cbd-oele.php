@@ -156,6 +156,7 @@ if ( post_password_required() ) {
 	return;
 }
 ?>
+<div class="<?php get_current_product_category();?>">
 <div id="product-<?php the_ID(); ?>" <?php wc_product_class( '', $product ); ?>>
 
 	
@@ -225,6 +226,7 @@ if ( post_password_required() ) {
 
 	do_action( 'woocommerce_after_single_product_summary' );
 	?>
+</div>
 </div>
 
 <?php do_action( 'woocommerce_after_single_product' ); ?>
