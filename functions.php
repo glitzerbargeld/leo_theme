@@ -1590,6 +1590,7 @@ function get_current_product_category(){
   echo $product_cat_name;
 }
 
+/*
 add_action('plugins_loaded','ao_defer_inline_init');
 
 function ao_defer_inline_init() {
@@ -1614,3 +1615,4 @@ $in = str_replace( $match[0], $new_match, $in );
 }
 return $in;
 }
+*/
