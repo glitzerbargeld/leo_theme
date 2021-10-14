@@ -149,12 +149,12 @@ HEADER SECTION
 
 .astra-megamenu {
 	border-radius: 0 0 30px 30px !important;
-	padding: 10px !important
+	padding: 5px !important;
 }
 
 .sub-menu {
 	border-radius: 0 0 20px 20px !important;
-	padding: 10px;
+	padding: 10px !important;
 }
 
 
@@ -329,6 +329,8 @@ display: none;
   color: black !important;
   
 }
+
+
 button.faq-accordion-archive h2.accordion_heading {
 	font-size: 1.2em !important;
 	margin-bottom: 0  !important;
@@ -374,112 +376,6 @@ button.faq-accordion-archive h2.accordion_heading {
   width: 30px;
   padding: 2px;
 }
-
-
-
-/*
-.faq-container{
-  width: 100%;
-  max-width: 80rem;
-  margin: 0 auto;
-  padding: 0 .5rem;
-}
-
-.faq-accordion-item{
-  background-color: white;
-  border-radius: 30px;
-  margin-bottom: .5rem;
-  padding: 1rem;
-  box-shadow: .5rem 2px .5rem rgba(0,0,0, .1);
-  
-}
-
-.faq-accordion-link{
-  font-size: 1.6rem;
-  color: rgba(0,0,0, .8);
-  display: inline-flex;
-  align-items: center;
-  text-decoration: none;
-  width: 100%;
-  justify-content: space-between;
-  padding: 1rem 0;
-}
-
-.faq-accordion-link i{
-  padding: .5rem;
-}
-
-.faq-accordion-link .faq-info-close{
-  display: none;
-  transition: transform 1s;
-  
-}
-
-
-.faq-info-open{
-  background: url(https://sanaleo.com/wp-content/uploads/2021/07/alert-circle-outline.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: inline-block;
-  height: 30px;
-  width: 30px;
-  padding: 2px;
-}
-
-.faq-info-close{
-  background: url(https://sanaleo.com/wp-content/uploads/2021/07/close-circle-outline.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: inline-block;
-  height: 30px;
-  width: 30px;
-  padding: 2px;
-}
-
-.faq-answer{
-  overflow: hidden;
-  height: 0;
-  position: relative;
-  transition: height 650ms;
-}
-
-.faq-accordion-item:target .faq-answer{
-  height: 5rem;
-  
-  
-}
-
-.faq-accordion-item:target .faq-accordion-link .faq-info-close{
-  animation-name: rotateit;
-  animation-duration: 650ms;
-  animation-timing-function: linear;
-  -webkit-animation-name: rotateit;
-  -webkit-animation-duration: 650ms;
-  -webkit-animation-timing-function: linear;   
-  display: block;
-}
-
-@keyframes rotateit{
-  from{transform: rotate(0deg);}
-  to{transform: rotate(-180deg);}
-}
-
-@-webkit-keyframes rotateit{
-  from{transform: rotate(0deg);}
-  to{transform: rotate(-180deg);}
-}
-
-.faq-accordion-item:target .faq-accordion-link  .faq-info-open{
-  display: none;
-}
-
-
-/*FAQ ENDE*/
-
-
-
-
-
 
 
 /* SLIDER */
@@ -2717,16 +2613,17 @@ box-shadow: 0px 7px 12px 1px rgba(0,0,0,0.2);
 
 /*HERO SECTION*/
 
-#hero-banner{
-  width: 100%;
-  background-color: #F3F3D9;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: auto;
-  border-radius: 50px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+#hero-banner {
+	width: 100%;
+	background-color: #F3F3D9;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: auto;
+	border-radius: 50px;
+	box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+	padding: 5vh;
 }
 
 #hero-flex-wrap {
@@ -2736,7 +2633,6 @@ box-shadow: 0px 7px 12px 1px rgba(0,0,0,0.2);
   justify-content: center;
   align-items: center;
   height: auto;
-  margin-top: 5%;
   
 }
 
@@ -2789,14 +2685,18 @@ box-shadow: 0px 7px 12px 1px rgba(0,0,0,0.2);
 }
 
 #hero-cta {
-  margin: 50px;
-  font-size: 1.3em;
-  padding: 15px;
-  background-color: darkgreen;
-  color: white;
-  border: none; 
-  border-radius: 50px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+	margin-bottom: 5vh;
+	font-size: 1em;
+	padding-top: 2vh;
+  padding-bottom: 2vh;
+  padding-left: 20px;
+	padding-right: 20px;
+	background-color: darkgreen;
+	color: white;
+	border: none;
+	border-radius: 50px;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+	text-decoration: none;
 }
 
 .ast-stock-detail{

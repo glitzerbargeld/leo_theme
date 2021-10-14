@@ -38,7 +38,7 @@ function closeNav() {
 /*PRODUCT VARIATIONS SLIDER CBD ÖLE*/
 
 
-jQuery(function () {
+jQuery(document).ready(function () {
   var select = jQuery("#anteil-cbd");
   var slider;
 
@@ -61,7 +61,7 @@ jQuery(function () {
     console.log("Value Passed: " + this.selectedIndex + 1);
   });
 });
-jQuery(function () {
+jQuery(document).ready(function () {
   var select = jQuery("#anteil-cbd");
   var slider;
 
