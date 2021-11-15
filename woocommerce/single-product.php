@@ -46,7 +46,10 @@ get_header( 'shop' ); ?>
 			 } 
 			 else  if ( in_array( 'cbd-blueten', $categories ) ) {
 				wc_get_template_part( 'content', 'single-product-cbd-aromablueten' );
-			} 
+			}
+			else  if ( in_array( 'cbd-kosmetik', $categories ) ) {
+				wc_get_template_part( 'content', 'single-product-cbd-kosmetik' );
+			}
 			 else {
 				 wc_get_template_part( 'content', 'single-product' );
 			 }

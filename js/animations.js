@@ -12,7 +12,10 @@ jQuery( document ).ready(function() {
     menuBtn[i].onclick = () => {
       menuBtn[i].classList.contains('open') ? menuBtn[i].classList.remove('open') : menuBtn[i].classList.add('open');
       for(let j=0; j < astraMenu.length; j++){
+<<<<<<< HEAD
         console.log(astraMenu[j].style.display, astraMenu[j].style.display != "block");
+=======
+>>>>>>> 400a530 (latest changes)
         astraMenu[j].style.display != "block" ?  astraMenu[j].style.display = "block" : astraMenu[j].style.display = "none"; 
       }
     };
