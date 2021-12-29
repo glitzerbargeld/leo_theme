@@ -1,11 +1,169 @@
+/*PRODUCT PAGE - GENERAL*/
+
+.t-product-info-short {
+
+    text-align: center;
+
+    @media (min-width: 1200px){
+        text-align: left;
+    }
+
+    h1 {
+        font-size: 2em;
+        font-weight: 900;
+        text-align: center;
+
+        @media (min-width: 1200px) {
+            text-align: left;
+        }
+    }
+
+    h3 {
+        text-transform: none;
+    }
+
+    
+}
+
+
+/*Product Details*/
+
+
+.woocommerce div.product .woocommerce-tabs .panel {
+    text-align: justify;
+  }
+  
+  /*Product Gallery*/
+  .attachment-woocommerce_thumbnail.size-woocommerce_thumbnail {
+    width: 31.5%;
+    margin: auto;
+  }
+  
+  /*Product-Image*/
+  .woocommerce-product-gallery.woocommerce-product-gallery--with-images.woocommerce-product-gallery--columns-4.images {
+    opacity: 1;
+    transition: opacity 0.25s ease-in-out;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /*ONSALE*/
+  
+  
+  
+.image-wrap {
+    @media (min-width: 768px) {
+      text-align: center;
+      margin-top: -25%;
+    }
+}
+
+
+/*CART*/
+
+
+.woocommerce div.product form.cart .button.single_add_to_cart_button {
+    padding-top: 10px;
+    margin-left: 0;
+    border-radius: 0;
+    padding-left: 5px;
+    padding-bottom: 10px;
+    padding-right: 5px;
+    height: 65px;
+  }
+  
+  
+  .woocommerce div.product form.cart {
+    margin-top: 1.2em;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+/*CUSTOM TABS*/
+
+
+/* Element | https://sanaleo.com/cbd-geschenkboxen/holy-night/ */
+
+.woocommerce-tabs {
+    padding-top: 5%;
+    border-top: 1px solid black;
+}
+
+.woocommerce div.product .woocommerce-tabs .panel {
+    max-width: 992px;
+    padding: 20px;
+    margin: auto;
+  }
+
+.woocommerce-Tabs-panel {
+    
+    text-align: justify;
+    text-align-last: center;
+  
+  
+  ol, ul {
+    width: 80%;
+    margin: 0 auto 10% auto;
+    text-align-last: left;
+  }
+    
+  .woocommerce div.product .woocommerce-tabs .panel {
+    max-width: 992px;
+    margin: 5% auto;
+    padding: 20px;
+  }
+
+  li {
+      margin: 10px auto;
+  }
+  
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li a {
+	border: 1px solid white;
+    border-radius: 30px;
+
+    &:hover {
+        border: 1px solid black;
+    }
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li.active {
+    border-radius: 30px;
+	background: black !important;
+	color: white !important;
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li.active::before {
+	display: none;
+}
+
+.woocommerce #content div.product .woocommerce-tabs ul.tabs li, .woocommerce-page #content div.product .woocommerce-tabs ul.tabs li {
+	border-radius: 30px;
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li a {
+	padding: 0.6em;
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs {
+	border-top: none;
+}
+
+.woocommerce #reviews {
+	display: block;
+	text-align: center;
+}
+
 /*PRODUCT ARCHIVE*/
 
 .woocommerce-products-header .h1_span {
-	font-size: calc(max(5.5vw, 1.5em));
+	font-size: calc(max(5.5vw, 1em));
 	margin-bottom: 0.5em;
 	margin-top: 0.3em;
 	font-weight: 100;
-	letter-spacing: 20px;
+	letter-spacing: 15px;
+    text-transform: uppercase;
 }
 
 
@@ -55,6 +213,10 @@
         @media (max-width: 991.5px){
             margin-top: -250px;
         }
+        @media (max-width: 1199.5px) {
+            max-width: 600px;
+            margin: -30vh auto 10% auto;
+        }
     }
     .images{
         margin-bottom: 0 !important;
@@ -69,25 +231,15 @@
     }
 }
 
-.blurry-box {
-    box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
-    border-radius: 5px;
-    position: relative;
-    z-index: 1;
-    background: inherit;
-    overflow: hidden;
-
-    &::before {
-        content: "";
-        position: absolute;
-        background: inherit;
-        z-index: -1;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        box-shadow: inset 0 0 2000px rgba(255, 255, 255, .5);
-        filter: blur(10px);
-        margin: -20px;
-    }
+/*MERRY BUD-MAS*/
+    
+.woocommerce div.product form.cart .reset_variations {
+    opacity: 1;
+    font-size: 15px;
+    background: black !important;
+    color: white;
+    padding: 5px 20px;
+    margin: 30px 0;
+    border-radius: 30px;
+    font-weight: 400;
 }

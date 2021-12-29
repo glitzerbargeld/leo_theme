@@ -46,6 +46,8 @@ INDEX
 @import './partials/components/forms';
 @import './partials/components/images';
 @import './partials/components/wp_classes';
+@import './partials/layouts/basiclayouts';
+@import './partials/layouts/blockstyles';
 @import './partials/layouts/footer';
 @import './partials/layouts/frontpage';
 @import './partials/layouts/header';
@@ -650,39 +652,13 @@ button.faq-accordion-archive h2.accordion_heading {
   background-color: #fdede0;
 }
 
-.term-cbd-vape {
-  .woocommerce-products-header h1 {
-    color: #93933c;
-  }
-}
-
-.term-cbd-oele {
-  .woocommerce-products-header h1 {
-    color: #f48c10;
-  }
-}
-
 .term-lebensmittel .site-content {
   background-color: #f6eaff !important;
 }
 
-.term-lebensmittel {
-  .woocommerce-products-header h1 {
-    color: #a773ce;
-  }
-}
-
-.term-cbd-aromablueten {
-  .woocommerce-products-header h1 {
-    color: darkgreen;
-  }
-}
-
 .term-cbd-kapseln .site-content {
   background-color: #feffde !important;
-
 }
-
 
 .woocommerce-products-header .term-description {
   font-size: 1em !important;
@@ -1036,7 +1012,6 @@ button.faq-accordion-archive h2.accordion_heading {
 }
 
 .product-row {
-  margin: 5% auto !important;
   padding: 5%;
   border-radius: 50px;
 }
@@ -1092,8 +1067,22 @@ button.faq-accordion-archive h2.accordion_heading {
 
 /*Product Page - Schlafkapseln*/
 
-.postid-64328 {
+.postid-61698 {
 
+  .range-values {
+    display: none;
+  }
+
+  #variations-slider {
+    display: none;
+  }
+
+  .woocommerce div.product div.images img {
+    margin-top: 0%;
+  }
+}
+
+.postid-72836 {
   .range-values {
     display: none;
   }
@@ -1181,20 +1170,21 @@ button.faq-accordion-archive h2.accordion_heading {
 }
 
 .circle-background {
-  z-index: 100;
-  position: absolute;
-  width: 88%;
-  padding-top: 83%;
-  background: url("https://sanaleo.com/wp-content/uploads/2021/06/noisynoise.jpeg");
-  opacity: 0.2;
-  left: 6%;
-  top: 5%;
-  border-radius: 50%;
-  padding-bottom: 5%;
-  filter: brightness(70%);
-  pointer-events: none;
-  transform: rotate(50deg);
-  transition: 2s;
+	z-index: 100;
+	position: absolute;
+	width: 280px;
+	height: 280px;
+	background: url("https://sanaleo.com/wp-content/uploads/2021/11/beste-cbd-blueten-kaufen-im-cbd-shop-von-sanaleo.jpg");
+	opacity: 0.2;
+	border-radius: 50%;
+	padding-bottom: 5%;
+	-webkit-filter: brightness(70%);
+	filter: brightness(70%);
+	pointer-events: none;
+	-webkit-transform: rotate(50deg);
+	transform: rotate(50deg);
+	transition: 2s;
+	background-size: 10%;
 }
 
 #circle-shadow {
@@ -1210,12 +1200,6 @@ button.faq-accordion-archive h2.accordion_heading {
   pointer-events: none;
   transition: 2s;
   transform: rotate(-50deg);
-}
-
-.single-product div.product .woocommerce-product-details__short-description,
-.single-product div.product .product_meta,
-.single-product div.product .entry-content {
-  padding-top: 10%;
 }
 
 
@@ -1743,10 +1727,9 @@ button.faq-accordion-archive h2.accordion_heading {
   }
 
   .image-wrap {
-    margin-top: -59%;
+    margin-top: -35%;
   }
 }
-
 
 /*Variation Slider*/
 
@@ -1767,7 +1750,7 @@ button.faq-accordion-archive h2.accordion_heading {
 }
 
 
-.postid-61698 {
+.postid-72836 {
 
   .range-values {
     display: none;
@@ -1906,24 +1889,6 @@ a.ui-button:active,
 
 }
 
-.woocommerce div.product form.cart .button.single_add_to_cart_button {
-  padding-top: 10px;
-  margin-left: 0;
-  border-radius: 0;
-  padding-left: 5px;
-  padding-bottom: 10px;
-  padding-right: 5px;
-  width: 160px;
-  height: 65px;
-}
-
-
-.woocommerce div.product form.cart {
-  margin-top: 1.2em;
-  margin-left: 0;
-  margin-right: 0;
-}
-
 
 .summary-col {
   right: 50%;
@@ -2036,47 +2001,6 @@ a.ui-button:active,
 // }
 // }
 
-
-
-
-/*Product Details*/
-
-
-.woocommerce div.product .woocommerce-tabs .panel {
-  text-align: justify;
-}
-
-
-
-/*Product Gallery*/
-.attachment-woocommerce_thumbnail.size-woocommerce_thumbnail {
-  width: 31.5%;
-  margin: auto;
-}
-
-/*Product-Image*/
-.woocommerce-product-gallery.woocommerce-product-gallery--with-images.woocommerce-product-gallery--columns-4.images {
-  opacity: 1;
-  transition: opacity 0.25s ease-in-out;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-@media (max-width: 921px) {
-
-  .image-wrap {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: -30%;
-  }
-}
-
-@media (min-width: 922px) {
-  .image-wrap {
-    text-align: center;
-    margin-top: -20%;
-  }
-}
 
 
 
@@ -2429,6 +2353,9 @@ a {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  padding-top: 35px;
+  background: white;
+  padding-bottom: 19px; 
 
 }
 
@@ -2599,9 +2526,6 @@ a {
   margin-top: 5%;
 }
 
-.woocommerce div.product .product_title {
-  margin: 2em 0 .5em 0;
-}
 
 .wp-image-65606 {
   min-width: 40vw;
@@ -3005,21 +2929,6 @@ h2 {
   background-position: center
 }
 
-.prod-btn {
-  width: 75%;
-  height: 50px;
-  background-color: rgba(255, 255, 255, 0.95);
-  color: black;
-  padding: 10px;
-  border: none;
-  border-radius: 30px
-}
-
-.prod-btn a {
-  font-weight: 400;
-  color: black
-}
-
 .prod-btn a:hover {
   color: black;
 }
@@ -3129,20 +3038,21 @@ h2 {
 }
 
 .circle-background {
-  z-index: 100;
-  position: absolute;
-  width: 280px;
-  height: 280px;
-  background: url("https://sanaleo.com/wp-content/uploads/2021/06/noisynoise.jpeg");
-  opacity: 0.2;
-  border-radius: 50%;
-  padding-bottom: 5%;
-  -webkit-filter: brightness(70%);
-  filter: brightness(70%);
-  pointer-events: none;
-  -webkit-transform: rotate(50deg);
-  transform: rotate(50deg);
-  transition: 2s;
+	z-index: 100;
+	position: absolute;
+	width: 280px;
+	height: 280px;
+	background: url("https://sanaleo.com/wp-content/uploads/2021/11/beste-cbd-blueten-kaufen-im-cbd-shop-von-sanaleo.jpg");
+	opacity: 0.2;
+	border-radius: 50%;
+	padding-bottom: 5%;
+	-webkit-filter: brightness(70%);
+	filter: brightness(70%);
+	pointer-events: none;
+	-webkit-transform: rotate(50deg);
+	transform: rotate(50deg);
+	transition: 2s;
+	background-size: 10%;
 }
 
 #inner-circle {
@@ -3356,11 +3266,6 @@ span.has-text-align-center.ticss-77901956 {
   margin: 3% 0;
 }
 
-.woocommerce div.product .woocommerce-tabs .panel {
-  text-align: justify;
-  margin: 5% 0;
-}
-
 .woocommerce div.product .woocommerce-tabs .panel h2 {
   text-align: center
 }
@@ -3369,18 +3274,6 @@ span.has-text-align-center.ticss-77901956 {
   text-align: center
 }
 
-
-
-.woocommerce #content div.product .woocommerce-tabs,
-.woocommerce div.product .woocommerce-tabs,
-.woocommerce-page #content div.product .woocommerce-tabs,
-.woocommerce-page div.product .woocommerce-tabs {
-  clear: both;
-  margin: 10% auto;
-  border-radius: 50px;
-  box-shadow: 0px 1px 20px 1px lightgray;
-  padding: 10%;
-}
 
 .woocommerce div.product div.images .flex-control-thumbs {
   overflow: hidden;

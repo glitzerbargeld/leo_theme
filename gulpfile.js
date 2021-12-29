@@ -38,14 +38,12 @@ gulp.task('browser-sync', function () {
 const css = function () {
   return gulp
     .src('./scss/main.scss')
-    .pipe(sourcemaps.init())
     .pipe(
       sass({
-        outputStyle: 'nested',
+        outputStyle: 'compact',
       }).on('error', sass.logError),
     )
     .pipe(autoprefixer())
-    .pipe(sourcemaps.write())
     .pipe(concat('style.css'))
     .pipe(gulp.dest('./'))
     .pipe(reload({ stream: true }));
