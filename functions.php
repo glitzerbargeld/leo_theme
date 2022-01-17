@@ -1889,3 +1889,10 @@ function action_before_cart() {
         wc_print_notice( sprintf( 'Leider dürfen wir für den Kauf von CBD-Blüten keine Zahlung mit Klarna anbieten. Wir bitten um Verständnis.', reset($categories)), 'notice' );
     }
 }
+
+// Register Footer Menu
+
+function register_my_menu() {
+  register_nav_menu('footer-menu-2',__( 'Footer Menu 2' ));
+}
+add_action( 'init', 'register_my_menu' );
