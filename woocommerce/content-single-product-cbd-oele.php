@@ -1,9 +1,10 @@
 <style>
-	.woocommerce div.product form.cart .variations {
-	display: none;
-	}
-	.wp-post-image{
-clip-path: url("#zuschnitt");
+.woocommerce div.product form.cart .variations {
+    display: none;
+}
+
+.wp-post-image {
+    clip-path: url("#zuschnitt");
 }
 </style>
 
@@ -192,14 +193,14 @@ if ( post_password_required() ) {
 }
 ?>
 <div class="<?php get_current_product_category();?>">
-<div id="product-<?php the_ID(); ?>" <?php wc_product_class( '', $product ); ?>>
-
-	
+    <div id="product-<?php the_ID(); ?>" <?php wc_product_class( '', $product ); ?>>
 
 
-	<div class="ast-row">
-		<div class="ast-col-md-5 ast-col-xs-12 ast-col-md-push-6 image-wrap">
-			<?php
+
+
+        <div class="ast-row">
+            <div class="ast-col-md-5 ast-col-xs-12 ast-col-md-push-6 image-wrap">
+                <?php
 				/**
 				 * Hook: woocommerce_before_single_product_summary.
 				 *
@@ -209,13 +210,13 @@ if ( post_password_required() ) {
 				do_action( 'woocommerce_before_single_product_summary' );
 
 			?>
-		</div>
+            </div>
 
-		<div class="ast-col-md-4 ast-col-xs-12 ast-col-md-pull-4 has-text-align-center">
+            <div class="ast-col-md-4 ast-col-xs-12 ast-col-md-pull-4 has-text-align-center">
 
-			
 
-			<?php
+
+                <?php
 				/**
 				 * Hook: woocommerce_single_product_summary.
 				 *
@@ -238,30 +239,30 @@ if ( post_password_required() ) {
 				do_action( 'woocommerce_single_product_summary' );
 				add_action( 'woocommerce_single_product_summary', 'woocommerce_total_product_price', 25 ); ?>
 
-		</div>
+            </div>
+
+
+
+        </div>
+
+
+
+
+
+
+        <?php
+		/**
+		 * Hook: woocommerce_after_single_product_summary.
+		 *
+		 * @hooked woocommerce_output_product_data_tabs - 10
+		 * @hooked woocommerce_upsell_display - 15
+		 * @hooked woocommerce_output_related_products - 20
+		 */
 		
 
-
-	</div>
-
-
-
-
-	
-
-	<?php
-	/**
-	 * Hook: woocommerce_after_single_product_summary.
-	 *
-	 * @hooked woocommerce_output_product_data_tabs - 10
-	 * @hooked woocommerce_upsell_display - 15
-	 * @hooked woocommerce_output_related_products - 20
-	 */
-	
-
-	do_action( 'woocommerce_after_single_product_summary' );
-	?>
-</div>
+		do_action( 'woocommerce_after_single_product_summary' );
+		?>
+    </div>
 </div>
 
 <?php do_action( 'woocommerce_after_single_product' ); ?>
@@ -269,18 +270,18 @@ if ( post_password_required() ) {
 
 
 <script>
-jQuery(function($){
-	var price = <?php echo $product->get_price(); ?>,
-		currency = '<?php echo get_woocommerce_currency_symbol(); ?>';
+jQuery(function($) {
+    var price = <?php echo $product->get_price(); ?>,
+        currency = '<?php echo get_woocommerce_currency_symbol(); ?>';
 
-	$('[name=quantity]').change(function(){
-		if (!(this.value < 1)) {
+    $('[name=quantity]').change(function() {
+        if (!(this.value < 1)) {
 
-			var product_total = parseFloat(price * this.value);
+            var product_total = parseFloat(price * this.value);
 
-			$('#product_total_price .price').html( currency + product_total.toFixed(0));
+            $('#product_total_price .price').html(currency + product_total.toFixed(0));
 
-		}
-	});
+        }
+    });
 });
 </script>

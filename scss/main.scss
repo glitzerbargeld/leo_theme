@@ -69,7 +69,7 @@ INDEX
 
 .ast-separate-container .ast-article-post,
 .ast-separate-container .ast-article-single {
-  border-bottom: 1px solid #eee;
+  border: none;
   margin: 0;
   padding: 5.34em 0;
 }
@@ -757,12 +757,8 @@ button.faq-accordion-archive h2.accordion_heading {
   }
 
   #ast-hf-mobile-menu li {
-    display: flex;
-    margin-right: 2% !important;
+    display: block;
     margin-left: 0%;
-    width: 170px !important;
-
-    justify-content: flex-start;
   }
 }
 
@@ -2343,11 +2339,6 @@ a {
 
 }
 
-.wp-block-group {
-  padding-top: 2em;
-  padding-bottom: 4em;
-}
-
 .B2BButtonContainer {
   display: flex;
   align-items: center;
@@ -3768,7 +3759,7 @@ div.desc {
 }
 
 .term-cbd-vape .site-content {
-  background-color: #f3f3d9 !important;
+  background-color: #E1F0EC !important;
   position: relative;
   border-radius: 50px;
   padding-top: 2%
@@ -3832,8 +3823,6 @@ div.desc {
 
 
 .woocommerce-products-header .term-description {
-  text-align: justify;
-  text-align-last: center;
   font-size: 1.5em;
   margin-bottom: 3em;
   padding: 0 3%

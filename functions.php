@@ -272,7 +272,7 @@ add_filter('mime_types', 'webp_upload_mimes');
 /* Modify Email Header - Order Notification */
 add_action('woocommerce_email_header','add_Address', 10, 2);
 function add_Address($email_heading, $email) {
-	echo "<table><tr><th>Sanaleo Web UG</th></tr><tr><td>Geschäftsführerin: Stefanie Barth</td></tr><tr><td>Lessingstraße 29</td></tr><tr><td>04109 Leipzig</td></tr><tr><td>Tel.:01638913184</td></tr><tr><td>E-Mail: info@sanaleo-cbd.de</td></tr></table>";
+	echo "<table><tr><th>Sanaleo Web UG</th></tr><tr><td>Geschäftsführer: Wolf Kilian Stephan</td></tr><tr><td>Oeserstraße 37</td></tr><tr><td>04229 Leipzig</td></tr><tr><td>Tel.:01638913184</td></tr><tr><td>E-Mail: info@sanaleo-cbd.de</td></tr></table>";
 }
 
 /* Change Product Titles from H2 to Span -> SEO 
@@ -935,7 +935,7 @@ add_action('woocommerce_before_single_product','add_woo_actions');
 /* dequeue guteberg mist*/
 /* enqueue pure style */
 
-
+/*
 
 add_action( 'init', 'wpb_product_menu' );
 function wpb_product_menu() {
@@ -958,7 +958,7 @@ function wpb_product_menu() {
 
 	echo '</div>';
 }
-
+*/
 function range_slider(){
 	echo '<div class="range-values"><ul><li>5%</li><li>15%</li><li>25%</li></ul></div>';
 	echo '<div id="variations-slider"><h3 id="cbdanteil-title"style="color: white;">CBD ANTEIL</h3></div>';
@@ -1198,6 +1198,12 @@ function customer_reviews() {
         </ul>
         <p>Unser Full Spectrum Öl und Broad Spectrum Öl unterscheiden sich zum einen in der Zusammensetzung der einzelnen natürlichen Inhaltsstoffe und zum anderen in ihrer Öl-Basis. Full Spectrum-Öle enthalten alle natürlichen Inhaltsstoffe des für die Herstellung verwendeten Pflanzenmaterials, während in Broad Spectrum-Ölen bestimmte Inhaltsstoffe herausgefiltert wurden. Zusätzlich bieten wir verschiedene Full Spectrum-Öle an, die von unserer Aroma-Öl-Expertin mit weiteren natürlichen Pflanzenextrakten ergänzt werden. Diese Spezial-Öl-Mischungen werden mit ätherischen Ölen angereichert. Ätherische Öle enthalten Terpene, die den <a href="https://sanaleo.com/der-entourage-effekt/" title="Der Entourage-Effekt">Entourage-Effekt</a> verstärken können.</p>
 			</div>
+			
+			<div class="ProductCategoryDescription">
+				<h3 class="BewertungsHeading">SANALEO CBD ÖL: ANWENDUNG UND WIRKUNG?</h3>
+				<p>Hinweise zur Anwendung und Wirkung unserer CBD-Öle finden sich auf den entsprechenden Produktinformationsseiten. Weiterhin finden sich die Hinweise zur Anwendung und Wirkung auf der Umverpackung des jeweiligen CBD-Öls.</p>
+			</div>
+			
 			<div class="BewertungsHeading"><h2>Das sagen Kunden, die bei Sanaleo CBD Öl kaufen:</h2></div>
 				<div class="BewertungsContainerMain">
 					 <div class="BewertungsConstainer">
@@ -1226,6 +1232,13 @@ function customer_reviews() {
 				<h3 class="BewertungsHeading">WANN MUSS ICH MEINEN VAPE-PEN LADEN? WANN IST MEIN VAPE-PEN GELADEN?</h3>
 				<p>Wenn der <a href="https://sanaleo.com/cbd-vape/cbd-pen/" title="CBD Pen kaufen">CBD-Pen</a> geladen werden muss, blinkt das grüne Licht in regelmäßigen Abständen. Wenn er geladen ist, leuchtet das Licht durchgängig.</p>
 			</div>
+			
+			<div class="ProductCategoryDescription">
+				<h3 class="BewertungsHeading">SANALEO CBD VAPE: ANWENDUNG UND WIRKUNG?</h3>
+				<p>Hinweise zur Anwendung und Wirkung unserer CBD-Vape-Produkte finden sich auf den entsprechenden Produktinformationsseiten. Weiterhin finden sich die Hinweise zur Anwendung und Wirkung auf der Umverpackung des jeweiligen CBD-Vape-Produkts. </p>
+			</div>
+			
+			
 		<div class="BewertungsHeading"><h2>Das sagen Kunden, die bei Sanaleo CBD-Vape-Produkte kaufen:</h2></div>
 				<div class="BewertungsContainerMain">
 					 <div class="BewertungsConstainer">
@@ -1278,6 +1291,35 @@ Ein Besuch der Mary Jane Berlin bietet Dir die Möglichkeit die neuesten Entwick
 <li class="li_without_padding">Raucherzubehör</li>
 <li class="li_without_padding"><a href="https://sanaleo.com/cbd-vape/" title="Erhalte Informationen zu CBD Vape">Vaporizer</a> Und vieles mehr…</li></ul>
 			</div>
+		';
+	}
+	
+	if (is_product_category('cbd-kosmetik')) {
+		echo '
+		<div class="ProductCategoryDescription">
+		<h2>WORAN IST HOCHWERTIGE CBD KOSMETIK ZU ERKENNEN?</h2>
+		<p>Damit die Vorteile von CBD in Kosmetik tatsächlich in Erscheinung treten, sind bestimmte Aspekte ausschlaggebend:</p>
+		  <ul>
+			<li>keine Verwendung von CBD-Isolaten, sondern eines CBD-Vollspektrum-Extrakts mit hoher Qualität</li>
+			<li>ausreichende Konzentration (ca. 1% CBD)</li>
+			<li>hochwertige Trägeröle und weitere Inhaltsstoffe</li>
+		  </ul>
+		</div>
+		
+		<div class="ProductCategoryDescription">
+		<h2>WARUM SANALEO CBD-KOSMETIK?</h2>
+		<p>Wir von SANALEO wollen <b>CBD Kosmetik</b>, die ihrem Namen gerecht wird. Wir nutzen ausschließlich <a href="https://sanaleo.com/cbd-oele/full-spectrum-oele/" title="CBD Vollspektrum Öl">CBD Vollspektrum Öle</a> zur Herstellung unserer Produkte. Die Verwendung solcher ist im Vergleich zu CBD-Isolaten zwar kostenintensiver, unserer Ansicht nach jedoch entscheidend hinsichtlich der Wirksamkeit. Darüber hinaus beinhaltet jedes einzelne CBD-Kosmetikprodukt der Kosmetiklinie von SANALEO eine ausreichend hohe Konzentration an CBD und weiteren Phytocannabinoiden, um eine entsprechende Wirkung entfalten zu können.</p>
+		</div>
+		
+		<div class="ProductCategoryDescription">
+		<h2>SANALEO CBD-KOSMETIK: ANWENDUNG UND WIRKUNG?</h2>
+		<p>SANALEOs CBD Kosmetikprodukte pflegen Haut, Muskeln und Gelenke. Dem Cannabinoid werden beruhigende, zellanregende und entzündungshemmende Eigenschaften nachgesagt. Jedes unserer CBD-Kosmetik- und Wellnessprodukte ist in Kombination mit anderen pflanzlichen und kosmetischen Inhaltsstoffen so entwickelt, dass sie einen größtmöglichen Effekt auf bestimmte Hautpartien Deines Körpers haben: Ob auf der 			Gesichtshaut, an Schläfen und Gelenken oder einmassiert am ganzen Körper; ob heiß oder kalt, flüssig oder fest: Hier findest Du sicherlich das CBD-Produkt, das Deinem Körper(gefühl) zu mehr Wohlbefinden verhilft.
+		</p></div>
+		
+		<div class="ProductCategoryDescription">
+		<h2>CBD Kosmetik für Haut, Muskeln und Gelenke</h2>
+		<p><a href="https://sanaleo.com/was-ist-cbd/" title="Was ist CBD?">CBD</a> ist ein chemischer Pflanzenstoff, der in unserem Körper im sogenannten "Endocannabinoidsystem" wirkt. Dabei knüpft das CBD an Rezeptoren an, von denen sich besonders viele auf unserer Haut befinden. Seit kurzem gilt CBD deshalb als vielversprechendes Mittel in den Bereichen Kosmetik und Wellness. Um von ausreichender Qualität zu sein, 		sollten CBD-Kosmetik- und Wellnessprodukte mindestens 1% CBD enthalten. Diesem Anspruch wird unsere neue Kosmetik- und Wellnesslinie in vollem Umfang gerecht.</p>
+		</div>
 		';
 	}
   
@@ -1372,6 +1414,17 @@ Die Analysezertifikate zu jeder Sorte können auf der entsprechenden Produktinfo
       <div class="panel-archive">
         <p><a href="https://sanaleo.com/cbd-was-ist-das-uberhaupt/#Ueberblick_Welche_Cannabinoide_gibt_es_Was_sind_Terpene" title="Was sind Terpene">Terpene</a> sind kurz gesagt Pflanzeninhaltsstoffe. Sie übernehmen häufig funktionale Eigenschaften und sind in vielen Fällen für den charakteristischen Geruch einer Pflanze verantwortlich. Die aromatische Fülle soll Insekten zur Bestäubung anlocken. Auch die Hanfpflanze enthält neben den zentralen Cannabinoiden eine Vielzahl an Terpenen, die den unverkennbaren Geruch verantworten. Die Auswirkungen, die Terpene auf den Menschen haben, werden bereits in der Aromatherapie genutzt. Wissenschaftliche Erkenntnisse legen nahe, dass Hanfextrakte, die neben CBD das volle Spektrum der natürlichen Terpene der Pflanze enthalten, eine höhere Bioverfügbarkeit aufweisen und somit eine bessere Wirkung entfalten. Man spricht hier vom sog. <a href="https://sanaleo.com/der-entourage-effekt/" title="Entourage Effekt">Entourage-Effekt</a>: Die Wirkung der Pflanze ist größer als die Summe ihrer Bestandteile. Bis heute hat die Forschung die Struktur von etwa 20.000 Terpenen identifiziert und analysiert. Die wichtigsten im Zusammenhang mit CBD sind: B-Caryophyllene, Limonene, Linalool, Myrzene und Pinene. Das Zusammenspiel der Terpene birgt enormes Potential, das es verstehen und richtig anzuwenden gilt! Weitere Informationen zu den genannten Terpenen sind im <a href="https://sanaleo.com/cbd-was-ist-das-uberhaupt/#Was_Sind_Terpene" title="CBD Wiki - alle Informationen zu CBD">CBD-Wiki</a> zu finden.</p>
       </div>
+	  
+	  <button class="faq-accordion-archive"><h2 class="accordion_heading">CBD-BLÜTEN MIT PAYPAL BEZAHLEN</h2><i class="faq-archive-info-open"></i></button>
+      <div class="panel-archive">
+        <p>Bei SANALEO kein Problem – neben den herkömmlichen Zahlungsweisen wie Vorkasse, Direkte Banküberweisung oder Kreditkartenzahlung kannst Du bei SANALEO folgende Produkte mit PayPal bezahlen: CBD-Blüten, CBD-Kosmetik, CBD-Öle und CBD-Vape.</p>
+      </div>
+	  
+	  <button class="faq-accordion-archive"><h2 class="accordion_heading">CBD-BLÜTEN MIT KLARNA BEZAHLEN</h2><i class="faq-archive-info-open"></i></button>
+      <div class="panel-archive">
+        <p>Das funktioniert momentan leider noch nicht. KLARNA behält sich vor, die Transaktionen zum Kauf von CBD-Blüten nicht zu unterstützen. Sobald das Unternehmen seine Police entsprechend ändert, können wir von SANALEO den Kauf von CBD-Blüten via KLARNA anbieten. Bis dahin können ausschließlich folgende Produktkategorien mit KLARNA bezahlt werden: CBD-Kosmetik, CBD-Öle, CBD-Vape. SANALEO CBD-Blüten können mit folgenden Zahlungsmöglichkeiten erworben werden: PayPal, Direkte Banküberweisung, Kreditkartenzahlung, Vorkasse.</p>
+      </div>
+	  
 	  <h3 style="text-align:center;margin-top:20px; margin-bottom:20px;">Entdecke ausgewählte Sorten im Sanaleo CBD-Blüten Shop:</h3>
 
       <div style="margin-left: auto; margin-right:auto; text-align:center; font-size: 24px; margin-bottom: 3%;">Die CBD-Aromablüten von Sanaleo werden unter <br>unterschiedlichen Voraussetzungen angebaut.
@@ -1454,8 +1507,8 @@ Die Analysezertifikate zu jeder Sorte können auf der entsprechenden Produktinfo
         </div>
         <div class="product-table-content">
             <ul class="product-table-list">
-                <li><a href="">Moby Dick</a><img src="https://sanaleo.com/wp-content/uploads/2021/10/gradient_mobydick.png" alt=""></li>
-                <li><a href="">Power Plant</a><img src="https://sanaleo.com/wp-content/uploads/2021/10/gradient_powerplant.png" alt=""></li>
+                <li><a href="https://sanaleo.com/cbd-blueten/moby-dick">Moby Dick</a><img src="https://sanaleo.com/wp-content/uploads/2021/10/gradient_mobydick.png" alt=""></li>
+                <li><a href="https://sanaleo.com/cbd-blueten/power-plant">Power Plant</a><img src="https://sanaleo.com/wp-content/uploads/2021/10/gradient_powerplant.png" alt=""></li>
             </ul>
         </div>
     </div>
@@ -1468,7 +1521,7 @@ Die Analysezertifikate zu jeder Sorte können auf der entsprechenden Produktinfo
             <ul class="product-table-list">
                 <li><a href="https://sanaleo.com/cbd-blueten/gorilla-glue/">Gorilla Glue</a><img src="https://sanaleo.com/wp-content/uploads/2021/10/gradient_gorillaglue.png" alt=""></li>
                 <li><a href="https://sanaleo.com/cbd-blueten/jack-herer/">Jack Herer</a><img src="https://sanaleo.com/wp-content/uploads/2021/10/gradient_jackherer.png" alt=""></li>
-                <li><a href="">Skywalker OG</a><img src="https://sanaleo.com/wp-content/uploads/2021/10/gradient_skywalkerog.png" alt=""></li>
+                <li><a href="https://sanaleo.com/cbd-blueten/skywalker-og">Skywalker OG</a><img src="https://sanaleo.com/wp-content/uploads/2021/10/gradient_skywalkerog.png" alt=""></li>
             </ul>
         </div>
     </div>
@@ -1528,6 +1581,17 @@ Die Analysezertifikate zu jeder Sorte können auf der entsprechenden Produktinfo
       <div class="panel-archive">
       <p>Die Wenigsten von uns sind im Alltag frei von Beschwerden. In Zeiten des Leistungsdrucks und des ständigen “Funktionieren-Müssens” neigen wir dazu, sie leichtfertig zu ignorieren. Schnelle Abhilfe versprechen massenhaft pharmazeutische Produkte, die nicht frei von Nebenwirkungen sind und immer weniger Vertrauen erfahren. Nicht ohne Grund boomen Naturprodukte so sehr wie noch nie. Natur statt Chemie lautet die Devise. Die wichtigste (Wieder-)Entdeckung der vergangenen Jahre: <a href="https://sanaleo.com/anwendungsfelder-und-vorteile-der-hanfpflanze/" title="Anwendungsgebiete Cannabis">Das Potential von Cannabis.</a></p>
       </div>
+	  
+	  <button class="faq-accordion-archive"><h2 class="accordion_heading">CBD-ÖL MIT PAYPAL BEZAHLEN</h2><i class="faq-archive-info-open"></i></button>
+      <div class="panel-archive">
+        <p>Bei SANALEO kein Problem – neben den herkömmlichen Zahlungsweisen wie Vorkasse, Direkte Banküberweisung oder Kreditkartenzahlung kannst Du bei SANALEO folgende Produkte mit PayPal bezahlen: CBD-Blüten, CBD-Kosmetik, CBD-Öle und CBD-Vape.</p>
+      </div>
+	  
+	  <button class="faq-accordion-archive"><h2 class="accordion_heading">CBD-ÖL MIT KLARNA BEZAHLEN</h2><i class="faq-archive-info-open"></i></button>
+      <div class="panel-archive">
+        <p>Auch das ist kein Problem. Folgende Produktkategorien von SANALEO können mit KLARNA bezahlt werden: CBD-Kosmetik, CBD-Öle, CBD-Vape. SANALEO CBD-Blüten können momentan „nur“ mit folgenden Zahlungsmöglichkeiten erworben werden: PayPal, Direkte Banküberweisung, Kreditkartenzahlung, Vorkasse.</p>
+      </div>
+	  
 
       <div class="ProductCategoryDescription">
       <p>Unsere Unique Collection (Happy und Ease Drops) sind Full Spectrum Öle, die mit ausgewählten ätherischen Ölen angereichert wurden, die bestimmte Effekte verstärken sollen.</p>
@@ -1639,6 +1703,18 @@ Die Analysezertifikate zu jeder Sorte können auf der entsprechenden Produktinfo
       Wegen der geringen Studienlage raten wir Schwangeren vom Genuss von <a href="https://sanaleo.com/shop-sortiment/" title="CBD Produkte im Onlineshop kaufen">CBD-Produkten</a> ab.
       </p>   
     </div>
+		  
+	  <button class="faq-accordion-archive"><h2 class="accordion_heading">CBD-VAPE MIT PAYPAL BEZAHLEN</h2><i class="faq-archive-info-open"></i></button>
+      <div class="panel-archive">
+        <p>Bei SANALEO kein Problem – neben den herkömmlichen Zahlungsweisen wie Vorkasse, Direkte Banküberweisung oder Kreditkartenzahlung kannst Du bei SANALEO folgende Produkte mit PayPal bezahlen: CBD-Blüten, CBD-Kosmetik, CBD-Öle und CBD-Vape.</p>
+      </div>
+	  
+	  <button class="faq-accordion-archive"><h2 class="accordion_heading">CBD-VAPE MIT KLARNA BEZAHLEN</h2><i class="faq-archive-info-open"></i></button>
+      <div class="panel-archive">
+        <p>Auch das ist kein Problem. Folgende Produktkategorien von SANALEO können mit KLARNA bezahlt werden: CBD-Kosmetik, CBD-Öle, CBD-Vape. SANALEO CBD-Blüten können momentan „nur“ mit folgenden Zahlungsmöglichkeiten erworben werden: PayPal, Direkte Banküberweisung, Kreditkartenzahlung, Vorkasse.</p>
+      </div>
+	  
+
     ';
     
    }
@@ -1698,6 +1774,19 @@ Die Analysezertifikate zu jeder Sorte können auf der entsprechenden Produktinfo
     ';
   
   }
+  else if(is_product_category('cbd-kosmetik')){
+    echo '
+    <button class="faq-accordion-archive"><h2 class="accordion_heading">CBD KOSMETIK MIT PAYPAL BEZAHLEN?</h2><i class="faq-archive-info-open"></i></button>
+    <div class="panel-archive">
+      <p>Bei SANALEO kein Problem – neben den herkömmlichen Zahlungsweisen wie Vorkasse, Direkte Banküberweisung oder Kreditkartenzahlung kannst Du bei SANALEO folgende Produkte mit PayPal bezahlen: <a href="https://sanaleo.com/cbd-blueten/" title="CBD Blüten mit Paypal bezahlen">CBD Blüten</a>, CBD-Kosmetik, <a href="https://sanaleo.com/cbd-oele/" title="CBD Öl mit Paypal bezahlen">CBD Öl</a> und <a href="https://sanaleo.com/cbd-vape/" title="CBD Vape mit Paypal bezahlen">CBD Vape</a>.</p>
+    </div>
+	
+	<button class="faq-accordion-archive"><h2 class="accordion_heading">CBD-KOSMETIK MIT KLARNA BEZAHLEN?</h2><i class="faq-archive-info-open"></i></button>
+    <div class="panel-archive">
+      <p>Auch das ist kein Problem. Folgende Produktkategorien von SANALEO können mit KLARNA bezahlt werden: CBD-Kosmetik, CBD-Öle, CBD-Vape. SANALEO CBD-Blüten können momentan „nur“ mit folgenden Zahlungsmöglichkeiten erworben werden: PayPal, Direkte Banküberweisung, Kreditkartenzahlung, Vorkasse.</p>
+    </div>
+    ';
+   }
 }
 
 
@@ -1707,7 +1796,7 @@ add_action( 'wp_head', 'add_styles_to_product', 100);
 function add_styles_to_product(){
 	global $post;
     if ( has_term( 'cbd-vape', 'product_cat', $post->ID ) ) {
-		echo "<style>.product-row{background-color: #f3f3d9 !important}#primary{margin-top: 0 !important;}</style>";
+		echo "<style>.product-row{background-color: #E1F0EC !important}#primary{margin-top: 0 !important;}</style>";
 	}
 	else if ( has_term( 'lebensmittel', 'product_cat', $post->ID ) ) {
 		echo "<style>.product-row{background-color: #f6eaff !important}#primary{margin-top: 0 !important;}</style>";

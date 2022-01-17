@@ -64,6 +64,10 @@ INDEX
 /*FRONTPAGE - BUTTONS PRODUCT-CATEGORIES*/
 .prod-btn { width: 75%; height: 50px; background-color: rgba(255, 255, 255, 0.95); color: black; padding: 10px; border: none; border-radius: 30px a; border-radius-font-size: 16px !important; border-radius-text-decoration: none !important; }
 
+#wpforms-submit-72924 { background: white; color: black; border: 1px solid black; border-radius: 30px; }
+
+#wpforms-submit-72924:hover { background: black; color: white; }
+
 /*Cookie Compliance*/
 /* Element | https://sanaleo.com/ */
 #cc-window { border-radius: 30px; }
@@ -98,6 +102,12 @@ INDEX
 
 .margin-10 { margin: 10% !important; }
 
+.padding-top-0 { padding-top: 0; }
+
+.padding-bottom-0 { padding-bottom: 0; }
+
+.padding-0 { padding: 0 !important; }
+
 /*FEATURED PRODUCT BLOCK*/
 .t-featured-product { max-width: 996px; border-radius: 50px; padding: 5%; margin: 5% auto; }
 
@@ -129,7 +139,7 @@ INDEX
 .uagb-section__wrap .uagb-section__overlay { border-radius: 50px; }
 
 /*BLUETE DES MONATS SECTION*/
-#bluete-des-monats { display: flex; align-items: center; flex-wrap: wrap; justify-content: center; background: url(https://sanaleo.com/wp-content/uploads/2020/12/Pineapple-Express-CBD-Blueten-Aromablueten-Sanaleo-CBD.jpg); background-size: 308px; background-position-x: -10%; min-height: 60vh; padding: 1%; width: 100vw; margin-left: -5%; margin-right: -5%; margin-bottom: 10%; margin-top: 10%; overflow: hidden; background-repeat: repeat-x; background-position-y: center; }
+#bluete-des-monats { display: flex; align-items: center; flex-wrap: wrap; justify-content: center; background: url(https://sanaleo.com/wp-content/uploads/2020/12/Pineapple-Express-CBD-Blueten-Aromablueten-Sanaleo-CBD.jpg); background-size: 308px; background-position-x: -10%; min-height: 60vh; padding: 1%; margin-bottom: 10%; margin-top: 10%; overflow: hidden; background-repeat: repeat-x; background-position-y: center; }
 
 #bluete-des-monats #outer-circle { width: 500px; height: 500px; }
 
@@ -168,6 +178,11 @@ INDEX
 /*Account Symbol*/
 .ast-header-account-wrap { display: flex; height: 37px; }
 
+/*NAV MENU*/
+.menu-icon-cat { margin: 0 10px 10px 0; }
+
+.ast-header-break-point .main-navigation ul .menu-item .menu-link .icon-arrow:first-of-type svg { display: none; }
+
 .ast-separate-container .ast-article-post, .ast-separate-container .ast-article-single { border-bottom: 1px solid #eee; margin: 0; padding: 5.34em 0; }
 
 #post-44 .ast-breadcrumbs-wrapper { display: none !important; }
@@ -201,7 +216,6 @@ INDEX
 .woocommerce div.product form.cart { margin-top: 1.2em; margin-left: 0; margin-right: 0; }
 
 /*CUSTOM TABS*/
-/* Element | https://sanaleo.com/cbd-geschenkboxen/holy-night/ */
 .woocommerce-tabs { padding-top: 5%; border-top: 1px solid black; }
 
 .woocommerce div.product .woocommerce-tabs .panel { max-width: 992px; padding: 20px; margin: auto; }
@@ -253,6 +267,11 @@ INDEX
 
 .cbd-kosmetik .product_title { margin: 0 !important; }
 
+/*CBD-Blüten*/
+.cbd-blueten .woocommerce-product-gallery { opacity: 1; transition: opacity 0.25s ease-in-out 0s; background: white; border-radius: 50px; margin-bottom: 2em !important; }
+
+.cbd-blueten .flex-viewport { overflow: hidden; position: relative; height: 530.6px; border-radius: 50px 50px 0 0; }
+
 /*MERRY BUD-MAS*/
 .woocommerce div.product form.cart .reset_variations { opacity: 1; font-size: 15px; background: black !important; color: white; padding: 5px 20px; margin: 30px 0; border-radius: 30px; font-weight: 400; }
 
@@ -263,7 +282,7 @@ INDEX
 /*LAYOUT UND TYPOGRAPHIE*/
 .single .entry-header .post-thumb img { border-radius: 30px; }
 
-.ast-separate-container .ast-article-post, .ast-separate-container .ast-article-single { border-bottom: 1px solid #eee; margin: 0; padding: 5.34em 0; }
+.ast-separate-container .ast-article-post, .ast-separate-container .ast-article-single { border: none; margin: 0; padding: 5.34em 0; }
 
 /*CONTENT PAGES*/
 /*B2B*/
@@ -460,7 +479,7 @@ button.faq-accordion-archive h2.accordion_heading { font-size: 1.2em !important;
 .ast-hfb-header .ast-builder-menu-mobile .main-header-menu, .ast-hfb-header .ast-builder-menu-mobile .main-navigation .menu-item .menu-link, .ast-hfb-header .ast-builder-menu-mobile .main-navigation .menu-item .sub-menu .menu-link { border-style: none; justify-content: start; }
 
 @media only screen and (min-width: 768px) and (max-width: 1224px) { .ast-builder-menu-mobile .main-navigation { font-size: 1rem; }
-  #ast-hf-mobile-menu li { display: flex; margin-right: 2% !important; margin-left: 0%; width: 170px !important; justify-content: flex-start; } }
+  #ast-hf-mobile-menu li { display: block; margin-left: 0%; } }
 
 .sub-menu a { transition: font-style 2.5s; }
 
@@ -929,8 +948,6 @@ a { text-decoration: none; }
 
 .woocommerce ul.products li.product.box-shadow-1, .woocommerce ul.products li.product.box-shadow-1-hover:hover, .woocommerce-page ul.products li.product.box-shadow-1, .woocommerce-page ul.products li.product.box-shadow-1-hover { display: flex; justify-content: center; box-shadow: 0 1px 3px -2px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.1); transition: all .3s ease-in-out; }
 
-.wp-block-group { padding-top: 2em; padding-bottom: 4em; }
-
 .B2BButtonContainer { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; padding-top: 35px; background: white; padding-bottom: 19px; }
 
 .B2BButtonContainer button { margin: 15px; border-radius: 50px; }
@@ -1322,7 +1339,7 @@ div.desc { padding: 15px; text-align: center; }
 
 .term-cbd-aromablueten .ast-advanced-headers-vertical-center { border-radius: 50px 50px 0 0px; }
 
-.term-cbd-vape .site-content { background-color: #f3f3d9 !important; position: relative; border-radius: 50px; padding-top: 2%; }
+.term-cbd-vape .site-content { background-color: #E1F0EC !important; position: relative; border-radius: 50px; padding-top: 2%; }
 
 .ast-advanced-headers-vertical-center { border-radius: 50px 50px 0 0px; }
 
@@ -1340,7 +1357,7 @@ div.desc { padding: 15px; text-align: center; }
 
 .ast-advanced-headers-wrap .taxonomy-description { display: none; }
 
-.woocommerce-products-header .term-description { text-align: justify; -moz-text-align-last: center; text-align-last: center; font-size: 1.5em; margin-bottom: 3em; padding: 0 3%; }
+.woocommerce-products-header .term-description { font-size: 1.5em; margin-bottom: 3em; padding: 0 3%; }
 
 @media screen and (max-width: 768px) { .woocommerce-products-header .term-description { font-size: 1em; margin-bottom: 3em; padding: 0; text-align: center; } }
 

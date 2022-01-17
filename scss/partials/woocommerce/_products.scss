@@ -1,112 +1,98 @@
 /*PRODUCT PAGE - GENERAL*/
 
 .t-product-info-short {
+  text-align: center;
 
+  @media (min-width: 1200px) {
+    text-align: left;
+  }
+
+  h1 {
+    font-size: 2em;
+    font-weight: 900;
     text-align: center;
 
-    @media (min-width: 1200px){
-        text-align: left;
+    @media (min-width: 1200px) {
+      text-align: left;
     }
+  }
 
-    h1 {
-        font-size: 2em;
-        font-weight: 900;
-        text-align: center;
-
-        @media (min-width: 1200px) {
-            text-align: left;
-        }
-    }
-
-    h3 {
-        text-transform: none;
-    }
-
-    
+  h3 {
+    text-transform: none;
+  }
 }
-
 
 /*Product Details*/
 
-
 .woocommerce div.product .woocommerce-tabs .panel {
-    text-align: justify;
-  }
-  
-  /*Product Gallery*/
-  .attachment-woocommerce_thumbnail.size-woocommerce_thumbnail {
-    width: 31.5%;
-    margin: auto;
-  }
-  
-  /*Product-Image*/
-  .woocommerce-product-gallery.woocommerce-product-gallery--with-images.woocommerce-product-gallery--columns-4.images {
-    opacity: 1;
-    transition: opacity 0.25s ease-in-out;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  /*ONSALE*/
-  
-  
-  
-.image-wrap {
-    @media (min-width: 768px) {
-      text-align: center;
-      margin-top: -25%;
-    }
+  text-align: justify;
 }
 
+/*Product Gallery*/
+.attachment-woocommerce_thumbnail.size-woocommerce_thumbnail {
+  width: 31.5%;
+  margin: auto;
+}
+
+/*Product-Image*/
+.woocommerce-product-gallery.woocommerce-product-gallery--with-images.woocommerce-product-gallery--columns-4.images {
+  opacity: 1;
+  transition: opacity 0.25s ease-in-out;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*ONSALE*/
+
+.image-wrap {
+  @media (min-width: 768px) {
+    text-align: center;
+    margin-top: -25%;
+  }
+}
 
 /*CART*/
 
-
 .woocommerce div.product form.cart .button.single_add_to_cart_button {
-    padding-top: 10px;
-    margin-left: 0;
-    border-radius: 0;
-    padding-left: 5px;
-    padding-bottom: 10px;
-    padding-right: 5px;
-    height: 65px;
-  }
-  
-  
-  .woocommerce div.product form.cart {
-    margin-top: 1.2em;
-    margin-left: 0;
-    margin-right: 0;
-  }
+  padding-top: 10px;
+  margin-left: 0;
+  border-radius: 0;
+  padding-left: 5px;
+  padding-bottom: 10px;
+  padding-right: 5px;
+  height: 65px;
+}
+
+.woocommerce div.product form.cart {
+  margin-top: 1.2em;
+  margin-left: 0;
+  margin-right: 0;
+}
 
 /*CUSTOM TABS*/
 
-
-/* Element | https://sanaleo.com/cbd-geschenkboxen/holy-night/ */
-
 .woocommerce-tabs {
-    padding-top: 5%;
-    border-top: 1px solid black;
+  padding-top: 5%;
+  border-top: 1px solid black;
 }
 
 .woocommerce div.product .woocommerce-tabs .panel {
-    max-width: 992px;
-    padding: 20px;
-    margin: auto;
-  }
+  max-width: 992px;
+  padding: 20px;
+  margin: auto;
+}
 
 .woocommerce-Tabs-panel {
-    
-    text-align: justify;
-    text-align-last: center;
-  
-  
-  ol, ul {
+  text-align: justify;
+  text-align-last: center;
+
+  ol,
+  ul {
     width: 80%;
     margin: 0 auto 10% auto;
     text-align-last: left;
   }
-    
+
   .woocommerce div.product .woocommerce-tabs .panel {
     max-width: 992px;
     margin: 5% auto;
@@ -114,132 +100,149 @@
   }
 
   li {
-      margin: 10px auto;
+    margin: 10px auto;
   }
-  
 }
 
 .woocommerce div.product .woocommerce-tabs ul.tabs li a {
-	border: 1px solid white;
-    border-radius: 30px;
+  border: 1px solid white;
+  border-radius: 30px;
 
-    &:hover {
-        border: 1px solid black;
-    }
+  &:hover {
+    border: 1px solid black;
+  }
 }
 
 .woocommerce div.product .woocommerce-tabs ul.tabs li.active {
-    border-radius: 30px;
-	background: black !important;
-	color: white !important;
+  border-radius: 30px;
+  background: black !important;
+  color: white !important;
 }
 
 .woocommerce div.product .woocommerce-tabs ul.tabs li.active::before {
-	display: none;
+  display: none;
 }
 
-.woocommerce #content div.product .woocommerce-tabs ul.tabs li, .woocommerce-page #content div.product .woocommerce-tabs ul.tabs li {
-	border-radius: 30px;
+.woocommerce #content div.product .woocommerce-tabs ul.tabs li,
+.woocommerce-page #content div.product .woocommerce-tabs ul.tabs li {
+  border-radius: 30px;
 }
 
 .woocommerce div.product .woocommerce-tabs ul.tabs li a {
-	padding: 0.6em;
+  padding: 0.6em;
 }
 
 .woocommerce div.product .woocommerce-tabs ul.tabs {
-	border-top: none;
+  border-top: none;
 }
 
 .woocommerce #reviews {
-	display: block;
-	text-align: center;
+  display: block;
+  text-align: center;
 }
 
 /*PRODUCT ARCHIVE*/
 
 .woocommerce-products-header .h1_span {
-	font-size: calc(max(5.5vw, 1em));
-	margin-bottom: 0.5em;
-	margin-top: 0.3em;
-	font-weight: 100;
-	letter-spacing: 15px;
-    text-transform: uppercase;
+  font-size: calc(max(5.5vw, 1em));
+  margin-bottom: 0.5em;
+  margin-top: 0.3em;
+  font-weight: 100;
+  letter-spacing: 15px;
+  text-transform: uppercase;
 }
-
 
 /*ÖLE*/
 
-
 @media (max-width: 767px) {
-    .cbd_oele {
-
-        .woocommerce #content .ast-woocommerce-container div.product div.images,
-        .woocommerce .ast-woocommerce-container div.product div.images,
-        .woocommerce-page #content .ast-woocommerce-container div.product div.images,
-        .woocommerce-page .ast-woocommerce-container div.product div.images {
-            width: 100%;
-            margin-top: -220px;
-            margin-bottom: 0;
-        }
+  .cbd_oele {
+    .woocommerce #content .ast-woocommerce-container div.product div.images,
+    .woocommerce .ast-woocommerce-container div.product div.images,
+    .woocommerce-page
+      #content
+      .ast-woocommerce-container
+      div.product
+      div.images,
+    .woocommerce-page .ast-woocommerce-container div.product div.images {
+      width: 100%;
+      margin-top: -220px;
+      margin-bottom: 0;
     }
+  }
 }
 
 @media (min-width: 768px) {
-
-    .woocommerce #content .ast-woocommerce-container div.product div.images,
-    .woocommerce .ast-woocommerce-container div.product div.images,
-    .woocommerce-page #content .ast-woocommerce-container div.product div.images,
-    .woocommerce-page .ast-woocommerce-container div.product div.images {
-        width: 100%;
-        margin: auto;
-    }
+  .woocommerce #content .ast-woocommerce-container div.product div.images,
+  .woocommerce .ast-woocommerce-container div.product div.images,
+  .woocommerce-page #content .ast-woocommerce-container div.product div.images,
+  .woocommerce-page .ast-woocommerce-container div.product div.images {
+    width: 100%;
+    margin: auto;
+  }
 }
 
-
 .woocommerce-variation-add-to-cart {
-    width: 90%;
-    margin-bottom: 30px;
-    margin-left: auto;
-    margin-right: auto;
+  width: 90%;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /*Kosmetik*/
 
-.cbd-kosmetik{
-    .woocommerce-product-details__short-description {
-        text-align: center;
+.cbd-kosmetik {
+  .woocommerce-product-details__short-description {
+    text-align: center;
+  }
+  .ast-row {
+    @media (max-width: 991.5px) {
+      margin-top: -250px;
     }
-    .ast-row {
-        @media (max-width: 991.5px){
-            margin-top: -250px;
-        }
-        @media (max-width: 1199.5px) {
-            max-width: 600px;
-            margin: -30vh auto 10% auto;
-        }
+    @media (max-width: 1199.5px) {
+      max-width: 600px;
+      margin: -30vh auto 10% auto;
     }
-    .images{
-        margin-bottom: 0 !important;
-    }
+  }
+  .images {
+    margin-bottom: 0 !important;
+  }
 
-    .woocommerce-product-details__short-description{
-        padding-top: 0 !important;
-    }
+  .woocommerce-product-details__short-description {
+    padding-top: 0 !important;
+  }
 
-    .product_title {
-        margin: 0 !important;
-    }
+  .product_title {
+    margin: 0 !important;
+  }
+}
+
+/*CBD-Blüten*/
+
+.cbd-blueten {
+  .woocommerce-product-gallery {
+    opacity: 1;
+    transition: opacity 0.25s ease-in-out 0s;
+    background: white;
+    border-radius: 50px;
+    margin-bottom: 2em !important;
+  }
+  .flex-viewport {
+    overflow: hidden;
+    position: relative;
+    height: 530.6px;
+    border-radius: 50px 50px 0 0;
+  }
 }
 
 /*MERRY BUD-MAS*/
-    
+
 .woocommerce div.product form.cart .reset_variations {
-    opacity: 1;
-    font-size: 15px;
-    background: black !important;
-    color: white;
-    padding: 5px 20px;
-    margin: 30px 0;
-    border-radius: 30px;
-    font-weight: 400;
+  opacity: 1;
+  font-size: 15px;
+  background: black !important;
+  color: white;
+  padding: 5px 20px;
+  margin: 30px 0;
+  border-radius: 30px;
+  font-weight: 400;
 }

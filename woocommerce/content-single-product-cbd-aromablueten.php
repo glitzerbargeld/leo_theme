@@ -1,9 +1,7 @@
 <style>
-
-	.woocommerce div.product form.cart .variations {
-	display: none;
-	}
-	
+.woocommerce div.product form.cart .variations {
+    display: none;
+}
 </style>
 
 
@@ -40,14 +38,16 @@ if ( post_password_required() ) {
 	return;
 }
 ?>
-<div id="product-<?php the_ID(); ?>" <?php wc_product_class( '', $product ); ?>>
 
-	
+<div class="<?php get_current_product_category();?>">
+    <div id="product-<?php the_ID(); ?>" <?php wc_product_class( '', $product ); ?>>
 
 
-	<div class="ast-row">
-		<div class="ast-col-md-5 ast-col-xs-12 ast-col-md-push-6">
-			<?php
+
+
+        <div class="ast-row">
+            <div class="ast-col-xl-5 ast-col-xl-push-6">
+                <?php
 				/**
 				 * Hook: woocommerce_before_single_product_summary.
 				 *
@@ -57,13 +57,13 @@ if ( post_password_required() ) {
 				do_action( 'woocommerce_before_single_product_summary' );
 
 			?>
-		</div>
+            </div>
 
-		<div class="ast-col-xl-4 ast-col-md-6 ast-col-sm-12 ast-col-md-pull-5 ast-col-xl-pull-4" style="overflow: hidden">
+            <div class="ast-col-xl-4 ast-col-xl-pull-4" style="overflow: hidden">
 
-			
 
-			<?php
+
+                <?php
 				/**
 				 * Hook: woocommerce_single_product_summary.
 				 *
@@ -81,16 +81,16 @@ if ( post_password_required() ) {
 				do_action( 'woocommerce_single_product_summary' );
 
 				?>
-		
 
 
-		</div>
-		
+
+            </div>
 
 
-	</div>
 
-	<?php
+        </div>
+
+        <?php
 	/**
 	 * Hook: woocommerce_after_single_product_summary.
 	 *
@@ -101,53 +101,52 @@ if ( post_password_required() ) {
 	do_action( 'woocommerce_after_single_product_summary' );
 	?>
 
+    </div>
 </div>
 
-<?php do_action( 'woocommerce_after_single_product' ); ?>
+    <?php do_action( 'woocommerce_after_single_product' ); ?>
 
 
-<script>
+    <script>
+    const buds = document.querySelectorAll('.buds');
+    const select = document.getElementById("pa_menge");
+    const dropdownselect = jQuery("#pa_menge");
+    const selectoptions = select.options;
+    var selectoptionsarray = [];
 
-
-const buds = document.querySelectorAll('.buds');
-const select = document.getElementById("pa_menge");
-const dropdownselect = jQuery("#pa_menge");
-const selectoptions = select.options;
-var selectoptionsarray = [];
-
-for(var i=0; i<select.options.length; i++){
-    selectoptionsarray.push(select.options[i].value);
-}
-
-buds.forEach(el => {
-    if(selectoptionsarray.includes(el.getAttribute("data-el"))){
-        el.parentElement.style.display = "block";
+    for (var i = 0; i < select.options.length; i++) {
+        selectoptionsarray.push(select.options[i].value);
     }
-    if(el.getAttribute("data-el") == select.value){el.style.backgroundColor = "rgb(136, 175, 136)"}
-})
+
+    buds.forEach(el => {
+        if (selectoptionsarray.includes(el.getAttribute("data-el"))) {
+            el.parentElement.style.display = "block";
+        }
+        if (el.getAttribute("data-el") == select.value) {
+            el.style.backgroundColor = "rgb(136, 175, 136)"
+        }
+    })
 
 
 
 
-buds.forEach(el => el.addEventListener('click', event => {
-    event.preventDefault();
-    select.value = event.target.getAttribute("data-el");
-	dropdownselect.change();
-    buds.forEach(el => el.style.backgroundColor ="gray");
-    event.target.style.backgroundColor = "rgb(136, 175, 136)";
+    buds.forEach(el => el.addEventListener('click', event => {
+        event.preventDefault();
+        select.value = event.target.getAttribute("data-el");
+        dropdownselect.change();
+        buds.forEach(el => el.style.backgroundColor = "gray");
+        event.target.style.backgroundColor = "rgb(136, 175, 136)";
 
 
-}));
+    }));
 
-buds.forEach(el => el.addEventListener('touchstart', event => {
-    event.preventDefault();
-    select.value = event.target.getAttribute("data-el");
-	dropdownselect.change();
-    buds.forEach(el => el.style.backgroundColor ="gray");
-    event.target.style.backgroundColor = "rgb(136, 175, 136)";
-
-
-}));
+    buds.forEach(el => el.addEventListener('touchstart', event => {
+        event.preventDefault();
+        select.value = event.target.getAttribute("data-el");
+        dropdownselect.change();
+        buds.forEach(el => el.style.backgroundColor = "gray");
+        event.target.style.backgroundColor = "rgb(136, 175, 136)";
 
 
-</script> 
+    }));
+    </script>
