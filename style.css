@@ -173,7 +173,7 @@ footer #ft-about img { margin-bottom: 20px; max-width: 120px; }
 
 #ft-partners .partner-logo { max-height: 70px; margin: 20px; }
 
-#ft-legal { text-align: justify; -moz-text-align-last: center; text-align-last: center; grid-area: legal; }
+#ft-legal { font-size: 12px; text-align: justify; -moz-text-align-last: center; text-align-last: center; grid-area: legal; }
 
 /*MEDIA QUERIES*/
 @media (max-width: 991.5px) { footer { grid-template-columns: 1fr 1fr; grid-template-areas: "ftnewsletter ftnewsletter" "ftabout ftabout" "ftmenu ftmenu" "services services" "partners partners" "legal legal"; }
@@ -1414,6 +1414,278 @@ div.desc { padding: 15px; text-align: center; }
 @media screen and (max-width: 768px) { .woocommerce-products-header .term-description { font-size: 1em; margin-bottom: 3em; padding: 0; text-align: center; } }
 
 .woocommerce div.product div.images img { display: block; width: 100%; height: auto; box-shadow: none; }
+
+/*THURSDAY - 01-20-2022*/
+.hide_element { display: none !important; }
+
+.woocommerce div.product form.cart .button.single_add_to_cart_button { width: calc(min(40vw, 180px)) !important; padding-top: 10px; margin-left: 0; border-radius: 0; padding-left: 15px; padding-bottom: 10px; padding-right: 15px; height: 65px; display: flex; align-items: center; text-align: left; }
+
+.cart_item .attachment-woocommerce_thumbnail.size-woocommerce_thumbnail { width: 100%; margin: auto; }
+
+#order_review { padding: calc(min(5vw, 1em)) !important; border-width: .5px !important; border-radius: 30px; border-color: black !important; }
+
+#order_review_heading { border: none !important; }
+
+.cat-img { max-height: 40vh; }
+
+.has-text-align-center { text-align: center !important; }
+
+.products-hero-section h1 { font-weight: 900; }
+
+.products-hero-section p { background: white; font-weight: 400; padding: 20px; border-radius: 20px; margin: 30px 0; }
+
+.entry-title { text-align: center; }
+
+.single-post p { text-align: justify; -moz-text-align-last: left; text-align-last: left; }
+
+article .entry-content h2 { font-weight: 600; text-transform: none; }
+
+.single-post h2 { font-size: 1.5em; }
+
+.single-product h1 { text-transform: none !important; font-size: 2.3em !important; font-weight: 600; }
+
+.product-table-header.h4_span { font-size: 38px !important; font-weight: 300 !important; margin-bottom: 15px; text-align: left !important; font-family: 'Mr-Eaves-Modern',mr-eaves-modern,sans-serif; line-height: 1.5; }
+
+.cbd-kosmetik h1 { text-align: center !important; }
+
+.h4_span { font-size: 38px !important; font-weight: 300 !important; margin-bottom: 15px; text-align: left !important; font-family: 'Mr-Eaves-Modern',mr-eaves-modern,sans-serif; line-height: 1.5; }
+
+.sfsiaftrpstwpr { display: flex; float: none; margin-top: 100px; padding: 0 !important; width: 100%; }
+
+.sfsiaftrpstwpr > div > div { margin: 5px !important; }
+
+.home .ast-row { max-width: 1920px; }
+
+.wc-block-grid .wc-block-grid__products .wc-block-grid__product:hover { -webkit-transform: translateY(-20px); transform: translateY(-20px); box-shadow: 0px 20px 8px 2px rgba(0, 0, 0, 0.1); }
+
+.wc-block-grid .wc-block-grid__products .wc-block-grid__product { box-shadow: 0px 5px 8px 2px rgba(0, 0, 0, 0.1); margin: 5%; border-radius: 30px; padding: 10px; transition: .5s; }
+
+.uagb-block-0be75286.uagb-section__wrap { max-width: 1368px; }
+
+.wc-block-grid__products { justify-content: center; }
+
+#hero-cta { font-size: 1em; padding-top: 10px; padding-bottom: 10px; padding-left: 15px; padding-right: 15px; background-color: darkgreen; color: white; border: none; border-radius: 30px; box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3); text-decoration: none; font-weight: 900; margin: 0px 5px 15px -5px; }
+
+.ProductCategoryDescription { max-width: 960px; margin: auto; text-align: justify; -moz-text-align-last: center; text-align-last: center; }
+
+.ProductCategoryDescription ul { list-style: none; margin: 5% 0; text-align: center; }
+
+.ProductCategoryDescription li { border-bottom: 1px solid black; padding: 15px; width: 50%; margin: auto; }
+
+.woocommerce div.product span.onsale { display: none !important; }
+
+.faq-accordion-archive { margin: auto !important; }
+
+.panel-archive { margin-top: 20px; }
+
+html { scroll-behavior: smooth; }
+
+:target:before { content: ""; display: block; height: 100px; margin: -100px 0 0; }
+
+.cbd_oele { text-align: center !important; }
+
+@media screen and (max-width: 920px) { .wp-block-column:nth-child(2n) { margin-left: 0; }
+  .entry-meta, .entry-meta * { display: none; } }
+
+/*LANDING PAGE STYLES*/
+@-webkit-keyframes ease-in-up { 0% { -webkit-transform: translateY(20px); transform: translateY(20px);
+    opacity: 0; }
+  100% { opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px); } }
+@keyframes ease-in-up { 0% { -webkit-transform: translateY(20px); transform: translateY(20px);
+    opacity: 0; }
+  100% { opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px); } }
+
+@-webkit-keyframes swirl-in { 0% { -webkit-transform: scale(0.1); transform: scale(0.1);
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); }
+  50% { -webkit-transform: scale(0.5); transform: scale(0.5);
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg); }
+  100% { -webkit-transform: rotate(0deg); transform: rotate(0deg);
+    -webkit-transform: scale(1);
+            transform: scale(1); } }
+
+@keyframes swirl-in { 0% { -webkit-transform: scale(0.1); transform: scale(0.1);
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); }
+  50% { -webkit-transform: scale(0.5); transform: scale(0.5);
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg); }
+  100% { -webkit-transform: rotate(0deg); transform: rotate(0deg);
+    -webkit-transform: scale(1);
+            transform: scale(1); } }
+
+#kosmetik-table .product-table-list li { display: block; margin: 0 0px 20px 0px; }
+
+#kosmetik-table .product-table-content { border: 7px solid #f2dfe7; }
+
+#oel-table { margin-top: 5%; }
+
+#oel-table .product-table-content { border: 7px solid #fdebe0; }
+
+#oel-table .product-table-list li { display: block; margin: 0 0px 20px 0px; }
+
+#blueten-faq { margin-top: 5%; text-align: justify !important; }
+
+.flex-list { display: flex; background: white; padding: 50px; flex-wrap: wrap; justify-content: center; list-style: none; }
+
+.flex-list li { display: flex; flex-basis: 300px; padding: 10px; border: 7px solid #ecfbe6; margin: 10px; justify-content: center; align-items: center; text-align: center; font-weight: 600; }
+
+.product-table-wrapper { display: flex; flex-wrap: wrap; padding: 30px; justify-content: center; background: white; }
+
+.product-table-col { flex: 1; display: flex; flex-direction: column; margin-top: 20px; }
+
+.product-table-header { font-weight: 300; display: inline-flex; justify-content: space-between; align-items: flex-end; padding-left: 10px; padding-right: 20px; }
+
+.product-table-header h4 { font-size: 38px !important; font-weight: 300 !important; margin-bottom: 15px; text-align: left !important; }
+
+.product-table-icon { -webkit-transform: translateY(10px); transform: translateY(10px); padding: 5px; -webkit-animation: swirl-in 1s linear; animation: swirl-in 1s linear; }
+
+.product-table-content { font-size: 1.4em; font-weight: 200; height: 100%; border: 7px solid #ecfbe6; margin: 5px; line-height: 1.2em; padding-right: 10px; padding-top: 10px; padding-bottom: 5px; }
+
+.product-table-list { list-style: none; margin: 0 10px; }
+
+.product-table-list li { opacity: 0; display: flex; justify-content: space-between; align-items: center; padding-right: 5px; padding-left: 5px; -webkit-animation: ease-in-up 1s forwards; animation: ease-in-up 1s forwards; }
+
+.product-table-list img { min-width: 30px; max-width: 3vw; }
+
+/*END LANDING PAGE Styles*/
+.flex-basis-50 { flex-basis: 50%; }
+
+.flex { display: flex; flex-wrap: wrap; }
+
+/* main.min.css | http://stag2.sanaleo.com/wp-content/themes/astra/assets/css/minified/main.min.css?ver=3.6.8 */
+.single .entry-header { text-align: center; }
+
+/* style.css | http://stag2.sanaleo.com/wp-content/themes/sanaleo/style.css?ver=1.0.0 */
+.ast-breadcrumbs-wrapper { text-align: center; }
+
+.sfsiaftrpstwpr { display: inline-flex; justify-content: center; padding: 30px; }
+
+.padding-bottom-5 { padding-bottom: 5%; }
+
+.bg-white { background-color: white; }
+
+.text-align-justify-last-center { text-align: justify; -moz-text-align-last: center; text-align-last: center; }
+
+.p-960 { max-width: 960px; margin: auto; }
+
+.page-id-70882 { padding: 0 !important; }
+
+.page-id-70882 ._wvi1k5 { display: none !important; }
+
+.page-id-70882 #sfsi_plus_floater { display: none !important; }
+
+.page-id-70882 #ast-scroll-top { display: none !important; }
+
+.border-radius-none { border-radius: 0 !important; }
+
+.fullheight { min-height: 100vh; }
+
+.flex-col-align-center { display: flex; flex-direction: column; justify-content: center; }
+
+@media (min-width: 765px) { .rotate-90-tablet { -webkit-transform: rotate(-90deg); transform: rotate(-90deg); } }
+
+@media (min-width: 1368px) { .rotate-90-desktop { -webkit-transform: rotate(-90deg); transform: rotate(-90deg); } }
+
+.faq_span { font-size: calc(min(250px, 20vw)) !important; font-weight: 900; }
+
+@media (max-width: 544px) { #astra-footer-menu { margin-top: 0px; margin-bottom: 0px; margin-left: 0px; margin-right: 0px; display: flex; flex-direction: column; } }
+
+#ast-scroll-top { box-shadow: inset 0.2px -1px 7px #000, 2px 1px 5px #484848; }
+
+#terpene { font-size: 20px; }
+
+.cc-color-override-240881985.cc-window { color: black; background-color: white; border: medium none; border-radius: 39px; box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 10px; }
+
+#newsletter-form { text-align: center; }
+
+.imgrid { display: flex; justify-content: center; }
+
+.img-col { flex-basis: 25%; margin: 0 5%; }
+
+#sfsi_plus_floater { display: flex; flex-direction: column; background: white; width: 40px !important; border-radius: 30px; box-shadow: 2px 10px 10px -5px rgba(0, 0, 0, 0.2); left: 5px !important; padding-bottom: 15px; padding-top: 15px; top: 45% !important; position: fixed !important; }
+
+@media (max-width: 567.5px) { #sfsi_plus_floater { visibility: hidden; } }
+
+.sfsi_plus_tool_tip_2 { left: 60px; }
+
+.wp-image-69234, .wp-block-cover { border-radius: 50px; }
+
+.image-wrap .images { margin-top: -170px; }
+
+.astra-cart-drawer .astra-cart-drawer-close { padding: 0.875em 1em .675em; }
+
+.astra-cart-drawer .astra-cart-drawer-header { padding: 0.675em 0 0.675rem; }
+
+#ast-fixed-header .ast-below-header { box-shadow: 0px 0px 10px 2px lightgray; border-radius: 0 0 30px 30px; }
+
+@media (max-width: 996px) { #qualitaetsanspruch h1, h2, h3, h4 { text-align: center !important; }
+  #qualitaetsanspruch p { text-align: justify !important; }
+  #qualitaetsanspruch .wp-block-buttons { justify-content: center !important; } }
+
+.ast-builder-menu-mobile .main-navigation .main-header-menu .menu-item > .menu-link { text-align: left; }
+
+/*HERO SECTION*/
+.inline-flex-wrapper { display: inline-flex; }
+
+#hero-banner { width: 100%; background-color: #F3F3D9; display: flex; flex-direction: column; justify-content: center; align-items: center; margin: auto; border-radius: 50px; box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); }
+
+#hero-flex-wrap { width: 100%; display: flex; flex-direction: row-reverse; flex-wrap: wrap; justify-content: center; align-items: center; min-height: 50vh; margin-top: 5%; }
+
+#hero-image-wrapper { flex-basis: 50%; }
+
+#hero-image-wrapper img { width: 100%; }
+
+#hero-text { z-index: 10; flex-basis: 50%; }
+
+#hero-text h1 { text-decoration: none; font-size: calc(max(4vh, 1.5em)); line-height: 1.2em; font-weight: 200; color: darkgreen; margin: 0; }
+
+#hero-text h1 span { font-size: calc(max(5vh, 1em)); font-weight: 900; color: darkgreen; text-transform: uppercase; margin: 0; text-decoration: none !important; }
+
+#hero-text span { font-size: calc(max(2.5vh, 1em)); }
+
+#hero-text h2 { margin-bottom: 50px; font-size: calc(max(2vh, 0.9em)); font-weight: 300; color: darkgreen; }
+
+@media (max-width: 992px) { #hero-image-wrapper { flex-basis: 100%; }
+  #hero-text { flex-basis: 100%; text-align: center; } }
+
+.ast-stock-detail { text-align: center; }
+
+/*END HERO SECTION*/
+.ast-above-header.ast-above-header-bar { margin-top: 0px !important; }
+
+#premium-section { text-align: justify; }
+
+#premium-section .wp-block-columns { padding: 5%; }
+
+.h2-margin-bottom { margin-bottom: 1.5em !important; }
+
+#reasons-section { margin: 10% 0; }
+
+#reasons p { text-align: justify !important; }
+
+#oele-section .wp-block-columns { padding-left: 10%; padding-right: 10%; text-align: center; }
+
+#service-section { text-align: center; }
+
+#service-section .wp-block-columns { padding-left: 10%; padding-right: 10%; text-align: justify; }
+
+.page-id-68711 #sfsi_plus_floater { display: none; }
+
+.page-id-68711 h3, h4, h5 { font-weight: 200 !important; text-transform: none !important; }
+
+#newsletter-signup-form { display: flex; flex-direction: column; align-items: center; }
+
+.page-id-68711 p { letter-spacing: 0.7px; }
+
+#newsletter-signup-form input { width: 80%; margin-bottom: 20px; }
+
+@media only screen and (max-width: 414px) { .li_without_padding { padding: 0px 0px 0px 0px !important; } }
 
 /*END CUSTOMIZER IMPORT*/
 /*ENDE UNSORTIERT*/

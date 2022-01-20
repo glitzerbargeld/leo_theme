@@ -21,7 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 <footer>
     <div id="ft-about" class="bd-top-1">
         <?php the_custom_logo() ?>
-        <p>Sanaleo ist eine Premium CBD
+        <p>SANALEO ist eine Premium CBD
             Marke dessen Kerngeschäft
             der Handel mit CBD Produkten ist. Die Qualität unserer Produkte steht im Zeichen der Nachhaltigkeit und der
             Zufriedenheit unserer Kunden. Als CBD-Experten setzen wir uns zudem für Aufklärung und die Interessen der
@@ -34,7 +34,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
     <div id="ft-newsletter" class="bd-top-1">
 
-		<h3>Jetzt für Newsletter anmelden und 15% Rabatt auf die erste Bestellung erhalten</h3>
+		<h3>Jetzt Newsletter abonnieren und 15% Rabatt auf die erste Bestellung erhalten</h3>
 
 
         <!-- Begin Mailchimp Signup Form -->
@@ -63,7 +63,6 @@ if ( ! defined( 'ABSPATH' ) ) {
                 method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate"
                 target="_blank" novalidate>
                 <div id="mc_embed_signup_scroll">
-                    <label for="mce-EMAIL">Newsletter abonnieren</label>
                     <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Email Adresse"
                         required>
                     <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
@@ -115,7 +114,7 @@ if ( ! defined( 'ABSPATH' ) ) {
         über das Thema. Der Anbieter dieser Website übernimmt jedoch keine Gewähr für die Richtigkeit, Aktualität und
         Vollständigkeit der bereitgestellten Texte und Inhalte. Sie stellen keine Empfehlung der beschriebenen oder
         erwähnten diagnostischen Methoden, Behandlungen oder Arzneimittel dar und sollen auch nicht als Werbung dienen.<p>
-		<p>Copyright © 2022 Sanaleo CBD Shop<br>Dein CBD-Onlineshop aus Leipzig.</p>
+		<p>Copyright © 2022 SANALEO CBD Shop<br>Dein CBD-Onlineshop aus Leipzig.</p>
 
     </div>
 
