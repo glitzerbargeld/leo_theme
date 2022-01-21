@@ -135,7 +135,7 @@ INDEX
 
 .t-featured-product .tax-info { font-size: 0.8em; }
 
-footer { display: grid; grid-gap: 40px; margin: auto; margin: 5% auto; }
+footer { display: grid; grid-gap: 30px; margin: auto; margin: 5% auto; }
 
 footer .bd-top-1 { border-top: 1px solid; padding-top: 20px; }
 
@@ -171,7 +171,7 @@ footer #ft-about img { margin-bottom: 20px; max-width: 120px; }
 
 #ft-partners { display: inline-block; text-align: center; grid-area: partners; }
 
-#ft-partners .partner-logo { max-width: 10%; }
+#ft-partners .partner-logo { max-height: 60px; }
 
 #ft-legal { font-size: 12px; text-align: justify; -moz-text-align-last: center; text-align-last: center; grid-area: legal; }
 
