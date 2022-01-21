@@ -34,7 +34,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
     <div id="ft-newsletter" class="bd-top-1">
 
-		<h3>Jetzt Newsletter abonnieren und 15% Rabatt auf die erste Bestellung erhalten</h3>
+		<span style="font-size: 1rem; font-weight: 400;">Jetzt Newsletter abonnieren und 15% Rabatt auf die erste Bestellung erhalten</h3>
 
 
         <!-- Begin Mailchimp Signup Form -->
