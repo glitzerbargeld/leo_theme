@@ -35,7 +35,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     <div id="ft-newsletter" class="bd-top-1">
 
         <span style="font-size: 1rem; font-weight: 400;">Jetzt Newsletter abonnieren und 15% Rabatt auf die erste
-            Bestellung erhalten</h3>
+            Bestellung erhalten!</h3>
 
 
             <!-- Begin Mailchimp Signup Form -->
@@ -111,10 +111,6 @@ if ( ! defined( 'ABSPATH' ) ) {
         <a href="https://www.trustedshops.de/bewertung/info_X6D1A629F4093FD235B626136D23695B9.html">
             <img class="partner-logo" src="https://sanaleo.com/wp-content/uploads/2021/07/TS_Guetesiegel.png"
                 alt="Trusted Shops Siegel" height="50">
-        </a>
-        <a href="https://sanaleo.com/cbd-produkte-der-apotheke-kaufen/"> <img class="partner-logo"
-                src="https://sanaleo.com/wp-content/uploads/2021/12/20px-Deutsche_Apotheke_Logo.svg_Kopie.webp"
-                alt="Apotheken Logo" height="50">
         </a>
 
     </div>

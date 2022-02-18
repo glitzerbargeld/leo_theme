@@ -30,6 +30,12 @@ function child_enqueue_styles() {
 
 add_action( 'wp_enqueue_scripts', 'child_enqueue_styles', PHP_INT_MAX );
 
+function kb_admin_style() {
+  wp_enqueue_style('admin-styles', get_template_directory_uri().'/styles-admin.css');
+}
+
+add_action('admin_enqueue_scripts', 'kb_admin_style');
+
 
 /**
  * Enqueue scripts
@@ -736,29 +742,6 @@ function implement_row_beginning(){
     echo '<div class="ast-row">';
 }
 
-
-/**
- * Exclude products from a particular category on the shop page
-
-function custom_pre_get_posts_query( $q ) {
-
-  $tax_query = (array) $q->get( 'tax_query' );
-
-  $tax_query[] = array(
-         'taxonomy' => 'product_cat',
-         'field' => 'slug',
-         'terms' => array( 'cbd-aromablueten' ), // Don't display products in the clothing category on the shop page.
-         'operator' => 'NOT IN'
-  );
-
-
-  $q->set( 'tax_query', $tax_query );
-
-}
-add_action( 'woocommerce_product_query', 'custom_pre_get_posts_query' );  
-*/
-
-
 // TAKES UNLIMITED CLASSNAMES AND CREATES AN OPENING DIV TAG
 
 function implement_div_classes(...$classes) {
@@ -1154,12 +1137,24 @@ function customer_reviews() {
     	echo '
 			<div class="ProductCategoryDescription">
 			<h2>Hochwertige CBD Blüten bei Sanaleo kaufen:</h2>
-				<ul><li><b>Hochwertige CBD-Blüten bester Qualität</b> online bestellen!</li> <li>Ab 50€ versandkostenfreie Lieferung innerhalb Deutschland!</li> <li>Schnelle Lieferung!</li> <li>Bei Bestellungen vor 12 Uhr erfolgt der Versand der Produkte am gleichen Tag!</li></ul>
+				<ul><li><b>Hochwertige CBD-Blüten in Bio-Qualität</b> online bestellen!</li> <li>Ab 50€ versandkostenfreie Lieferung innerhalb Deutschland!</li> <li>Schnelle Lieferung!</li> <li>Bei Bestellungen vor 12 Uhr erfolgt der Versand der Produkte am gleichen Tag!</li></ul>
 			</div>
 			<div class="ProductCategoryDescription">
 				<h2 class="BewertungsHeading">Was sind CBD-Blüten?</h2>
-				<p>Bei einer <b>CBD Blüte</b> handelt es sich um die Knospe der weiblichen Cannabispflanze. Die angebotenen Hanfblüten stammen ausschließlich von EU-zertifizierten Nutzhanfpflanzen mit einem minimalen THC-Gehalt – statt berauschendem THC gibt es eine volle Ladung entspannendes Cannabidiol. Im Vergleich zu anderen Teilen der Pflanze ist der CBD-Gehalt in den Cannabisblüten der Welt verschiedene Cannabissorten entdeckt.Im Jahr 1753 klassifizierte der schwedische Naturforscher Carl von Linné die Hanfsorte Cannabis Sativa, in der Übersetzung „gewöhnlicher Hanf“ bedeutend. In Indien wurde 32 Jahre später eine weitere Cannabissorte entdeckt und Cannabis Indica („Indischer Hanf“) getauft. 1926 beschrieb der Botaniker Dimitrij E. Janischwesky die Sorte Ruderalis, auch Ruderal-Hanf genannt.Grundsätzlich gehören diese Cannabissorten zur Pflanzengattung Cannabis Sativa L. Diese einzelnen Cannabissorten unterscheiden sich allerdings in ihrem Aussehen, ihrer Wachstums- und Blütezeit, ihrem Geruch, Geschmack und der natürlichen Zusammensetzung verschiedener Inhaltsstoffe. Mit der Zeit wurden verschiedenste Cannabispflanzen miteinander gekreuzt und so entstanden und entstehen immer neue unterschiedliche Cannabispflanzen und -sorten.</p>
+				<p>Bei einer <b>CBD Blüte</b> handelt es sich um die <a href="https://sanaleo.com/gefriertrocknung/" title="CBD Blüten trocknen">getrocknete Knospe</a> der weiblichen Cannabispflanze. Die angebotenen Hanfblüten stammen ausschließlich von EU-zertifizierten Nutzhanfpflanzen mit einem minimalen THC-Gehalt – statt berauschendem THC gibt es eine volle Ladung entspannendes Cannabidiol. Im Vergleich zu anderen Teilen der Pflanze ist der CBD-Gehalt in den Cannabisblüten der Welt verschiedene Cannabissorten entdeckt.Im Jahr 1753 klassifizierte der schwedische Naturforscher Carl von Linné die Hanfsorte Cannabis Sativa, in der Übersetzung „gewöhnlicher Hanf“ bedeutend. In Indien wurde 32 Jahre später eine weitere Cannabissorte entdeckt und Cannabis Indica („Indischer Hanf“) getauft. 1926 beschrieb der Botaniker Dimitrij E. Janischwesky die Sorte Ruderalis, auch Ruderal-Hanf genannt.Grundsätzlich gehören diese Cannabissorten zur Pflanzengattung Cannabis Sativa L. Diese einzelnen Cannabissorten unterscheiden sich allerdings in ihrem Aussehen, ihrer Wachstums- und Blütezeit, ihrem Geruch, Geschmack und der natürlichen Zusammensetzung verschiedener Inhaltsstoffe. Mit der Zeit wurden verschiedenste Cannabispflanzen miteinander gekreuzt und so entstanden und entstehen immer neue unterschiedliche Cannabispflanzen und -sorten.</p>
 			</div>
+			
+			<div class="ProductCategoryDescription">
+				<h3 class="BewertungsHeading">WELCHE CBD-AROMABLÜTEN SIND BEI UNS ERHÄLTLICH?</h3>
+				<p><ul><li>Outdoor: Black Domina | Butters Bud | Skywalker OG</li>
+			<li>Indoor: Amnesia | | Gorilla Glue | | Jack Herer | Orange Bud CBG Blüten | Pineapple Express | Power Plant | Strawberry Haze | Super Lemon Haze</li> 
+<li>Green House: Hawaiian Skunk | Mango Kush</li>
+<li>CBD Hasch: Litani Hash | Caramello Hash</li>
+</p>
+<p>Die Analysezertifikate zu jeder Sorte können auf der entsprechenden Produktinformationsseite eingesehen werden. Sie geben Aufschluss über den Gehalt der einzelnen <a href="https://sanaleo.com/ubersicht-cannabinoide-der-hanfplanze/" title="Die Cannabinoide der Hanfpflanze">Cannabinoide</a>.
+</p>
+			</div>
+			
 			<div class="ProductCategoryDescription">
 				<h3 class="BewertungsHeading">WAS MACHT SANALEO-CBD-BLÜTEN BESONDERS?</h3>
 				<p>Aufgrund der enormen Erfahrung unserer Hersteller beim Anbau von Cannabis können wir eine exklusive Bio-Genetik garantieren. Unsere <strong>Blütensorten</strong> zeichnen sich durch ihren intensiven Geruch und ihr exotisches Aussehen aus. Einige von unseren Hanfblüten, darunter bspw. „Pineapple Express“ sind sogar aus den USA importiert.</p>
@@ -1186,7 +1181,7 @@ function customer_reviews() {
 			</div>
 			<div class="ProductCategoryDescription">
 				<h3 class="BewertungsHeading">WIE WERDEN SANALEO PREMIUM CBD ÖL HERGESTELLT?</h3>
-				<p>Die angebotenen CBD Öle werden aus getrockneten <a href="https://sanaleo.com/cbd-blueten/" title="CBD Blüten von Sanaleo">CBD Cannabisblüten</a> mit einem <a href="https://sanaleo.com/cbd-was-ist-das-uberhaupt/#Wieso_haben_EU-Nutzhanfsorten_unterschiedlich_hohe_CBD-Gehalte" title="CBD Gehalt von Cannabisblüten">natürlicherweise hohen CBD-Gehalt hergestellt.</a> Die dafür verwendeten Cannabisblüten werden ohne jeglichen Einsatz von Herbiziden oder Pestiziden angebaut. Nach der Ernte und dem Trocknungsprozess werden die Cannabisblüten mithilfe eines einzigartigen Verfahren extrahiert, bei dem eine sehr hohe Ausbeute erreicht wird. Nach der Extraktion ist zudem kein Einsatz von Lösungsmitteln erforderlich. Zuletzt wird das Cannabisextrakt mit einer natürlichen Ölbasis vermengt.</p>
+				<p>Die angebotenen CBD Öle werden aus getrockneten <a href="https://sanaleo.com/cbd-blueten/" title="CBD Blüten von Sanaleo">CBD Blüten</a> mit einem <a href="https://sanaleo.com/cbd-was-ist-das-uberhaupt/#Wieso_haben_EU-Nutzhanfsorten_unterschiedlich_hohe_CBD-Gehalte" title="CBD Gehalt von Cannabisblüten">natürlicherweise hohen CBD-Gehalt hergestellt.</a> Die dafür verwendeten Cannabisblüten werden ohne jeglichen Einsatz von Herbiziden oder Pestiziden angebaut. Nach der Ernte und dem Trocknungsprozess werden die Cannabisblüten mithilfe eines einzigartigen Verfahren extrahiert, bei dem eine sehr hohe Ausbeute erreicht wird. Nach der Extraktion ist zudem kein Einsatz von Lösungsmitteln erforderlich. Zuletzt wird das Cannabisextrakt mit einer natürlichen Ölbasis vermengt.</p>
 			</div>
 			<div class="ProductCategoryDescription">
 				<h3 class="BewertungsHeading">WELCHE CBD ÖLE SIND BEI UNS ERHÄLTLICH?</h3>
@@ -1201,7 +1196,7 @@ function customer_reviews() {
 			
 			<div class="ProductCategoryDescription">
 				<h3 class="BewertungsHeading">SANALEO CBD ÖL: ANWENDUNG UND WIRKUNG?</h3>
-				<p>Hinweise zur Anwendung und Wirkung unserer CBD-Öle finden sich auf den entsprechenden Produktinformationsseiten. Weiterhin finden sich die Hinweise zur Anwendung und Wirkung auf der Umverpackung des jeweiligen CBD-Öls.</p>
+				<p>Hinweise zur <a href="https://sanaleo.com/wie-wirkt-cbd-im-menschlichen-koerper/" title="Wie wirkt CBD im Körper?">Anwendung und Wirkung unserer CBD-Öle</a> finden sich auf den entsprechenden Produktinformationsseiten. Weiterhin finden sich die Hinweise zur Anwendung und Wirkung auf der Umverpackung des jeweiligen CBD-Öls.</p>
 			</div>
 			
 			<div class="BewertungsHeading"><h2>Das sagen Kunden, die bei Sanaleo CBD Öl kaufen:</h2></div>
@@ -1254,14 +1249,6 @@ function customer_reviews() {
 		<div class="ProductCategoryDescription">
 				
 				<ul><li><b>Hochwertige CBD Kapseln</b> bester Qualität bei Sanaleo kaufen!</li> <li>Ab 50€ versandkostenfreie Lieferung innerhalb Deutschland!</li> <li>Schnelle Lieferung!</li> <li>Bei Bestellungen vor 12 Uhr erfolgt der Versand der Produkte am gleichen Tag!</li></ul>
-			</div>
-			<div class="ProductCategoryDescription">
-				<h3 class="BewertungsHeading">KANN MAN DIE CBD-TRAUMKAPSELN ÜBERDOSIEREN?</h3>
-				<p>Eine Überdosierung durch unsere Traumkapseln ist ausgeschlossen, da sie keine berauschende Wirkung besitzen.</p>
-			</div>
-			<div class="ProductCategoryDescription">
-				<h3 class="BewertungsHeading">IST IN DEN TRAUMKAPSELN WIRKLICH MELATONIN DRIN?</h3>
-				<p>Unsere <a href="https://sanaleo.com/cbd-kapseln/sanaleo-cbd-traumkapseln/" title="CBD Schlafkapseln von Sanaleo">CBD Schlafkapseln</a> bestehen aus Steinpilzpulver, Melissenextrakt, Cannabidiol, Traubenzucker und ja, einer kleinen Prise Melatonin. Die Menge an Melatonin ist jedoch gerade so gering, dass sie gänzlich unbedenklich ist, aber dennoch ihre Wirkung entfaltet.</p>
 			</div>
 		';
 	}
@@ -1373,12 +1360,12 @@ Die Analysezertifikate zu jeder Sorte können auf der entsprechenden Produktinfo
 	  
 	  <button class="faq-accordion-archive"><h2 class="accordion_heading">WIE UNTERSCHEIDEN SICH SANALEO-CBD-BLÜTEN DER SORTE NACH?</h2><i class="faq-archive-info-open"></i></button>
       <div class="panel-archive">
-        <p>Wie oben bereits beschrieben, unterscheiden sich unsere CBD Hanfblüten in ihrem Aussehen, Geruch, Geschmack und in ihrer natürlichen Zusammensetzung der verschiedenen Inhaltsstoffe. Außerdem unterscheiden sich unsere Blüten in der Art und Weise des Anbaus. Unsere Sorten werden outdoor, indoor oder in einem Gewächshaus gegrowt. Die entsprechende Anbauweise findest Du in der jeweiligen Produktbeschreibung oder in der unten aufgelisteten Tabelle.</p>
+        <p>Wie oben bereits beschrieben, unterscheiden sich unsere CBD Hanfblüten in ihrem Aussehen, Geruch, Geschmack und in ihrer natürlichen Zusammensetzung der verschiedenen Inhaltsstoffe. Außerdem unterscheiden sich unsere Blüten in der Art und Weise des Anbaus. Unsere Sorten werden <a href="https://sanaleo.com/cbd-was-ist-das-uberhaupt/#Wie_wird_CBD-Hanf_angebaut" title="Die unterschiedlichen Anbaumethoden von Hanf">outdoor, indoor oder in einem Gewächshaus gegrowt</a>. Die entsprechende Anbauweise findest Du in der jeweiligen Produktbeschreibung oder in der unten aufgelisteten Tabelle.</p>
       </div>
 	  
-	  <!--<button class="faq-accordion-archive"><h2 class="accordion_heading">WAS MACHT SANALEO CBD GRAS BESONDERS?</h2><i class="faq-archive-info-open"></i></button>
+	  <!--<button class="faq-accordion-archive"><h2 class="accordion_heading">WAS MACHT CBD GRAS VON SANALEO BESONDERS?</h2><i class="faq-archive-info-open"></i></button>
       <div class="panel-archive">
-        <p>Aufgrund der enormen Erfahrung unserer Hersteller beim Anbau von Cannabis können wir eine exklusive Bio-Genetik garantieren. Unser CBD Gras zeichnet sich durch  intensiven Geruch und exotisches Aussehen aus. Einige von unseren Hanf-Blüten, darunter bspw. „Pineapple Express“ sind sogar aus den USA importiert.</p>
+        <p>Aufgrund der enormen Erfahrung unserer Hersteller beim Anbau von Cannabis können wir eine exklusive Bio-Genetik garantieren. Unser CBD Gras zeichnet sich durch  intensiven Geruch und exotisches Aussehen aus. Einige von unseren Hanfblüten, darunter bspw. „Pineapple Express“ sind sogar aus den USA importiert.</p>
       </div>-->
 	  
 	  <button class="faq-accordion-archive"><h2 class="accordion_heading">WIE LAGERT MAN CBD GRAS SICHER UND RICHTIG?</h2><i class="faq-archive-info-open"></i></button>
@@ -1397,12 +1384,12 @@ Die Analysezertifikate zu jeder Sorte können auf der entsprechenden Produktinfo
 	  
 	  <button class="faq-accordion-archive"><h2 class="accordion_heading">SIND CBD-BLÜTEN IN DEUTSCHLAND LEGAL?</h2><i class="faq-archive-info-open"></i></button>
       <div class="panel-archive">
-        <p>Grundsätzlich musst Du dir als CBD-Nutzer*in keine Sorge vor einer rechtlichen Verfolgung nach einem Drogentest machen. CBD ist (im Gegensatz zu THC) kein Rauschmittel. Darum fällt Cannabidiol nicht unter das Betäubungsmittelgesetz. Der THC-Gehalt in sämtlichen Produkten muss in Deutschland unter 0,2% liegen. All unsere Produkte werden vor dem Verkauf von einem unabhängigen Labor auf ihre Inhaltsstoffe und die Einhaltung der rechtlichen Rahmenbedingungen untersucht und zertifiziert. führe ein Analysenzertifikat mit Dir mit. So bist du garantiert auf der sicheren Seite.</p>
+        <p>Grundsätzlich musst Du dir als CBD-Nutzer*in keine Sorge vor einer rechtlichen Verfolgung nach einem Drogentest machen. CBD ist (im Gegensatz zu THC) kein Rauschmittel. Darum fällt Cannabidiol nicht unter das Betäubungsmittelgesetz. Der THC-Gehalt in sämtlichen Produkten muss in Deutschland unter 0,2% liegen. All unsere Produkte werden vor dem Verkauf von einem unabhängigen Labor auf ihre Inhaltsstoffe und die <a href="https://sanaleo.com/zur-rechtslage-von-cbd/" title="CBD und Recht in Deutschand">Einhaltung der rechtlichen Rahmenbedingungen</a> untersucht und zertifiziert. führe ein Analysenzertifikat mit Dir mit. So bist du garantiert auf der sicheren Seite.</p>
       </div>
 	  
 	  <button class="faq-accordion-archive"><h2 class="accordion_heading">WAS IST DER UNTERSCHIED ZWISCHEN THC UND CBD??</h2><i class="faq-archive-info-open"></i></button>
       <div class="panel-archive">
-        <p>Das neben Cannabidiol bekannteste Cannabinoid ist THC. Es ist für die berauschende Wirkung von Cannabis verantwortlich und in Deutschland verboten. Chemisch betrachtet unterscheiden sich CBD und THC nur minimal in ihrer Struktur. Dennoch unterscheiden sich die beiden Cannabinoide essentiell in ihrer Wirkung. CBD wirkt im Vergleich zu THC nicht berauschend. Weitere Informationen zum <a href="https://cbdratgeber.de/legalitaet-cannabidiol-cannabis/" title="Ist CBD legal?">rechtlichen Status von CBD-Produkten findet ihr beim CBD-Ratgeber</a>.</p>
+        <p>Das neben Cannabidiol bekannteste Cannabinoid ist THC. Es ist für die berauschende <a href="https://sanaleo.com/wie-wirkt-cbd-im-menschlichen-koerper/" title="Wie wirkt CBD in unserem Körper?">Wirkung von Cannabis</a> verantwortlich und in Deutschland verboten. Chemisch betrachtet unterscheiden sich CBD und THC nur minimal in ihrer Struktur. Dennoch unterscheiden sich die beiden Cannabinoide essentiell in ihrer Wirkung. CBD wirkt im Vergleich zu THC nicht berauschend. Weitere Informationen zum <a href="https://cbdratgeber.de/legalitaet-cannabidiol-cannabis/" title="Ist CBD legal?">rechtlichen Status von CBD-Produkten findet ihr beim CBD-Ratgeber</a>.</p>
       </div>
 	  
 	  <button class="faq-accordion-archive"><h2 class="accordion_heading">CANNABIDIOL ALS PFLANZLICHE ALTERNATIVE?</h2><i class="faq-archive-info-open"></i></button>
@@ -1417,13 +1404,13 @@ Die Analysezertifikate zu jeder Sorte können auf der entsprechenden Produktinfo
 	  
 	  <button class="faq-accordion-archive"><h2 class="accordion_heading">CBD BLÜTEN MIT KLARNA ODER PAYPAL BEZAHLEN</h2><i class="faq-archive-info-open"></i></button>
       <div class="panel-archive">
-        <p>PAYPAL: Bei SANALEO kein Problem – neben den herkömmlichen Zahlungsweisen wie Vorkasse, Direkte Banküberweisung oder Kreditkartenzahlung kannst Du bei SANALEO folgende Produkte mit PayPal bezahlen: CBD-Aromablüten, CBD-Kosmetik, CBD-Öle und CBD-Vape.</p>
-		<p>KLARNA: Das funktioniert momentan leider noch nicht. KLARNA behält sich vor, die Transaktionen zum Kauf von Cannabidiol-Gras nicht zu unterstützen. Sobald das Unternehmen seine Police entsprechend ändert, können wir KLARNA als Zahlungsmittel zum Kauf von CBD Blüten anbieten. Bis dahin können ausschließlich folgende Produktkategorien mit KLARNA bezahlt werden: CBD-Kosmetik, CBD-Öle, CBD-Vape.</p>
+        <p>PAYPAL: Bei SANALEO kein Problem – neben den herkömmlichen Zahlungsweisen wie Vorkasse, Direkte Banküberweisung oder Kreditkartenzahlung kannst Du folgende Produkte mit PayPal bezahlen: CBD-Aromablüten, CBD-Kosmetik, CBD-Öle und CBD-Vape.</p>
+		<p>KLARNA: Das funktioniert momentan leider noch nicht. KLARNA behält sich vor, die Transaktionen zum Kauf von CBD Gras nicht zu unterstützen. Sobald das Unternehmen seine Police entsprechend ändert, können wir KLARNA als Zahlungsmittel zum Kauf von CBD Blüten anbieten. Bis dahin können ausschließlich folgende Produktkategorien mit KLARNA bezahlt werden: CBD-Kosmetik, CBD-Öle, CBD-Vape.</p>
       </div>
 	  
 	  <h3 style="text-align:center;margin-top:20px; margin-bottom:20px;">Entdecke ausgewählte Sorten im Sanaleo CBD-Blüten Shop:</h3>
 
-      <div style="margin-left: auto; margin-right:auto; text-align:center; font-size: 24px; margin-bottom: 3%;">Die Aromablüten von Sanaleo werden unter <br>unterschiedlichen Voraussetzungen angebaut.
+      <div style="margin-left: auto; margin-right:auto; text-align:center; font-size: 24px; margin-bottom: 3%;">Die angebotenen Aromablüten werden unter <br>unterschiedlichen Voraussetzungen angebaut.
       </div>
 
 <div class="product-table-wrapper p-960">
@@ -1471,7 +1458,7 @@ Die Analysezertifikate zu jeder Sorte können auf der entsprechenden Produktinfo
     </div>
 </div>
 
-<div style="margin-left: auto; margin-right:auto; text-align:center; font-size: 24px; margin-bottom: 3%; margin-top: 3%;">Bei einzelnen CBD-Blütensorten von Sanaleo wurde <br>der CBD-Gehalt nachträglich
+<div style="margin-left: auto; margin-right:auto; text-align:center; font-size: 24px; margin-bottom: 3%; margin-top: 3%;">Bei einzelnen CBD-Blütensorten wurde <br>der CBD-Gehalt nachträglich
     erhöht oder reduziert.
 </div>
 
@@ -1532,7 +1519,7 @@ Die Analysezertifikate zu jeder Sorte können auf der entsprechenden Produktinfo
     echo '
       <!--<button class="faq-accordion-archive" style="text-align: center;"><h2 class="accordion_heading" style="font-size: 1em; margin-bottom: 0px;">WIE WERDEN SANALEO-PREMIUM-CBD-ÖLE HERGESTELLT?</h2><i class="faq-archive-info-open"></i></button>
       <div class="panel-archive">
-        <p>Die angebotenen CBD-Öle werden aus getrockneten <a href="https://sanaleo.com/cbd-blueten/" title="CBD Blüten von Sanaleo">CBD-Cannabisblüten</a> mit einem <a href="https://sanaleo.com/cbd-was-ist-das-uberhaupt/#Wieso_haben_EU-Nutzhanfsorten_unterschiedlich_hohe_CBD-Gehalte" title="CBD Gehalt von Cannabisblüten">natürlicherweise hohen CBD-Gehalt hergestellt.</a> Die dafür verwendeten Cannabisblüten werden ohne jeglichen Einsatz von Herbiziden oder Pestiziden angebaut. Nach der Ernte und dem Trocknungsprozess werden die Cannabisblüten mithilfe eines einzigartigen Verfahren extrahiert, bei dem eine sehr hohe Ausbeute erreicht wird. Nach der Extraktion ist zudem kein Einsatz von Lösungsmitteln erforderlich. Zuletzt wird das Cannabisextrakt mit einer natürlichen Ölbasis vermengt.</p>
+        <p>Die angebotenen CBD-Öle werden aus getrockneten <a href="https://sanaleo.com/cbd-blueten/" title="CBD Blüten von Sanaleo">CBD Blüten</a> mit einem <a href="https://sanaleo.com/cbd-was-ist-das-uberhaupt/#Wieso_haben_EU-Nutzhanfsorten_unterschiedlich_hohe_CBD-Gehalte" title="CBD Gehalt von Cannabisblüten">natürlicherweise hohen CBD-Gehalt hergestellt.</a> Die dafür verwendeten Cannabisblüten werden ohne jeglichen Einsatz von Herbiziden oder Pestiziden angebaut. Nach der Ernte und dem Trocknungsprozess werden die Cannabisblüten mithilfe eines einzigartigen Verfahren extrahiert, bei dem eine sehr hohe Ausbeute erreicht wird. Nach der Extraktion ist zudem kein Einsatz von Lösungsmitteln erforderlich. Zuletzt wird das Cannabisextrakt mit einer natürlichen Ölbasis vermengt.</p>
       </div>
 
       <button class="faq-accordion-archive"><h2 class="accordion_heading">WELCHE CBD-ÖLE SIND BEI UNS ERHÄLTLICH?</h2><i class="faq-archive-info-open"></i></button>
@@ -1554,7 +1541,7 @@ Die Analysezertifikate zu jeder Sorte können auf der entsprechenden Produktinfo
 
       <!--<button class="faq-accordion-archive"><h2 class="accordion_heading">WIESO HABEN EU-NUTZHANFSORTEN UNTERSCHIEDLICH HOHE CBD-GEHALTE?</h2><i class="faq-archive-info-open"></i></button>
       <div class="panel-archive">
-        <p>Verschiedene Produkte derselben Kategorie weisen unterschiedliche CBD-Gehalte auf. Vornehmlich bei <a href="https://sanaleo.com/cbd-blueten/" title="CBD Aromablüten">CBD-Blüten</a> finden wir geringe und vergleichsweise sehr hohe CBD-Anteile. Auch einzelne Chargen derselben Sorte variieren in den Cannabinoidwerten. Doch weshalb ist das so?</p>
+        <p>Verschiedene Produkte derselben Kategorie weisen unterschiedliche CBD-Gehalte auf. Vornehmlich bei <a href="https://sanaleo.com/cbd-blueten/" title="CBD Aromablüten">CBD Blüten</a> finden wir geringe und vergleichsweise sehr hohe CBD-Anteile. Auch einzelne Chargen derselben Sorte variieren in den Cannabinoidwerten. Doch weshalb ist das so?</p>
         <ol type="1">
           <li>Das Züchten von Hanf ist eine wirkliche Aufgabe. Die Aufgabe wird genau dann zur Kunst, wenn dieselbe Sorte stabil über Jahre gezüchtet und angebaut werden soll.</li> 
           <li>Das Verhältnis von THC zu CBD und von CBD zu THC ist nicht beliebig. Demnach spielt der gesetzlich vorgeschriebene THC-Gehalt des Vertriebslandes eine entscheidende Rolle für den CBD-Gehalt. Die unterschiedliche Gesetzeslage innerhalb der EU sorgt also dafür, dass in manchen Ländern (Österreich, Luxemburg) der auf natürlichem Wege erzielbare CBD-Gehalt bei max. 9% liegt, in den meisten Ländern der EU bei max. 6% CBD.</li>
@@ -1580,12 +1567,12 @@ Die Analysezertifikate zu jeder Sorte können auf der entsprechenden Produktinfo
 	  
 	  <button class="faq-accordion-archive"><h2 class="accordion_heading">CBD-ÖL MIT PAYPAL BEZAHLEN</h2><i class="faq-archive-info-open"></i></button>
       <div class="panel-archive">
-        <p>Bei SANALEO kein Problem – neben den herkömmlichen Zahlungsweisen wie Vorkasse, Direkte Banküberweisung oder Kreditkartenzahlung kannst Du bei SANALEO folgende Produkte mit PayPal bezahlen: CBD-Blüten, CBD-Kosmetik, CBD-Öle und CBD-Vape.</p>
+        <p>Bei SANALEO kein Problem – neben den herkömmlichen Zahlungsweisen wie Vorkasse, Direkte Banküberweisung oder Kreditkartenzahlung kannst Du folgende Produkte mit PayPal bezahlen: CBD-Blüten, CBD-Kosmetik, CBD-Öle und CBD-Vape.</p>
       </div>
 	  
 	  <button class="faq-accordion-archive"><h2 class="accordion_heading">CBD-ÖL MIT KLARNA BEZAHLEN</h2><i class="faq-archive-info-open"></i></button>
       <div class="panel-archive">
-        <p>Auch das ist kein Problem. Folgende Produktkategorien von SANALEO können mit KLARNA bezahlt werden: CBD-Kosmetik, CBD-Öle, CBD-Vape. SANALEO CBD-Blüten können momentan „nur“ mit folgenden Zahlungsmöglichkeiten erworben werden: PayPal, Direkte Banküberweisung, Kreditkartenzahlung, Vorkasse.</p>
+        <p>Auch das ist kein Problem. Folgende Produktkategorien können mit KLARNA bezahlt werden: CBD-Kosmetik, CBD-Öle, CBD-Vape. CBD-Blüten können momentan „nur“ mit folgenden Zahlungsmöglichkeiten erworben werden: PayPal, Direkte Banküberweisung, Kreditkartenzahlung, Vorkasse.</p>
       </div>
 	  
 
@@ -1598,7 +1585,7 @@ Die Analysezertifikate zu jeder Sorte können auf der entsprechenden Produktinfo
         <li>transportabel, einfach anzuwenden und nachhaltig verpackt.</li>
         <li>ausgewählt, zertifiziert und vielfach geprüft.</li> 
         </ul>
-        <p>Sanaleo CBD-Mundöle werden mit einem einzigartigen Extraktionsverfahren hergestellt, bei dem eine außergewöhnlich hohe Extraktionsausbeute erzielt wird. Dieses patentierte Herstellungs-verfahren bringt im Vergleich zur konventionellen CO2-Extraktion einige Vorteile mit sich:</p>
+        <p>Sanaleo CBD-Mundöle werden mit einem <a href="https://sanaleo.com/cbd-unsere-extraktionsmethode/" title="Extraktionsverfahren zur Herstellung von CBD Öl">einzigartigen Extraktionsverfahren</a> hergestellt, bei dem eine außergewöhnlich hohe Extraktionsausbeute erzielt wird. Dieses patentierte Herstellungsverfahren bringt im Vergleich zur konventionellen CO2-Extraktion einige Vorteile mit sich:</p>
         </div>
         
         
@@ -1648,7 +1635,7 @@ Die Analysezertifikate zu jeder Sorte können auf der entsprechenden Produktinfo
     <!--<button class="faq-accordion-archive"><h2 class="accordion_heading">WIE NEHME ICH MEIN SANALEO-VAPE-STARTERKIT IN BETRIEB?</h2>
     <i class="faq-archive-info-open"></i></button>
     <div class="panel-archive">
-      <p>Lade den Pen vor der ersten Nutzung sicherheitshalber noch einmal auf. Wenn er vollständig geladen ist, leuchtet das grüne Licht durchgängig. Verbinde anschließend deine <a href="https://sanaleo.com/cbd-vape/pineapple-express-kartusche/" title="CBD Kartuschen von Sanaleo kaufen">SANALEO-Vape CBD-Kartusche</a> mit dem <a href="https://sanaleo.com/cbd-vape/cbd-pen/" title="CBD Vape Pen kaufen">SANALEO-Vape-Pen</a> und ziehe daran. Normalerweise sollte es direkt zu einer Dampfbildung kommen, sobald du an dem Pen ziehst. 
+      <p>Lade den Pen vor der ersten Nutzung sicherheitshalber noch einmal auf. Wenn er vollständig geladen ist, leuchtet das grüne Licht durchgängig. Verbinde anschließend deine <a href="https://sanaleo.com/cbd-vape/cbd-kartusche-mit-hanfaroma/" title="CBD Kartuschen von Sanaleo kaufen">SANALEO-Vape CBD Kartusche</a> mit dem <a href="https://sanaleo.com/cbd-vape/cbd-pen/" title="CBD Vape Pen kaufen">SANALEO-Vape-Pen</a> und ziehe daran. Normalerweise sollte es direkt zu einer Dampfbildung kommen, sobald du an dem Pen ziehst. 
 
       Wichtig ist, dass Du gleichmäßige und nicht zu starke Züge nimmst. Andernfalls könnten die hohen Temperaturen dafür sorgen, dass wichtige Terpene zerstört werden, die im Sinne des <a href="https://sanaleo.com/der-entourage-effekt/" title="Der Entourage Effekt">Entourage-Effekts</a> unbedingt erhalten werden sollten.
       
@@ -1664,7 +1651,7 @@ Die Analysezertifikate zu jeder Sorte können auf der entsprechenden Produktinfo
     </div>-->
     <button class="faq-accordion-archive"><h2 class="accordion_heading">WAS SIND TERPENE?</h2><i class="faq-archive-info-open"></i></button>
     <div class="panel-archive">
-      <p>Terpene sind kurz gesagt Pflanzeninhaltsstoffe. Sie übernehmen häufig funktionale Eigenschaften und sind in vielen Fällen für den charakteristischen Geruch einer Pflanze verantwortlich. Die aromatische Fülle soll Insekten zur Bestäubung anlocken. Auch die Hanfpflanze enthält neben den zentralen Cannabinoiden eine Vielzahl an Terpenen, die den unverkennbaren Geruch verantworten. Die Auswirkungen, die Terpene auf den Menschen haben, werden bereits in der Aromatherapie genutzt. Wissenschaftliche Erkenntnisse legen nahe, dass Hanfextrakte, die neben CBD das volle Spektrum der natürlichen Terpene der Pflanze enthalten, eine höhere Bioverfügbarkeit aufweisen und somit eine bessere Wirkung entfalten. Man spricht hier vom sog. <a href="https://sanaleo.com/der-entourage-effekt/" title="Entourage Effekt">Entourage-Effekt</a>: Die Wirkung der Pflanze ist größer als die Summe ihrer Bestandteile. Bis heute hat die Forschung die Struktur von etwa 20.000 Terpenen identifiziert und analysiert. Die wichtigsten im Zusammenhang mit CBD sind: B-Caryophyllene, Limonene, Linalool, Myrzene und Pinene. Das Zusammenspiel der Terpene birgt enormes Potential, das es verstehen und richtig anzuwenden gilt! Weitere Informationen zu den genannten Terpenen sind im <a href="https://sanaleo.com/cbd-was-ist-das-uberhaupt/#Was_Sind_Terpene" title="CBD Wiki - alle Informationen zu CBD">CBD-Wiki</a> zu finden.</p>
+      <p>Terpene sind kurz gesagt Pflanzeninhaltsstoffe. Sie übernehmen häufig funktionale Eigenschaften und sind in vielen Fällen für den charakteristischen Geruch einer Pflanze verantwortlich. Die aromatische Fülle soll Insekten zur Bestäubung anlocken. Auch die Hanfpflanze und vorallem <a href="https://sanaleo.com/cbd-blueten/" title="CBD Blüten">CBD Blüten</a> enthalten neben den <a href="https://sanaleo.com/ubersicht-cannabinoide-der-hanfplanze/" title="Die Cannabinoide der Hanfpflanze">zentralen Cannabinoiden</a> eine Vielzahl an Terpenen, die den unverkennbaren Geruch verantworten. Die Auswirkungen, die Terpene auf den Menschen haben, werden bereits in der Aromatherapie genutzt. Wissenschaftliche Erkenntnisse legen nahe, dass Hanfextrakte, die neben CBD das volle Spektrum der natürlichen Terpene der Pflanze enthalten, eine höhere Bioverfügbarkeit aufweisen und somit eine bessere Wirkung entfalten. Man spricht hier vom sog. <a href="https://sanaleo.com/der-entourage-effekt/" title="Entourage Effekt">Entourage-Effekt</a>: Die Wirkung der Pflanze ist größer als die Summe ihrer Bestandteile. Bis heute hat die Forschung die Struktur von etwa 20.000 Terpenen identifiziert und analysiert. Die wichtigsten im Zusammenhang mit CBD sind: B-Caryophyllene, Limonene, Linalool, Myrzene und Pinene. Das Zusammenspiel der Terpene birgt enormes Potential, das es verstehen und richtig anzuwenden gilt! Weitere Informationen zu den genannten Terpenen sind im <a href="https://sanaleo.com/cbd-was-ist-das-uberhaupt/#Was_Sind_Terpene" title="CBD Wiki - alle Informationen zu CBD">CBD-Wiki</a> zu finden.</p>
     </div>
     <button class="faq-accordion-archive"><h2 class="accordion_heading">WAS IST CBD?</h2><i class="faq-archive-info-open"></i></button>
     <div class="panel-archive">
@@ -1702,12 +1689,12 @@ Die Analysezertifikate zu jeder Sorte können auf der entsprechenden Produktinfo
 		  
 	  <button class="faq-accordion-archive"><h2 class="accordion_heading">CBD-VAPE MIT PAYPAL BEZAHLEN</h2><i class="faq-archive-info-open"></i></button>
       <div class="panel-archive">
-        <p>Bei SANALEO kein Problem – neben den herkömmlichen Zahlungsweisen wie Vorkasse, Direkte Banküberweisung oder Kreditkartenzahlung kannst Du bei SANALEO folgende Produkte mit PayPal bezahlen: CBD-Blüten, CBD-Kosmetik, CBD-Öle und CBD-Vape.</p>
+        <p>Bei SANALEO kein Problem – neben den herkömmlichen Zahlungsweisen wie Vorkasse, Direkte Banküberweisung oder Kreditkartenzahlung kannst Du folgende Produkte mit PayPal bezahlen: CBD-Blüten, CBD-Kosmetik, CBD-Öle und CBD-Vape.</p>
       </div>
 	  
 	  <button class="faq-accordion-archive"><h2 class="accordion_heading">CBD-VAPE MIT KLARNA BEZAHLEN</h2><i class="faq-archive-info-open"></i></button>
       <div class="panel-archive">
-        <p>Auch das ist kein Problem. Folgende Produktkategorien von SANALEO können mit KLARNA bezahlt werden: CBD-Kosmetik, CBD-Öle, CBD-Vape. SANALEO CBD-Blüten können momentan „nur“ mit folgenden Zahlungsmöglichkeiten erworben werden: PayPal, Direkte Banküberweisung, Kreditkartenzahlung, Vorkasse.</p>
+        <p>Auch das ist kein Problem. Folgende Produktkategorien können mit KLARNA bezahlt werden: CBD-Kosmetik, CBD-Öle, CBD-Vape. CBD-Blüten können momentan „nur“ mit folgenden Zahlungsmöglichkeiten erworben werden: PayPal, Direkte Banküberweisung, Kreditkartenzahlung, Vorkasse.</p>
       </div>
 	  
 
@@ -1718,12 +1705,6 @@ Die Analysezertifikate zu jeder Sorte können auf der entsprechenden Produktinfo
 
    else if(is_product_category('cbd-kapseln')){
     echo '
-    <!--<button class="faq-accordion-archive"><h2 class="accordion_heading">KANN MAN DIE TRAUMKAPSELN ÜBERDOSIEREN?</h2><i class="faq-archive-info-open"></i></button>
-    <div class="panel-archive">
-      <p>Eine Überdosierung durch unsere Traumkapseln ist ausgeschlossen, da sie keine berauschende Wirkung besitzen.
-      </p>   
-    </div>
-
     <button class="faq-accordion-archive"><h2 class="accordion_heading">IST IN DEN TRAUMKAPSELN WIRKLICH MELATONIN DRIN?</h2><i class="faq-archive-info-open"></i></button>
     <div class="panel-archive">
       <p>
@@ -1733,7 +1714,7 @@ Die Analysezertifikate zu jeder Sorte können auf der entsprechenden Produktinfo
     <button class="faq-accordion-archive"><h2 class="accordion_heading">WAS IST CBD?</h2><i class="faq-archive-info-open"></i></button>
     <div class="panel-archive">
       <p>
-      <a href="https://sanaleo.com/cbd-was-ist-das-uberhaupt/" title="Was ist CBD?">CBD</a> steht für Cannabidiol und ist ein Inhaltsstoff der Cannabispflanze. Er gehört zu den sogenannten Phytocannabinoiden. Dabei handelt es sich um pflanzliche Inhaltsstoffe, die nur die Cannabispflanze produziert. Alle Säugetiere, Fische und Weichtiere produzieren jedoch von Natur aus körpereigene Cannabinoide, die den Phytocannabinoiden strukturell sehr ähnlich sind. Unsere körpereigenen Cannabinoide sind Teil des Endocannabinoid-Systems, welches an unserem Gesundheitserhalt, an gewissen Genesungsprozessen und folglich auch an unserer Gemütslage beteiligt ist. Die wissenschaftliche These ist: Exogen zugeführte Cannabinoide stimulieren das System, das einen Ausgleich der ausgeschütteten Botenstoffe anstrebt. Durch die Entdeckung dieses körpereigenen Systems hat sich das Verständnis der Wissenschaft von CBD und anderer Phytocannabinoide enorm erweitert und weiterführende Forschung angeregt. 
+      <a href="https://sanaleo.com/cbd-was-ist-das-uberhaupt/" title="Was ist CBD?">CBD</a> steht für Cannabidiol und ist ein Inhaltsstoff der Cannabispflanze. Er gehört zu den sogenannten Phytocannabinoiden. Dabei handelt es sich um pflanzliche Inhaltsstoffe, die nur die Cannabispflanze produziert. Alle Säugetiere, Fische und Weichtiere produzieren jedoch von Natur aus körpereigene Cannabinoide, die den Phytocannabinoiden strukturell sehr ähnlich sind. Unsere körpereigenen <a href="https://sanaleo.com/ubersicht-cannabinoide-der-hanfplanze/" title="Die Cannabinoide der Hanfpflanze">Cannabinoide</a> sind Teil des <a href="https://sanaleo.com/der-entourage-effekt/" title="Das Endocannabinoidsystem">Endocannabinoid-Systems</a>, welches an unserem Gesundheitserhalt, an gewissen Genesungsprozessen und folglich auch an unserer Gemütslage beteiligt ist. Die wissenschaftliche These ist: Exogen zugeführte Cannabinoide stimulieren das System, das einen Ausgleich der ausgeschütteten Botenstoffe anstrebt. Durch die Entdeckung dieses körpereigenen Systems hat sich das Verständnis der Wissenschaft von CBD und anderer Phytocannabinoide enorm erweitert und weiterführende Forschung angeregt. 
       </p>   
     </div>
     <button class="faq-accordion-archive"><h2 class="accordion_heading">WAS IST DER UNTERSCHIED ZWISCHEN THC UND CBD?</h2><i class="faq-archive-info-open"></i></button>
@@ -1745,14 +1726,7 @@ Die Analysezertifikate zu jeder Sorte können auf der entsprechenden Produktinfo
     <button class="faq-accordion-archive"><h2 class="accordion_heading">CBD ALS PFLANZLICHE ALTERNATIVE?</h2><i class="faq-archive-info-open"></i></button>
     <div class="panel-archive">
       <p>Die Wenigsten von uns sind im Alltag frei von Beschwerden. In Zeiten des Leistungsdrucks und des ständigen “Funktionieren-Müssens” neigen wir dazu, sie leichtfertig zu ignorieren. Schnelle Abhilfe versprechen massenhaft pharmazeutische Produkte, die nicht frei von Nebenwirkungen sind und immer weniger Vertrauen erfahren. Nicht ohne Grund boomen Naturprodukte so sehr wie noch nie. Natur statt Chemie lautet die Devise. Die wichtigste (Wieder-)Entdeckung der vergangenen Jahre: <a href="https://sanaleo.com/anwendungsfelder-und-vorteile-der-hanfpflanze/" title="Anwendungsgebiete Cannabis">Das Potential von Cannabis.</a></p> 
-    </div>
-    <button class="faq-accordion-archive"><h2 class="accordion_heading">KANN MAN ZU VIEL CBD ZU SICH NEHMEN?</h2><i class="faq-archive-info-open"></i></button>
-    <div class="panel-archive">
-      <p>
-      CBD selbst verursacht keinen Rauschzustand. Deshalb kann man es auch nicht überdosieren. Bei einem zertifizierten THC-Gehalt von unter 0,2% ist ein Missbrauch als Rauschmittel auszuschließen. Versuch es also gar nicht erst.
-      </p>   
-    </div>
-   
+    </div>   
     <button class="faq-accordion-archive"><h2 class="accordion_heading">WAS MUSS ICH BEI DER KOMBINATION VON CBD MIT MEDIKAMENTEN BEACHTEN?</h2><i class="faq-archive-info-open"></i></button>
     <div class="panel-archive">
       <p>
@@ -1774,12 +1748,12 @@ Die Analysezertifikate zu jeder Sorte können auf der entsprechenden Produktinfo
     echo '
     <button class="faq-accordion-archive"><h2 class="accordion_heading">CBD KOSMETIK MIT PAYPAL BEZAHLEN?</h2><i class="faq-archive-info-open"></i></button>
     <div class="panel-archive">
-      <p>Bei SANALEO kein Problem – neben den herkömmlichen Zahlungsweisen wie Vorkasse, Direkte Banküberweisung oder Kreditkartenzahlung kannst Du bei SANALEO folgende Produkte mit PayPal bezahlen: <a href="https://sanaleo.com/cbd-blueten/" title="CBD Blüten mit Paypal bezahlen">CBD Blüten</a>, CBD-Kosmetik, <a href="https://sanaleo.com/cbd-oele/" title="CBD Öl mit Paypal bezahlen">CBD Öl</a> und <a href="https://sanaleo.com/cbd-vape/" title="CBD Vape mit Paypal bezahlen">CBD Vape</a>.</p>
+      <p>Bei SANALEO kein Problem – neben den herkömmlichen Zahlungsweisen wie Vorkasse, Direkte Banküberweisung oder Kreditkartenzahlung kannst Du folgende Produkte mit PayPal bezahlen: <a href="https://sanaleo.com/cbd-blueten/" title="CBD Blüten mit Paypal bezahlen">CBD Blüten</a>, CBD-Kosmetik, <a href="https://sanaleo.com/cbd-oele/" title="CBD Öl mit Paypal bezahlen">CBD Öl</a> und <a href="https://sanaleo.com/cbd-vape/" title="CBD Vape mit Paypal bezahlen">CBD Vape</a>.</p>
     </div>
 	
 	<button class="faq-accordion-archive"><h2 class="accordion_heading">CBD-KOSMETIK MIT KLARNA BEZAHLEN?</h2><i class="faq-archive-info-open"></i></button>
     <div class="panel-archive">
-      <p>Auch das ist kein Problem. Folgende Produktkategorien von SANALEO können mit KLARNA bezahlt werden: CBD-Kosmetik, CBD-Öle, CBD-Vape. SANALEO CBD-Blüten können momentan „nur“ mit folgenden Zahlungsmöglichkeiten erworben werden: PayPal, Direkte Banküberweisung, Kreditkartenzahlung, Vorkasse.</p>
+      <p>Auch das ist kein Problem. Folgende Produktkategorien können mit KLARNA bezahlt werden: CBD-Kosmetik, CBD-Öle, CBD-Vape. CBD-Blüten können momentan „nur“ mit folgenden Zahlungsmöglichkeiten erworben werden: PayPal, Direkte Banküberweisung, Kreditkartenzahlung, Vorkasse.</p>
     </div>
     ';
    }
@@ -1892,3 +1866,21 @@ function register_my_menu() {
   register_nav_menu('footer-menu-2',__( 'Footer Menu 2' ));
 }
 add_action( 'init', 'register_my_menu' );
+
+
+
+// Geschenkboxen Content Field Implementation
+
+function box_content() {
+  echo get_field('boxcontent');
+}
+
+add_action('woocommerce_single_product_summary', 'box_content', 10);
+
+
+// Remove Reset Variations Button
+
+add_filter('woocommerce_reset_variations_link', '__return_empty_string');
+
+
+//Valentine Popup

@@ -21,3 +21,14 @@
 		padding: 0 !important;
 	}
 }
+
+.flex-center {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 1em;
+}
+
+.translate-down-30 {
+	transform: translate(0, 30px);
+}

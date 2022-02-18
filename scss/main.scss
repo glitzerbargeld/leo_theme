@@ -2037,7 +2037,7 @@ a.ui-button:active,
 #wpsl-wrap.wpsl-store-below #wpsl-result-list li {
   padding: 10px 10px 10px 0;
   display: inline-block !important;
-  width: 100%;
+  width: 90%;
   margin: 2.4%;
 
 
@@ -2296,6 +2296,7 @@ a.ui-button:active,
 }
 
 a {
+  cursor: pointer !important;
   text-decoration: none;
 }
 
@@ -3886,11 +3887,12 @@ div.desc {
 	text-align: center !important;
 }
 .products-hero-section h1 {
+  font-size: calc(max(40px, 7vw));
 	font-weight: 900;
 }
 
 .products-hero-section p {
-	background: white;
+  font-size: calc(max(25px, 2vh));
 	font-weight: 400;
 	padding: 20px;
 	border-radius: 20px;
@@ -3972,8 +3974,6 @@ article .entry-content h2 {
 
 
 .wc-block-grid .wc-block-grid__products .wc-block-grid__product {
-  box-shadow: 0px 5px 8px 2px rgba(0, 0, 0, 0.1);
-  margin: 5%;
   border-radius: 30px;
   padding: 10px;
 		transition: .5s;

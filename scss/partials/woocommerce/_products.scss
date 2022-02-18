@@ -20,6 +20,12 @@
   h3 {
     text-transform: none;
   }
+
+  ul {
+    @media (max-width: 996px) {
+      margin: 20px 0 10px 0 !important;
+    }
+  }
 }
 
 /*Product Details*/
