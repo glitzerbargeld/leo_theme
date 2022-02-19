@@ -1527,6 +1527,16 @@ button.faq-accordion-archive h2.accordion_heading {
 
 }
 
+#behandlung {
+  visibility: hidden;
+  position: absolute;
+}
+
+#btn_behandlung {
+  display: flex;
+
+}
+
 
 .btn_active {
   width: 230% !important;

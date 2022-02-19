@@ -846,6 +846,10 @@ button.faq-accordion-archive h2.accordion_heading { font-size: 1.2em !important;
 
 #btn_terpenecbd { display: flex; }
 
+#behandlung { visibility: hidden; position: absolute; }
+
+#btn_behandlung { display: flex; }
+
 .btn_active { width: 230% !important; margin-left: -2%; margin-bottom: 2%; z-index: 10; }
 
 .info-popup { position: relative; top: 44%; }
