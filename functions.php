@@ -1883,4 +1883,11 @@ add_action('woocommerce_single_product_summary', 'box_content', 10);
 add_filter('woocommerce_reset_variations_link', '__return_empty_string');
 
 
-//Valentine Popup
+//Germanized Anpassung: Position der Checkboxen unter die Zusammenfassung der Bestellung
+add_action( 'init', 'my_child_move_legal_checkboxes', 50 );
+function my_child_move_legal_checkboxes() {
+// Remove
+remove_action( 'woocommerce_review_order_after_payment', 'woocommerce_gzd_template_render_checkout_checkboxes', 10 );
+// Readd before submit button
+add_action( 'woocommerce_gzd_review_order_before_submit', 'woocommerce_gzd_template_render_checkout_checkboxes', 10 );
+}
