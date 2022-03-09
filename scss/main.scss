@@ -56,6 +56,7 @@ INDEX
 @import './partials/layouts/sidebar';
 @import './partials/woocommerce/checkout';
 @import './partials/woocommerce/products';
+@import './partials/woocommerce/prodcatalogue';
 @import './partials/woocommerce/shoppingcart';
 
 
@@ -1574,72 +1575,62 @@ button.faq-accordion-archive h2.accordion_heading {
   width: 95%;
 }
 
-
-
-
 /*Size Selector*/
 
 .content {
   text-align: center;
   display: flex;
+  margin-bottom: 5%;
 }
 
 
 .glass-wrapper {
-  display: inline-flex;
+  display: flex;
   justify-content: center;
   align-items: flex-end;
-  width: auto;
-  margin: 2% 0% 4% 10%;
+  width: 100%;
 }
 
 .glass {
   border: 4px black solid;
   border-top: 11px solid rgb(221, 193, 142);
   display: none;
+  width: 40%;
 }
 
 .glass-wrapper .glass {
   &:nth-child(1) {
     margin-right: 2%;
-    padding: 7% 6% 0;
+    padding: 7% 3% 0;
+    margin-right: 2%;
   }
 
   &:nth-child(2) {
     margin-right: 2%;
-    padding: 10% 8% 0;
+    padding: 10% 3% 0;
   }
 
   &:nth-child(3) {
-    margin-right: 2%;
     padding: 12% 6% 0;
-  }
-
-  &:nth-child(4) {
-    padding: 11% 4% 0;
   }
 }
 
 @media screen and (max-width: 544px) {
 
-  .glass-wrapper {
-    margin: 2% 0% 4% 0%;
-  }
-
   .glass-wrapper .glass {
     &:nth-child(1) {
       margin-right: 2%;
-      padding: 7% 4% 0;
+      padding: 7% 3% 0;
     }
 
     &:nth-child(2) {
       margin-right: 2%;
-      padding: 10% 7% 0;
+      padding: 10% 3% 0;
     }
 
     &:nth-child(3) {
       margin-right: 2%;
-      padding: 12% 6% 0;
+      padding: 12% 3% 0;
     }
 
     &:nth-child(4) {
@@ -1675,7 +1666,7 @@ button.faq-accordion-archive h2.accordion_heading {
   }
 
   &:nth-child(3) .buds {
-    padding: 52px 32px 7px;
+    padding: 70px 32px 7px;
   }
 
   &:nth-child(4) .buds {
@@ -1683,28 +1674,6 @@ button.faq-accordion-archive h2.accordion_heading {
   }
 }
 
-@media screen and(max-width: 544px) {
-
-  .glass-wrapper {
-    display: inline-flex;
-    justify-content: center;
-    align-items: flex-end;
-    width: 75%;
-    margin: 14px;
-  }
-
-  .glass {
-    width: 45%;
-    margin: 3%;
-  }
-
-  .woocommerce div.product form.cart div.quantity {
-    float: left;
-    margin: 0px 25px 0 0;
-  }
-
-
-}
 
 /*Product Page - Öle*/
 
@@ -1811,7 +1780,7 @@ a.ui-button:active,
   margin-top: 5%;
   margin-bottom: 5%;
   height: 38px;
-  border-radius: 30px;
+  border-radius: 0;
   text-align: center;
 
 
@@ -2833,22 +2802,6 @@ h2 {
   align-items: center;
 }
 
-/* Element | https://sanaleo.com/cbd-blueten/gorilla-glue/ */
-
-
-.glass-wrapper {
-  /* display: inline-flex; */
-  /* justify-content: center; */
-  margin: 2% 0% 4% 0;
-  display: flex;
-  justify-content: flex-start;
-}
-
-.content {
-  margin-bottom: 30px;
-}
-
-
 /*MAILCHIMP FORM*/
 
 
@@ -3862,7 +3815,7 @@ div.desc {
 }
 
 .woocommerce div.product form.cart .button.single_add_to_cart_button {
-	width: calc(min(40vw, 180px)) !important;
+	
 	padding-top: 10px;
 	margin-left: 0;
 	border-radius: 0;
@@ -4413,18 +4366,6 @@ font-size: calc(min(250px, 20vw)) !important;
 	box-shadow: 0px 0px 10px 2px lightgray;
 		border-radius: 0 0 30px 30px;
 	
-}
-
-@media (max-width: 996px) {
-	#qualitaetsanspruch h1, h2, h3, h4 {
-		text-align: center !important;
-	}
-	#qualitaetsanspruch p {
-		text-align: justify !important;
-	}
-	#qualitaetsanspruch .wp-block-buttons  {
-		justify-content: center !important;
-	}
 }
 
 .ast-builder-menu-mobile .main-navigation .main-header-menu .menu-item > .menu-link {

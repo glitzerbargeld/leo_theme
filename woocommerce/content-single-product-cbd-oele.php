@@ -208,6 +208,7 @@ if ( post_password_required() ) {
 				 * @hooked woocommerce_show_product_images - 20
 				 */
 				do_action( 'woocommerce_before_single_product_summary' );
+				
 
 			?>
             </div>
@@ -237,7 +238,33 @@ if ( post_password_required() ) {
 				
 				add_action('woocommerce_product_thumbnails', 'woocommerce_template_single_excerp');
 				do_action( 'woocommerce_single_product_summary' );
-				add_action( 'woocommerce_single_product_summary', 'woocommerce_total_product_price', 25 ); ?>
+				add_action( 'woocommerce_single_product_summary', 'woocommerce_total_product_price', 25 ); 
+
+
+				echo '<div id="az-link-container">';
+				if(get_field("analysezertifikat_1") != "" ){
+					echo '<a class="az-link" href="'. get_field("analysezertifikat_1") . '"> <img src="https://sanaleo.com/wp-content/uploads/2022/03/Icon_zertifiziert.svg" width="40" alt="">Analysezertifikat ' . get_field("variante_1") . '</a>';
+				}
+
+				if(get_field("analysezertifikat_2") != "" ){
+					echo '<a class="az-link" href="'. get_field("analysezertifikat_2") . '"> <img src="https://sanaleo.com/wp-content/uploads/2022/03/Icon_zertifiziert.svg" width="40" alt="">Analysezertifikat ' . get_field("variante_2") . '</a>';
+				}
+
+				if(get_field("analysezertifikat_3") != "" ){
+					echo '<a class="az-link" href="'. get_field("analysezertifikat_3") . '"> <img src="https://sanaleo.com/wp-content/uploads/2022/03/Icon_zertifiziert.svg" width="40" alt="">Analysezertifikat ' . get_field("variante_3") . '</a>';
+				}
+
+				if(get_field("analysezertifikat_4") != "" ){
+					echo '<a class="az-link" href="'. get_field("analysezertifikat_4") . '"> <img src="https://sanaleo.com/wp-content/uploads/2022/03/Icon_zertifiziert.svg" width="40" alt="">Analysezertifikat ' . get_field("variante_4") . '</a>';
+				}
+
+				if(get_field("analysezertifikat_5") != "" ){
+					echo '<a class="az-link" href="'. get_field("analysezertifikat_5") . '"> <img src="https://sanaleo.com/wp-content/uploads/2022/03/Icon_zertifiziert.svg" width="40" alt="">Analysezertifikat ' . get_field("variante_5") . '</a>';
+				}
+				echo '</div>';
+				
+
+				?>
 
             </div>
 

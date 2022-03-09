@@ -141,7 +141,11 @@ if ( post_password_required() ) {
 				
 				add_action('woocommerce_product_thumbnails', 'woocommerce_template_single_excerpt');
 				do_action( 'woocommerce_single_product_summary' );
-				add_action( 'woocommerce_single_product_summary', 'woocommerce_total_product_price', 25 ); ?>
+				add_action( 'woocommerce_single_product_summary', 'woocommerce_total_product_price', 25 ); 
+				if(get_field("analysezertifikat_1") != "" ){
+                echo '<a class="az-link" href="'. get_field("analysezertifikat_1") . '"> <img src="https://sanaleo.com/wp-content/uploads/2022/03/Icon_zertifiziert.svg" width="40" alt="">Analysezertifikat</a>';
+                }
+				?>
 
 		</div>
 		

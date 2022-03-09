@@ -11,10 +11,6 @@
     font-size: 2em;
     font-weight: 900;
     text-align: center;
-
-    @media (min-width: 1200px) {
-      text-align: left;
-    }
   }
 
   h3 {
@@ -26,6 +22,28 @@
       margin: 20px 0 10px 0 !important;
     }
   }
+}
+
+.az-link-container {
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(2, 50%);
+	justify-content: center;
+}
+
+.az-link {
+    font-size: calc(min(4vw, 16px));
+    display: inline-flex;
+    align-items: center;
+    background: white;
+    padding: 10px;
+    border: 1px solid;
+    border-radius: 11px;
+    margin: 5px;
+
+    &:hover {
+      border-radius: 0;
+    }
 }
 
 /*Product Details*/
@@ -47,6 +65,19 @@
   margin-left: auto;
   margin-right: auto;
 }
+
+/*Add to Cart Quantity Section*/
+
+.woocommerce .product .cart .quantity.buttons_added {
+  font-weight: 900;
+}
+
+.woocommerce form .quantity .minus, .woocommerce form .quantity .plus {
+
+	background-color: white !important;
+
+}
+
 
 /*ONSALE*/
 

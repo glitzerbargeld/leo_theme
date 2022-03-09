@@ -46,7 +46,7 @@ if ( post_password_required() ) {
 		?>
 	</div>
 
-	<div class="ast-col-xl-5 ast-col-xs-12 ast-col-xl-pull-4 t-product-info-short">
+	<div class="ast-col-xl-4 ast-col-xs-12 ast-col-xl-pull-4 t-product-info-short">
 		
 			<?php
 			/**
@@ -62,7 +62,29 @@ if ( post_password_required() ) {
 			 * @hooked WC_Structured_Data::generate_product_data() - 60
 			 */
 			do_action( 'woocommerce_single_product_summary' );
+
+			if(get_field("analysezertifikat_1") != "" ){
+				echo '<a class="az-link" href="'. get_field("analysezertifikat_1") . '"> <img src="https://sanaleo.com/wp-content/uploads/2022/03/Icon_zertifiziert.svg" width="40" alt="">Analysezertifikat ' . get_field("variante_1") . '</a>';
+			}
+
+			if(get_field("analysezertifikat_2") != "" ){
+				echo '<a class="az-link" href="'. get_field("analysezertifikat_2") . '"> <img src="https://sanaleo.com/wp-content/uploads/2022/03/Icon_zertifiziert.svg" width="40" alt="">Analysezertifikat ' . get_field("variante_2") . '</a>';
+			}
+
+			if(get_field("analysezertifikat_3") != "" ){
+				echo '<a class="az-link" href="'. get_field("analysezertifikat_3") . '"> <img src="https://sanaleo.com/wp-content/uploads/2022/03/Icon_zertifiziert.svg" width="40" alt="">Analysezertifikat ' . get_field("variante_3") . '</a>';
+			}
+
+			if(get_field("analysezertifikat_4") != "" ){
+				echo '<a class="az-link" href="'. get_field("analysezertifikat_4") . '"> <img src="https://sanaleo.com/wp-content/uploads/2022/03/Icon_zertifiziert.svg" width="40" alt="">Analysezertifikat ' . get_field("variante_4") . '</a>';
+			}
+
+			if(get_field("analysezertifikat_5") != "" ){
+				echo '<a class="az-link" href="'. get_field("analysezertifikat_5") . '"> <img src="https://sanaleo.com/wp-content/uploads/2022/03/Icon_zertifiziert.svg" width="40" alt="">Analysezertifikat ' . get_field("variante_5") . '</a>';
+			}
+
 			?>
+			
 		</div>
 	</div>
 	
